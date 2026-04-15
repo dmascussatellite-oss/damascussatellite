@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title id="pageTitle" data-ar="كيف تعمل الأقمار الصناعية؟ | ستالايت دمشق" data-en="How Do Satellites Work? | Damascus Satellite">كيف تعمل الأقمار الصناعية؟ | ستالايت دمشق</title>
+    <link rel="icon" href="favicon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0;}
+        body{font-family:Arial,sans-serif;background:#f1f5f9;color:#0f172a;padding-bottom:50px;}
+        
+        header{background:#fff;padding:15px 20px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 10px rgba(0,0,0,0.05);position:sticky;top:0;z-index:1000;}
+        header a{color:#22c55e;text-decoration:none;font-weight:bold;display:flex;align-items:center;gap:8px;}
+        
+        .lang{cursor:pointer;background:#020617;color:#fff;padding:8px 15px;border-radius:20px;font-size:14px;font-weight:bold;}
+        
+        .container{max-width:900px;margin:40px auto;padding:20px;}
+        
+        .page-title{
+            text-align:center;
+            margin-bottom:40px;
+        }
+        .page-title h1{
+            font-size:36px;
+            color:#0f172a;
+            margin-bottom:10px;
+        }
+        .page-title p{
+            color:#475569;
+            font-size:18px;
+        }
+        
+        .section{
+            background:#fff;
+            border-radius:24px;
+            padding:30px;
+            margin-bottom:30px;
+            box-shadow:0 4px 15px rgba(0,0,0,0.05);
+        }
+        .section h2{
+            color:#22c55e;
+            margin-bottom:20px;
+            border-right:3px solid #22c55e;
+            padding-right:15px;
+        }
+        .section p{
+            line-height:1.8;
+            color:#334155;
+            margin-bottom:15px;
+        }
+        .section ul{
+            padding-right:20px;
+            margin:15px 0;
+        }
+        .section li{
+            margin-bottom:8px;
+            color:#475569;
+        }
+        
+        .diagram{
+            background:#f8fafc;
+            padding:20px;
+            border-radius:16px;
+            text-align:center;
+            margin:20px 0;
+        }
+        .diagram i{
+            font-size:60px;
+            color:#22c55e;
+            margin:0 15px;
+        }
+        
+        .formula-box{
+            background:#f1f5f9;
+            padding:15px;
+            border-radius:12px;
+            font-family:monospace;
+            text-align:center;
+            margin:15px 0;
+        }
+        
+        .sources{
+            background:#f8fafc;
+            border-radius:20px;
+            padding:25px;
+            margin-top:40px;
+            border-right:4px solid #22c55e;
+        }
+        
+        .back-btn{
+            display:inline-block;
+            padding:10px 20px;
+            background:#020617;
+            color:#fff;
+            text-decoration:none;
+            border-radius:30px;
+            font-size:14px;
+            margin-top:20px;
+        }
+        
+        @media (max-width:600px){
+            .page-title h1{font-size:28px;}
+            .diagram i{font-size:40px; margin:0 8px;}
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="/">
+        <i class="fas fa-home"></i> 
+        <span data-ar="الرئيسية" data-en="Home">الرئيسية</span>
+    </a>
+    <div class="lang" id="langBtn"><i class="fas fa-globe"></i> English</div>
+</header>
+
+<div class="container">
+    <div class="page-title">
+        <h1><i class="fas fa-satellite" style="color:#22c55e;"></i> <span data-ar="كيف تعمل الأقمار الصناعية؟" data-en="How Do Satellites Work?">كيف تعمل الأقمار الصناعية؟</span></h1>
+        <p data-ar="رحلة الإشارة من الأرض إلى القمر الصناعي والعودة" data-en="The journey of a signal from Earth to the satellite and back">
+            رحلة الإشارة من الأرض إلى القمر الصناعي والعودة
+        </p>
+    </div>
+    
+    <!-- مقدمة -->
+    <div class="section">
+        <h2><i class="fas fa-question-circle"></i> <span data-ar="ما هو القمر الصناعي؟" data-en="What is a Satellite?">ما هو القمر الصناعي؟</span></h2>
+        <p data-ar="القمر الصناعي هو جسم من صنع الإنسان يُطلق إلى الفضاء ليدور حول الأرض في مدار محدد. تستخدم الأقمار الصناعية لأغراض متعددة: الاتصالات، البث التلفزيوني، الإنترنت، الملاحة (GPS)، والمراقبة الجوية." data-en="A satellite is a man-made object launched into space to orbit the Earth in a specific orbit. Satellites are used for multiple purposes: communications, television broadcasting, internet, navigation (GPS), and weather monitoring.">
+            القمر الصناعي هو جسم من صنع الإنسان يُطلق إلى الفضاء ليدور حول الأرض في مدار محدد. تستخدم الأقمار الصناعية لأغراض متعددة: الاتصالات، البث التلفزيوني، الإنترنت، الملاحة (GPS)، والمراقبة الجوية.
+        </p>
+        <p><small data-ar="المصدر: NASA - What is a Satellite?" data-en="Source: NASA - What is a Satellite?">المصدر: NASA - What is a Satellite?</small></p>
+    </div>
+    
+    <!-- المدار الثابت الجغرافي -->
+    <div class="section">
+        <h2><i class="fas fa-globe"></i> <span data-ar="المدار الثابت الجغرافي (GEO)" data-en="Geostationary Orbit (GEO)">المدار الثابت الجغرافي (GEO)</span></h2>
+        <p data-ar="معظم أقمار البث التلفزيوني (مثل نايل سات، عرب سات، هوتبيرد) تقع في المدار الثابت الجغرافي. هذا المدار يقع على ارتفاع 35,786 كيلومتراً فوق سطح الأرض، ويدور بنفس سرعة دوران الأرض، مما يجعله يبدو ثابتاً في السماء." data-en="Most television broadcasting satellites (such as Nilesat, Arabsat, Hotbird) are in geostationary orbit. This orbit is located at an altitude of 35,786 kilometers above the Earth's surface and rotates at the same speed as the Earth, making it appear stationary in the sky.">
+            معظم أقمار البث التلفزيوني (مثل نايل سات، عرب سات، هوتبيرد) تقع في المدار الثابت الجغرافي. هذا المدار يقع على ارتفاع 35,786 كيلومتراً فوق سطح الأرض، ويدور بنفس سرعة دوران الأرض، مما يجعله يبدو ثابتاً في السماء.
+        </p>
+        <div class="formula-box">
+            <strong data-ar="معادلة سرعة المدار الثابت:" data-en="Geostationary Orbit Velocity Equation:">معادلة سرعة المدار الثابت:</strong><br>
+            v = √(GM / (R + h)) ≈ 3.07 كم/ث
+        </div>
+        <p><small data-ar="المصدر: ESA - Types of Orbits" data-en="Source: ESA - Types of Orbits">المصدر: ESA - Types of Orbits</small></p>
+    </div>
+    
+    <!-- كيف تنتقل الإشارة؟ -->
+    <div class="section">
+        <h2><i class="fas fa-radio"></i> <span data-ar="كيف تنتقل الإشارة؟" data-en="How is the Signal Transmitted?">كيف تنتقل الإشارة؟</span></h2>
+        <div class="diagram">
+            <i class="fas fa-satellite-dish"></i>
+            <i class="fas fa-arrow-up"></i>
+            <i class="fas fa-satellite"></i>
+            <i class="fas fa-arrow-down"></i>
+            <i class="fas fa-tv"></i>
+        </div>
+        <p data-ar="1. <strong>الإرسال:</strong> يتم إرسال الإشارة من محطة أرضية (Uplink Station) إلى القمر الصناعي بتردد عالي (عادة في نطاق C-Band أو Ku-Band)." data-en="1. <strong>Uplink:</strong> The signal is transmitted from an Earth station to the satellite at high frequency (typically in the C-Band or Ku-Band).">
+            1. <strong>الإرسال (Uplink):</strong> يتم إرسال الإشارة من محطة أرضية إلى القمر الصناعي بتردد عالي (عادة في نطاق C-Band أو Ku-Band).
+        </p>
+        <p data-ar="2. <strong>المعالجة على القمر:</strong> يستقبل القمر الإشارة، يضخمها (Amplification)، ويغير ترددها (Frequency Conversion) لتجنب التداخل مع الإشارة الصاعدة، ثم يعيد إرسالها إلى الأرض." data-en="2. <strong>On-board Processing:</strong> The satellite receives the signal, amplifies it, converts its frequency (to avoid interference with the uplink), and then retransmits it to Earth.">
+            2. <strong>المعالجة على القمر:</strong> يستقبل القمر الإشارة، يضخمها، ويغير ترددها (لتجنب التداخل مع الإشارة الصاعدة)، ثم يعيد إرسالها إلى الأرض.
+        </p>
+        <p data-ar="3. <strong>الاستقبال:</strong> يتم استقبال الإشارة على الأرض بواسطة الطبق (Dish) الذي يعكسها إلى الـ LNB، الذي يحول التردد العالي إلى تردد متوسط يمكن للرسيفر معالجته." data-en="3. <strong>Downlink:</strong> The signal is received on Earth by the dish, which reflects it to the LNB, which converts the high frequency to an intermediate frequency that the receiver can process.">
+            3. <strong>الاستقبال (Downlink):</strong> يتم استقبال الإشارة على الأرض بواسطة الطبق الذي يعكسها إلى الـ LNB، الذي يحول التردد العالي إلى تردد متوسط يمكن للرسيفر معالجته.
+        </p>
+        <p><small data-ar="المصدر: Satellite Communications, Dennis Roddy, Chapter 1" data-en="Source: Satellite Communications, Dennis Roddy, Chapter 1">المصدر: Satellite Communications, Dennis Roddy, Chapter 1</small></p>
+    </div>
+    
+    <!-- نطاقات التردد -->
+    <div class="section">
+        <h2><i class="fas fa-chart-line"></i> <span data-ar="نطاقات التردد المستخدمة" data-en="Frequency Bands Used">نطاقات التردد المستخدمة</span></h2>
+        <ul>
+            <li><strong>C-Band</strong> (3.4 - 4.2 GHz): <span data-ar="أطباق كبيرة (1.8 - 2.4 متر)، أقل تأثراً بالمطر، يستخدم في المناطق النائية" data-en="Large dishes (1.8 - 2.4 m), less affected by rain, used in remote areas">أطباق كبيرة (1.8 - 2.4 متر)، أقل تأثراً بالمطر، يستخدم في المناطق النائية</span></li>
+            <li><strong>Ku-Band</strong> (10.7 - 12.75 GHz): <span data-ar="أطباق صغيرة (60 - 120 سم)، الأكثر شيوعاً في البث المنزلي، يتأثر بالمطر" data-en="Small dishes (60 - 120 cm), most common for home broadcasting, affected by rain">أطباق صغيرة (60 - 120 سم)، الأكثر شيوعاً في البث المنزلي، يتأثر بالمطر</span></li>
+            <li><strong>Ka-Band</strong> (17.3 - 31 GHz): <span data-ar="أطباق صغيرة جداً، يستخدم للإنترنت عبر الأقمار، يتأثر بشدة بالمطر" data-en="Very small dishes, used for satellite internet, heavily affected by rain">أطباق صغيرة جداً، يستخدم للإنترنت عبر الأقمار، يتأثر بشدة بالمطر</span></li>
+        </ul>
+        <div class="formula-box">
+            <strong data-ar="معادلة حساب الطول الموجي:" data-en="Wavelength Calculation Formula:">معادلة حساب الطول الموجي:</strong><br>
+            λ = c / f <br>
+            حيث c = سرعة الضوء (3×10⁸ م/ث)، f = التردد
+        </div>
+        <p><small data-ar="المصدر: ITU-R Recommendations / Eutelsat Technical Guide" data-en="Source: ITU-R Recommendations / Eutelsat Technical Guide">المصدر: ITU-R Recommendations / Eutelsat Technical Guide</small></p>
+    </div>
+    
+    <!-- مكونات نظام الاستقبال -->
+    <div class="section">
+        <h2><i class="fas fa-microchip"></i> <span data-ar="مكونات نظام الاستقبال الأرضي" data-en="Ground Reception System Components">مكونات نظام الاستقبال الأرضي</span></h2>
+        <ul>
+            <li><strong data-ar="الطبق (Dish):" data-en="Dish:">الطبق (Dish):</strong> <span data-ar="يعكس الإشارة القادمة من القمر ويجمعها على الـ LNB. كفاءة الطبق تعتمد على حجمه وجودة صنعه." data-en="Reflects the signal from the satellite and focuses it on the LNB. Dish efficiency depends on its size and manufacturing quality.">يعكس الإشارة القادمة من القمر ويجمعها على الـ LNB. كفاءة الطبق تعتمد على حجمه وجودة صنعه.</span></li>
+            <li><strong data-ar="الـ LNB:" data-en="LNB:">الـ LNB:</strong> <span data-ar="Low-Noise Block downconverter. يستقبل الإشارة من الطبق، يضخمها، ويحولها من التردد العالي (Ku-Band) إلى تردد متوسط (950-2150 MHz)." data-en="Low-Noise Block downconverter. Receives the signal from the dish, amplifies it, and converts it from high frequency (Ku-Band) to intermediate frequency (950-2150 MHz).">Low-Noise Block downconverter. يستقبل الإشارة من الطبق، يضخمها، ويحولها من التردد العالي (Ku-Band) إلى تردد متوسط (950-2150 MHz).</span></li>
+            <li><strong data-ar="الكابل (Coaxial Cable):" data-en="Coaxial Cable:">الكابل (Coaxial Cable):</strong> <span data-ar="ينقل الإشارة من الـ LNB إلى الرسيفر. جودة الكابل تؤثر على قوة الإشارة." data-en="Transmits the signal from the LNB to the receiver. Cable quality affects signal strength.">ينقل الإشارة من الـ LNB إلى الرسيفر. جودة الكابل تؤثر على قوة الإشارة.</span></li>
+            <li><strong data-ar="الرسيفر (Receiver):" data-en="Receiver:">الرسيفر (Receiver):</strong> <span data-ar="يفك تشفير الإشارة، يحولها إلى صورة وصوت، ويسمح ببرمجة القنوات." data-en="Decodes the signal, converts it to video and audio, and allows channel programming.">يفك تشفير الإشارة، يحولها إلى صورة وصوت، ويسمح ببرمجة القنوات.</span></li>
+        </ul>
+    </div>
+    
+    <!-- المصادر العلمية -->
+    <div class="sources">
+        <h3><i class="fas fa-flask"></i> <span data-ar="المصادر العلمية" data-en="Scientific Sources">المصادر العلمية</span></h3>
+        <ul>
+            <li><strong>NASA - What is a Satellite?</strong> - <span data-ar="مقدمة عامة عن الأقمار الصناعية" data-en="General introduction to satellites">مقدمة عامة عن الأقمار الصناعية</span></li>
+            <li><strong>ESA (European Space Agency) - Types of Orbits</strong> - <span data-ar="شرح أنواع المدارات الفضائية" data-en="Explanation of space orbit types">شرح أنواع المدارات الفضائية</span></li>
+            <li><strong>Dennis Roddy - "Satellite Communications" (4th Edition)</strong> - <span data-ar="المرجع الأساسي في هندسة الاتصالات عبر الأقمار" data-en="The fundamental reference in satellite communications engineering">المرجع الأساسي في هندسة الاتصالات عبر الأقمار</span></li>
+            <li><strong>ITU-R (International Telecommunication Union) Recommendations</strong> - <span data-ar="المعايير الدولية لاستخدام الترددات" data-en="International standards for frequency use">المعايير الدولية لاستخدام الترددات</span></li>
+            <li><strong>Eutelsat Technical Guide</strong> - <span data-ar="الدليل التقني لاستقبال الأقمار" data-en="Technical guide for satellite reception">الدليل التقني لاستقبال الأقمار</span></li>
+        </ul>
+        <p><i class="fas fa-info-circle"></i> <span data-ar="* جميع المعلومات مأخوذة من مصادر علمية موثوقة. تم تحديث البيانات وفق أحدث المعايير الفنية العالمية." data-en="* All information is taken from reliable scientific sources. Data has been updated according to the latest international technical standards.">
+            * جميع المعلومات مأخوذة من مصادر علمية موثوقة. تم تحديث البيانات وفق أحدث المعايير الفنية العالمية.
+        </span></p>
+    </div>
+    
+    <div style="text-align:center; margin-top:20px;">
+        <a href="/" class="back-btn"><i class="fas fa-arrow-right"></i> <span data-ar="العودة للرئيسية" data-en="Back to Home">العودة للرئيسية</span></a>
+    </div>
+</div>
+
+<script>
+    (function(){
+        const langBtn = document.getElementById("langBtn");
+        let currentLang = localStorage.getItem("myWebLang") || "ar";
+        
+        function applyLang(){
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
+            
+            document.querySelectorAll("[data-ar]").forEach(el => {
+                if(el.tagName === 'A') return;
+                if(el.tagName === 'STRONG') return;
+                el.innerText = el.getAttribute("data-" + currentLang);
+            });
+            
+            langBtn.innerHTML = currentLang === "ar" ? '<i class="fas fa-globe"></i> English' : '<i class="fas fa-globe"></i> العربية';
+            localStorage.setItem("myWebLang", currentLang);
+        }
+        
+        langBtn.onclick = function(){
+            currentLang = currentLang === "ar" ? "en" : "ar";
+            applyLang();
+        };
+        applyLang();
+    })();
+</script>
+
+</body>
+</html>

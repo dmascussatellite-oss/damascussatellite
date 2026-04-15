@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title id="pageTitle" data-ar="تصويت: أكثر مشكلة تواجهها في الستالايت؟ | ستالايت دمشق" data-en="Poll: Most Common Satellite Problem? | Damascus Satellite">تصويت: أكثر مشكلة تواجهها في الستالايت؟ | ستالايت دمشق</title>
+    <meta name="description" id="pageDesc" data-ar="شارك برأيك: ما أكثر مشكلة تواجهها في الستالايت أو الرسيفر؟" data-en="Share your opinion: What is the most common problem you face with your satellite or receiver?">
+    <link rel="icon" href="favicon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{font-family:'Segoe UI',Tahoma,Arial;background:#f1f5f9;color:#0f172a;display:flex;flex-direction:column;min-height:100vh;}
+        
+        header{background:#fff;padding:15px 20px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 10px rgba(0,0,0,0.05);position:sticky;top:0;z-index:1000;}
+        header a{color:#22c55e;text-decoration:none;font-weight:bold;}
+        .lang{cursor:pointer;background:#020617;color:#fff;padding:8px 15px;border-radius:20px;font-size:14px;font-weight:bold;}
+        
+        .page-header{background:linear-gradient(135deg, #020617, #0f172a);color:white;padding:40px 20px;text-align:center;}
+        .page-header h1{font-size:32px;margin-bottom:15px;display:flex;align-items:center;justify-content:center;gap:12px;}
+        .page-header p{font-size:18px;opacity:0.9;}
+        
+        .poll-container{width:100%;padding:20px;background:#fff;}
+        iframe{width:100%;height:650px;border:none;display:block;background:#fff;}
+        
+        .note{background:#eef2ff;padding:18px;text-align:center;margin:20px;border-radius:20px;color:#1e40af;}
+        .whatsapp-btn{position:fixed;bottom:25px;right:25px;background:#25d366;color:white;padding:12px 22px;border-radius:50px;text-decoration:none;display:flex;align-items:center;gap:10px;z-index:9999;}
+        
+        footer{background:#020617;color:#94a3b8;text-align:center;padding:20px;margin-top:40px;}
+        
+        @media (max-width:600px){
+            .page-header h1{font-size:24px;}
+            iframe{height:550px;}
+            .whatsapp-btn{padding:12px;border-radius:50%;}
+            .whatsapp-btn span{display:none;}
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="/"><i class="fas fa-home"></i> <span data-ar="الرئيسية" data-en="Home">الرئيسية</span></a>
+    <div class="lang" id="langBtn"><i class="fas fa-globe"></i> English</div>
+</header>
+
+<div class="page-header">
+    <h1><i class="fas fa-chart-simple" style="color:#22c55e;"></i> <span data-ar="تصويت: أكثر مشكلة تواجهها في الستالايت؟" data-en="Poll: Most Common Satellite Problem?">تصويت: أكثر مشكلة تواجهها في الستالايت؟</span></h1>
+    <p><span data-ar="شارك برأيك لمساعدتنا في تقديم حلول أفضل" data-en="Share your opinion to help us provide better solutions">شارك برأيك لمساعدتنا في تقديم حلول أفضل</span></p>
+</div>
+
+<div class="poll-container">
+    <iframe id="pollFrame" src="https://docs.google.com/forms/d/e/1FAIpQLSchsa1fW-NsDQmfOKrPCwtpogoZ_OG6WmnhEpg0xEqnYQTk2Q/viewform?embedded=true" frameborder="0"></iframe>
+</div>
+
+<div class="note">
+    <i class="fas fa-info-circle"></i>
+    <span data-ar="💡 سيتم استخدام نتائج هذا التصويت لتقديم حلول للمشكلة الأكثر شيوعاً." data-en="💡 Poll results will be used to provide solutions for the most common problem.">
+        💡 سيتم استخدام نتائج هذا التصويت لتقديم حلول للمشكلة الأكثر شيوعاً.
+    </span>
+</div>
+
+<footer>© 2026 <span data-ar="ستالايت دمشق" data-en="Damascus Satellite">ستالايت دمشق</span></footer>
+
+<a href="https://wa.me/963990024693" class="whatsapp-btn" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+    <span>تواصل معنا</span>
+</a>
+
+<script>
+    (function(){
+        const langBtn = document.getElementById("langBtn");
+        const pollFrame = document.getElementById("pollFrame");
+        let currentLang = localStorage.getItem("myWebLang") || "ar";
+        
+        // الروابط المباشرة للنماذج (بدون embedded=true)
+        const arabicFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSchsa1fW-NsDQmfOKrPCwtpogoZ_OG6WmnhEpg0xEqnYQTk2Q/viewform';
+        const englishFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSdczRLyAezKbFGm_GGmV_jIZLe2N46q7DqfDUGbdBw4kvE0QA/viewform';
+        
+        function updatePollLanguage() {
+            if (currentLang === 'ar') {
+                pollFrame.src = arabicFormUrl;
+            } else {
+                pollFrame.src = englishFormUrl;
+            }
+        }
+        
+        function applyLang(){
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
+            
+            document.querySelectorAll("[data-ar]").forEach(el => {
+                el.innerText = el.getAttribute("data-" + currentLang);
+            });
+            
+            const titleEl = document.getElementById("pageTitle");
+            const descEl = document.getElementById("pageDesc");
+            if(titleEl) titleEl.innerText = titleEl.getAttribute("data-" + currentLang);
+            if(descEl) descEl.setAttribute("content", descEl.getAttribute("data-" + currentLang));
+            
+            if(langBtn){
+                langBtn.innerHTML = currentLang === "ar" ? '<i class="fas fa-globe"></i> English' : '<i class="fas fa-globe"></i> العربية';
+            }
+            
+            updatePollLanguage();
+            localStorage.setItem("myWebLang", currentLang);
+        }
+        
+        if(langBtn){
+            langBtn.onclick = function(){
+                currentLang = currentLang === "ar" ? "en" : "ar";
+                applyLang();
+            };
+        }
+        
+        applyLang();
+    })();
+</script>
+
+</body>
+</html>

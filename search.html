@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" href="favicon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>البحث عن تردد القنوات | ستالايت دمشق</title>
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0;}
+        body{
+            font-family:Arial,sans-serif;
+            background:#f1f5f9;
+            text-align:center;
+            padding:40px 20px;
+            color:#0f172a;
+        }
+        
+        h1{
+            color:#0f172a;
+            margin-bottom:10px;
+        }
+        h2{
+            color:#475569;
+            font-size:18px;
+            font-weight:normal;
+            margin-bottom:25px;
+        }
+        
+        #search{
+            padding:14px 18px;
+            font-size:16px;
+            width:100%;
+            max-width:450px;
+            border-radius:40px;
+            border:2px solid #e2e8f0;
+            outline:none;
+            background:#fff;
+        }
+        #search:focus{
+            border-color:#22c55e;
+            box-shadow:0 0 0 3px rgba(34,197,94,0.1);
+        }
+        
+        .table-wrapper{
+            overflow-x:auto;
+            margin-top:30px;
+            border-radius:20px;
+            box-shadow:0 4px 15px rgba(0,0,0,0.05);
+        }
+        
+        table{
+            width:100%;
+            max-width:1000px;
+            margin:auto;
+            border-collapse:collapse;
+            background:white;
+            border-radius:20px;
+            overflow:hidden;
+        }
+        
+        th{
+            background:linear-gradient(135deg, #22c55e, #16a34a);
+            color:white;
+            padding:14px;
+            font-weight:bold;
+        }
+        
+        td{
+            padding:12px;
+            border-bottom:1px solid #e2e8f0;
+            color:#334155;
+        }
+        
+        tr:hover{
+            background:#f8fafc;
+        }
+        
+        .back-btn{
+            display:inline-block;
+            padding:10px 20px;
+            background:#020617;
+            color:#fff;
+            text-decoration:none;
+            border-radius:30px;
+            font-size:14px;
+            margin-top:30px;
+            transition:0.3s;
+        }
+        .back-btn:hover{
+            background:#22c55e;
+            transform:scale(1.05);
+        }
+        
+        .whatsapp-btn{
+            position:fixed;
+            bottom:25px;
+            right:25px;
+            background:#25d366;
+            color:white;
+            padding:12px 22px;
+            border-radius:50px;
+            text-decoration:none;
+            font-weight:bold;
+            display:flex;
+            align-items:center;
+            gap:10px;
+            box-shadow:0 4px 15px rgba(0,0,0,0.3);
+            z-index:9999;
+            transition:0.3s;
+        }
+        .whatsapp-btn i{font-size:24px;}
+        .whatsapp-btn:hover{
+            background:#128c7e;
+            transform:scale(1.05);
+        }
+        
+        @media (max-width:480px){
+            .btn-text{display:none;}
+            .whatsapp-btn{padding:15px;border-radius:50%;bottom:20px;right:20px;}
+            th,td{font-size:12px;padding:8px;}
+        }
+    </style>
+</head>
+<body>
+
+<h1><i class="fas fa-search" style="color:#22c55e;"></i> البحث عن تردد القنوات</h1>
+<h2>ابحث عن ترددات القنوات العربية والعالمية بسهولة</h2>
+
+<input type="text" id="search" placeholder="اكتب اسم القناة...">
+
+<div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                <th>القناة</th>
+                <th>القمر</th>
+                <th>التردد</th>
+                <th>الاستقطاب</th>
+                <th>الترميز</th>
+            </tr>
+        </thead>
+        <tbody id="results"></tbody>
+    证
+</div>
+
+<div style="text-align:center;">
+    <a href="/" class="back-btn"><i class="fas fa-arrow-right"></i> العودة للرئيسية</a>
+</div>
+
+<script>
+    let channels=[];
+
+    fetch("channels.json")
+    .then(res=>res.json())
+    .then(data=>{
+        channels=data;
+        show(channels);
+    })
+    .catch(err=>{
+        document.getElementById("results").innerHTML = '<tr><td colspan="5">خطأ في تحميل البيانات. تأكد من وجود ملف channels.json</td></tr>';
+    });
+
+    const search=document.getElementById("search");
+
+    search.addEventListener("keyup",()=>{
+        let text=search.value.toLowerCase().trim();
+        if(text.length < 2) {
+            show(channels);
+            return;
+        }
+        let filtered=channels.filter(c =>
+            c.name.toLowerCase().includes(text)
+        );
+        show(filtered);
+    });
+
+    function show(list){
+        const table=document.getElementById("results");
+        table.innerHTML="";
+        if(list.length === 0){
+            table.innerHTML = '<tr><td colspan="5">لا توجد نتائج</td></tr>';
+            return;
+        }
+        list.forEach(c=>{
+            table.innerHTML+=`
+                <tr>
+                    <td>${c.name}</td>
+                    <td>${c.sat}</td>
+                    <td>${c.freq}</td>
+                    <td>${c.pol}</td>
+                    <td>${c.sr}</td>
+                </tr>
+            `;
+        });
+    }
+</script>
+
+<a href="https://wa.me/963990024693" class="whatsapp-btn" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+    <span class="btn-text">تواصل معنا</span>
+</a>
+
+</body>
+</html>

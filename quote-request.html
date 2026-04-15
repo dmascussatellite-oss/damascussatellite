@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>طلب عرض سعر | ستالايت دمشق</title>
+    <link rel="icon" href="favicon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0;}
+        body{font-family:Arial,sans-serif;background:#f1f5f9;color:#0f172a;padding-bottom:50px;}
+        
+        header{background:#fff;padding:15px 20px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 10px rgba(0,0,0,0.05);position:sticky;top:0;z-index:1000;}
+        header a{color:#22c55e;text-decoration:none;font-weight:bold;display:flex;align-items:center;gap:8px;}
+        
+        .lang{cursor:pointer;background:#020617;color:#fff;padding:8px 15px;border-radius:20px;font-size:14px;font-weight:bold;}
+        
+        .container{max-width:700px;margin:40px auto;padding:20px;}
+        
+        .form-card{
+            background:#fff;
+            border-radius:24px;
+            padding:35px;
+            box-shadow:0 4px 15px rgba(0,0,0,0.05);
+        }
+        .form-card h1{
+            text-align:center;
+            margin-bottom:5px;
+            font-size:28px;
+        }
+        .form-card h2{
+            text-align:center;
+            font-size:16px;
+            color:#475569;
+            margin-bottom:15px;
+            font-weight:normal;
+        }
+        .form-card .sub-desc{
+            text-align:center;
+            color:#475569;
+            margin-bottom:30px;
+            font-size:14px;
+        }
+        
+        .form-group{
+            margin-bottom:20px;
+        }
+        label{
+            display:block;
+            font-weight:bold;
+            margin-bottom:8px;
+            color:#0f172a;
+        }
+        input, select, textarea{
+            width:100%;
+            padding:12px 15px;
+            border:2px solid #e2e8f0;
+            border-radius:12px;
+            font-size:16px;
+            outline:none;
+            font-family:inherit;
+        }
+        input:focus, select:focus, textarea:focus{
+            border-color:#22c55e;
+        }
+        
+        button{
+            background:#22c55e;
+            color:#fff;
+            padding:14px 28px;
+            border:none;
+            border-radius:40px;
+            font-size:16px;
+            font-weight:bold;
+            cursor:pointer;
+            width:100%;
+            margin-top:15px;
+            transition:0.3s;
+        }
+        button:hover{
+            background:#16a34a;
+            transform:scale(1.02);
+        }
+        
+        .note{
+            background:#f8fafc;
+            padding:15px;
+            border-radius:12px;
+            margin-top:20px;
+            text-align:center;
+            color:#475569;
+            font-size:13px;
+        }
+        
+        .back-btn{
+            display:inline-block;
+            padding:10px 20px;
+            background:#020617;
+            color:#fff;
+            text-decoration:none;
+            border-radius:30px;
+            font-size:14px;
+            margin-top:20px;
+            transition:0.3s;
+        }
+        .back-btn:hover{
+            background:#22c55e;
+            transform:scale(1.05);
+        }
+        
+        @media (max-width:600px){
+            .form-card{padding:25px;}
+            .form-card h1{font-size:24px;}
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="/">
+        <i class="fas fa-home"></i> 
+        <span data-ar="الرئيسية" data-en="Home">الرئيسية</span>
+    </a>
+    <div class="lang" id="langBtn"><i class="fas fa-globe"></i> English</div>
+</header>
+
+<div class="container">
+    <div class="form-card">
+        <h1><i class="fas fa-file-invoice-dollar" style="color:#22c55e;"></i> <span data-ar="طلب عرض سعر" data-en="Request a Quote">طلب عرض سعر</span></h1>
+        
+        <!-- H2 المضافة لتحسين SEO -->
+        <h2>
+            <span data-ar="احصل على عرض سعر دقيق خلال 24 ساعة" data-en="Get an accurate quote within 24 hours">
+                احصل على عرض سعر دقيق خلال 24 ساعة
+            </span>
+        </h2>
+        
+        <p class="sub-desc" data-ar="املأ النموذج وسنقوم بالرد عليك بأسرع وقت مع عرض سعر مناسب" data-en="Fill out the form and we will get back to you as soon as possible with a suitable quote">
+            املأ النموذج وسنقوم بالرد عليك بأسرع وقت مع عرض سعر مناسب
+        </p>
+        
+        <form id="quoteForm">
+            <div class="form-group">
+                <label><i class="fas fa-user"></i> <span data-ar="الاسم كاملاً" data-en="Full Name">الاسم كاملاً</span> *</label>
+                <input type="text" name="name" required placeholder="أدخل اسمك">
+            </div>
+            
+            <div class="form-group">
+                <label><i class="fas fa-phone"></i> <span data-ar="رقم الهاتف" data-en="Phone Number">رقم الهاتف</span> *</label>
+                <input type="tel" name="phone" required placeholder="09XXXXXXXX">
+            </div>
+            
+            <div class="form-group">
+                <label><i class="fas fa-map-marker-alt"></i> <span data-ar="الحي" data-en="District">الحي</span> *</label>
+                <select name="district" required>
+                    <option value="">-- <span data-ar="اختر الحي" data-en="Select district">اختر الحي</span> --</option>
+                    <option value="mezzeh" data-ar="المزة" data-en="Mezzeh">المزة</option>
+                    <option value="kafrsouseh" data-ar="كفرسوسة" data-en="Kafr Souseh">كفرسوسة</option>
+                    <option value="barzeh" data-ar="برزة" data-en="Barzeh">برزة</option>
+                    <option value="midan" data-ar="الميدان" data-en="Midan">الميدان</option>
+                    <option value="muhajreen" data-ar="المهاجرين" data-en="Muhajreen">المهاجرين</option>
+                    <option value="qaboun" data-ar="القابون" data-en="Qaboun">القابون</option>
+                    <option value="jarmana" data-ar="جرمانا" data-en="Jaramana">جرمانا</option>
+                    <option value="dweilaa" data-ar="الدويلعة" data-en="Dweilaa">الدويلعة</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label><i class="fas fa-tools"></i> <span data-ar="نوع الخدمة" data-en="Service Type">نوع الخدمة</span> *</label>
+                <select name="service" required>
+                    <option value="">-- <span data-ar="اختر نوع الخدمة" data-en="Select service type">اختر نوع الخدمة</span> --</option>
+                    <option value="new_installation" data-ar="تركيب جديد (طبق + رسيفر)" data-en="New Installation (Dish + Receiver)">تركيب جديد (طبق + رسيفر)</option>
+                    <option value="maintenance" data-ar="صيانة وبرمجة" data-en="Maintenance & Programming">صيانة وبرمجة</option>
+                    <option value="tv_mounting" data-ar="تركيب شاشة" data-en="TV Mounting">تركيب شاشة</option>
+                    <option value="signal_tuning" data-ar="ضبط إشارة فقط" data-en="Signal Tuning Only">ضبط إشارة فقط</option>
+                    <option value="cable_extension" data-ar="تمديد شبكة" data-en="Cable Extension">تمديد شبكة</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label><i class="fas fa-comment"></i> <span data-ar="ملاحظات إضافية" data-en="Additional Notes">ملاحظات إضافية</span></label>
+                <textarea name="notes" rows="4" placeholder="أضف أي تفاصيل إضافية..."></textarea>
+            </div>
+            
+            <div class="note">
+                <i class="fas fa-info-circle"></i> 
+                <span data-ar="سيتم التواصل معك عبر واتساب أو الهاتف لتأكيد الطلب وتقديم عرض السعر المناسب." data-en="We will contact you via WhatsApp or phone to confirm your request and provide a suitable quote.">
+                    سيتم التواصل معك عبر واتساب أو الهاتف لتأكيد الطلب وتقديم عرض السعر المناسب.
+                </span>
+            </div>
+            
+            <button type="submit">
+                <i class="fab fa-whatsapp"></i> <span data-ar="إرسال الطلب عبر واتساب" data-en="Send Request via WhatsApp">إرسال الطلب عبر واتساب</span>
+            </button>
+        </form>
+    </div>
+    
+    <div style="text-align:center; margin-top:20px;">
+        <a href="/" class="back-btn"><i class="fas fa-arrow-right"></i> <span data-ar="العودة للرئيسية" data-en="Back to Home">العودة للرئيسية</span></a>
+    </div>
+</div>
+
+<script>
+    // إرسال الطلب عبر واتساب
+    document.getElementById('quoteForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const name = document.querySelector('input[name="name"]').value;
+        const phone = document.querySelector('input[name="phone"]').value;
+        const district = document.querySelector('select[name="district"]').value;
+        const service = document.querySelector('select[name="service"]').value;
+        const notes = document.querySelector('textarea[name="notes"]').value;
+        
+        // التحقق من الحقول المطلوبة
+        if(!name || !phone || !district || !service) {
+            const currentLang = localStorage.getItem("myWebLang") || "ar";
+            alert(currentLang === "ar" ? "يرجى تعبئة جميع الحقول المطلوبة" : "Please fill in all required fields");
+            return;
+        }
+        
+        // ترجمة الخيارات
+        const districtText = document.querySelector('select[name="district"] option[value="' + district + '"]').innerText;
+        const serviceText = document.querySelector('select[name="service"] option[value="' + service + '"]').innerText;
+        
+        const message = `📡 *طلب عرض سعر - ستالايت دمشق*%0A%0A👤 *الاسم:* ${name}%0A📞 *رقم الهاتف:* ${phone}%0A📍 *الحي:* ${districtText}%0A🛠️ *الخدمة:* ${serviceText}%0A📝 *ملاحظات:* ${notes || "لا يوجد"}%0A%0A🔗 يرجى التواصل مع العميل لتقديم عرض السعر.`;
+        
+        const whatsappUrl = `https://wa.me/963990024693?text=${message}`;
+        window.open(whatsappUrl, '_blank');
+        
+        // رسالة تأكيد للمستخدم
+        const currentLang = localStorage.getItem("myWebLang") || "ar";
+        alert(currentLang === "ar" ? "✅ تم إرسال طلبك! سيتم التواصل معك عبر واتساب خلال 24 ساعة." : "✅ Your request has been sent! You will be contacted via WhatsApp within 24 hours.");
+        
+        // إعادة تعيين النموذج
+        document.getElementById('quoteForm').reset();
+    });
+    
+    // نظام اللغة
+    (function(){
+        const langBtn = document.getElementById("langBtn");
+        let currentLang = localStorage.getItem("myWebLang") || "ar";
+        
+        function applyLang(){
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
+            
+            document.querySelectorAll("[data-ar]").forEach(el => {
+                if(el.tagName === 'A') return;
+                if(el.tagName === 'OPTION') {
+                    const text = el.getAttribute("data-" + currentLang);
+                    if(text) el.innerText = text;
+                } else {
+                    el.innerText = el.getAttribute("data-" + currentLang);
+                }
+            });
+            
+            langBtn.innerHTML = currentLang === "ar" ? '<i class="fas fa-globe"></i> English' : '<i class="fas fa-globe"></i> العربية';
+            localStorage.setItem("myWebLang", currentLang);
+        }
+        
+        langBtn.onclick = function(){
+            currentLang = currentLang === "ar" ? "en" : "ar";
+            applyLang();
+        };
+        applyLang();
+    })();
+</script>
+
+</body>
+</html>

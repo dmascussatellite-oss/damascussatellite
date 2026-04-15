@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">    
+
+<title id="pageTitle"
+data-ar="تركيب شاشات تلفزيون في دمشق | تثبيت جداري احترافي"
+data-en="TV Installation in Damascus | Professional Wall Mounting">
+تركيب شاشات تلفزيون في دمشق | تثبيت جداري احترافي
+</title>
+
+<meta name="description" id="pageDesc"
+data-ar="خدمة تركيب شاشات التلفزيون في دمشق. تثبيت جداري آمن، ترتيب كابلات، وضبط الإعدادات لجميع أنواع الشاشات. اتصل بنا 0990024693"
+data-en="TV installation services in Damascus. Secure wall mounting, cable management, and setup for all TV brands. Call us 0990024693"
+content="خدمة تركيب شاشات التلفزيون في دمشق. تثبيت جداري آمن وترتيب كابلات.">
+
+<style>
+/* نفس الستايل الموحد */
+*{box-sizing:border-box;margin:0;padding:0;transition: direction 0.3s ease, background-color 0.3s ease;}
+body{font-family:Arial,sans-serif;line-height:1.8;background:#f1f5f9;color:#0f172a;padding:40px 20px;max-width:900px;margin:auto}
+.lang{position:fixed;top:20px;min-width:120px;text-align:center;background:#fff;padding:10px 18px;border-radius:25px;font-weight:bold;cursor:pointer;box-shadow:0 3px 10px rgba(0,0,0,.25);z-index:9999;direction:ltr;color:#020617}
+html[dir="rtl"] .lang{left:20px}
+html[dir="ltr"] .lang{right:20px}
+h1{color:#020617; margin-bottom:20px; font-size:32px;}
+.card{background:#fff; padding:30px; border-radius:16px; box-shadow:0 4px 12px rgba(0,0,0,0.05);}
+a{color:#22c55e; font-weight:bold; text-decoration:none;}
+ul{margin:20px 0; padding-right:20px;}
+html[dir="ltr"] ul{padding-left:20px; padding-right:0;}
+li{margin-bottom:10px;}
+.back-home{display:inline-block; margin-top:40px; padding:10px 20px; background:#020617; color:#fff !important; border-radius:8px; font-size:14px;}
+</style>
+</head>
+
+<body>
+
+<div class="lang" id="langBtn"><i class="fas fa-globe"></i> English</div>
+
+<div class="card">
+    <h1 data-ar="تركيب شاشات في دمشق" data-en="TV Installation in Damascus">
+    تركيب شاشات في دمشق
+    </h1>
+
+    <p data-ar="نقدم خدمة تركيب شاشات التلفزيون (LED, LCD, OLED) بجميع الأحجام مع تأمين حوامل جدارية متينة واحترافية عالية."
+    data-en="We provide TV installation services (LED, LCD, OLED) for all sizes with high-quality wall mounts and professional setup.">
+    نقدم خدمة تركيب شاشات التلفزيون بجميع الأحجام مع تأمين حوامل جدارية متينة واحترافية عالية.
+    </p>
+
+    <h2 data-ar="مميزات الخدمة:" data-en="Service Features:">
+    مميزات الخدمة:
+    </h2>
+
+    <ul>
+    <li data-ar="تثبيت جداري آمن وموزون" data-en="Secure and leveled wall mounting">تثبيت جداري آمن وموزون</li>
+    <li data-ar="إخفاء وترتيب الأسلاك بشكل جمالي" data-en="Aesthetic cable management and hiding">إخفاء وترتيب الأسلاك بشكل جمالي</li>
+    <li data-ar="توصيل وبرمجة الرسيفر مع الشاشة" data-en="Connecting and programming receiver with TV">توصيل وبرمجة الرسيفر مع الشاشة</li>
+    <li data-ar="تأمين قواعد وحوامل شاشات ممتازة" data-en="Providing high-quality TV brackets and mounts">تأمين قواعد وحوامل شاشات ممتازة</li>
+    </ul>
+
+    <p style="font-size:20px;">📞 <a href="tel:0990024693" data-ar="للحجز والطلب: 0990024693" data-en="For booking: 0990024693">للحجز والطلب: 0990024693</a></p>
+
+    <a href="/" class="back-home" data-ar="← العودة إلى الصفحة الرئيسية" data-en="← Back to Home Page">
+    العودة إلى الصفحة الرئيسية
+    </a>
+</div>
+
+<script>
+/* نفس كود الجافاسكريبت الموحد */
+(function(){
+    const langBtn = document.getElementById("langBtn");
+    const pageTitle = document.getElementById("pageTitle");
+    let currentLang = localStorage.getItem("myWebLang") || "ar";
+
+    function applyLang(){
+        document.documentElement.lang = currentLang;
+        document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
+        document.querySelectorAll("[data-ar]").forEach(el => {
+            el.innerText = el.getAttribute("data-" + currentLang);
+        });
+        document.title = pageTitle.getAttribute("data-" + currentLang);
+        langBtn.innerHTML = currentLang === "ar" ? '<i class="fas fa-globe"></i> English' : '<i class="fas fa-globe"></i> العربية';
+        localStorage.setItem("myWebLang", currentLang);
+    }
+
+    langBtn.onclick = function(){
+        currentLang = currentLang === "ar" ? "en" : "ar";
+        applyLang();
+    };
+    applyLang();
+})();
+</script>
+<a href="https://wa.me/963990024693" class="whatsapp-btn" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+    <span class="btn-text">تواصل معنا</span>
+</a>
+
+<style>
+/* تنسيق الزر ليظهر بشكل احترافي */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25d366;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    z-index: 9999;
+}
+
+.whatsapp-btn i { font-size: 24px; }
+
+.whatsapp-btn:hover {
+    background-color: #128c7e;
+    transform: scale(1.05);
+}
+
+/* للموبايل: نكتفي بالأيقونة فقط لتوفير مساحة */
+@media (max-width: 480px) {
+    .btn-text { display: none; }
+    .whatsapp-btn { padding: 15px; border-radius: 50%; bottom: 20px; right: 20px; }
+}
+</style>
+</body>
+</html>

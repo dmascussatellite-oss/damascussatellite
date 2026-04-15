@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>دليل الترددات المباشر | ستالايت دمشق</title>
+    <link rel="icon" href="favicon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0;transition:all 0.3s ease;}
+        body{font-family:Arial,sans-serif;background:#f1f5f9;color:#0f172a;height:100vh;display:flex;flex-direction:column;}
+        
+        header{background:#fff;padding:15px 20px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 10px rgba(0,0,0,0.05);position:sticky;top:0;z-index:1000;}
+        header a{color:#22c55e;text-decoration:none;font-weight:bold;display:flex;align-items:center;gap:8px;}
+        
+        .lang{cursor:pointer;background:#020617;color:#fff;padding:8px 15px;border-radius:20px;font-size:14px;font-weight:bold;}
+        
+        .page-header{
+            background:linear-gradient(135deg, #020617, #0f172a);
+            color:white;
+            padding:30px 20px;
+            text-align:center;
+        }
+        .page-header h1{
+            font-size:32px;
+            margin-bottom:10px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            gap:12px;
+        }
+        .page-header p{
+            font-size:16px;
+            opacity:0.9;
+        }
+        
+        /* H2 للقسم */
+        .section-title{
+            text-align:center;
+            margin:20px 0 15px;
+            color:#0f172a;
+            font-size:22px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            gap:10px;
+        }
+        .section-title i{
+            color:#22c55e;
+        }
+        
+        .iframe-container {
+            flex: 1;
+            width: 100%;
+            background: #fff;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        /* رسالة بديلة */
+        .fallback-message {
+            display: none;
+            text-align: center;
+            padding: 50px 20px;
+            background: #fff;
+            height: 100%;
+        }
+        .fallback-message i {
+            font-size: 60px;
+            color: #22c55e;
+            margin-bottom: 20px;
+        }
+        .fallback-message h3 {
+            color: #0f172a;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        .fallback-message p {
+            color: #475569;
+            margin-bottom: 20px;
+        }
+        .fallback-message a {
+            display: inline-block;
+            background: #22c55e;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            margin: 5px;
+        }
+        
+        .note {
+            background: #f0f9ff;
+            color: #0369a1;
+            padding: 8px 15px;
+            text-align: center;
+            font-size: 14px;
+            border-bottom: 1px solid #e0f2fe;
+        }
+        .note i { color: #0ea5e9; margin-left: 5px; }
+        
+        .whatsapp-btn{
+            position:fixed;bottom:25px;right:25px;background:#25d366;color:white;
+            padding:12px 22px;border-radius:50px;text-decoration:none;font-weight:bold;
+            display:flex;align-items:center;gap:10px;box-shadow:0 4px 15px rgba(0,0,0,0.3);
+            z-index:9999;
+        }
+        .whatsapp-btn i{font-size:24px;}
+        .whatsapp-btn:hover{background:#128c7e;transform:scale(1.05);}
+        
+        @media (max-width:480px){
+            .btn-text{display:none;}
+            .whatsapp-btn{padding:15px;border-radius:50%;}
+            .page-header h1{font-size:24px;}
+            .page-header{padding:20px;}
+            .fallback-message a{display:block;margin:10px 20px;}
+            .section-title{font-size:18px;}
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="/">
+        <i class="fas fa-home"></i> 
+        <span data-ar="الرئيسية" data-en="Home">الرئيسية</span>
+    </a>
+    <div class="lang" id="langBtn"><i class="fas fa-globe"></i> English</div>
+</header>
+
+<!-- H1 الرئيسي للصفحة -->
+<div class="page-header">
+    <h1>
+        <i class="fas fa-satellite-dish" style="color: #22c55e;"></i>
+        <span data-ar="دليل الترددات المباشر" data-en="Live Frequency Guide">دليل الترددات المباشر</span>
+    </h1>
+    <p>
+        <span data-ar="أحدث ترددات القنوات العربية والعالمية محدثة يومياً" data-en="Latest Arab and international channel frequencies updated daily">
+            أحدث ترددات القنوات العربية والعالمية محدثة يومياً
+        </span>
+    </p>
+</div>
+
+<!-- H2 -->
+<h2 class="section-title">
+    <i class="fas fa-satellite"></i>
+    <span data-ar="مصدر الترددات" data-en="Frequency Source">مصدر الترددات</span>
+</h2>
+
+<div class="note">
+    <i class="fas fa-info-circle"></i>
+    <span data-ar="آخر تحديثات الترددات مباشرة من موقع KingOfSat العالمي" data-en="Latest frequency updates directly from KingOfSat">
+        آخر تحديثات الترددات مباشرة من موقع KingOfSat العالمي
+    </span>
+</div>
+
+<div class="iframe-container">
+    <iframe id="freqFrame" src="https://ar.kingofsat.net/" allowfullscreen></iframe>
+    
+    <!-- رسالة بديلة إذا لم يتم تحميل iframe -->
+    <div id="fallback" class="fallback-message">
+        <i class="fas fa-exclamation-triangle"></i>
+        <h3 data-ar="⚠️ لم يتم تحميل دليل الترددات" data-en="⚠️ Frequency guide could not be loaded">⚠️ لم يتم تحميل دليل الترددات</h3>
+        <p data-ar="قد يكون الموقع محجوباً أو بطيئاً. يمكنك زيارة المصادر المباشرة:" data-en="The site may be blocked or slow. You can visit direct sources:">
+            قد يكون الموقع محجوباً أو بطيئاً. يمكنك زيارة المصادر المباشرة:
+        </p>
+        <a href="https://www.lyngsat.com/" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-tv"></i> Lyngsat.com
+        </a>
+        <a href="https://www.kingofsat.net/" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-satellite"></i> KingOfSat.net
+        </a>
+        <a href="/" style="background:#020617;">
+            <i class="fas fa-home"></i> <span data-ar="العودة للرئيسية" data-en="Back to Home">العودة للرئيسية</span>
+        </a>
+    </div>
+</div>
+
+<script>
+    (function(){
+        const langBtn = document.getElementById("langBtn");
+        let currentLang = localStorage.getItem("myWebLang") || "ar";
+        
+        function applyLang(){
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
+            
+            document.querySelectorAll("[data-ar]").forEach(el => {
+                el.innerText = el.getAttribute("data-" + currentLang);
+            });
+            
+            langBtn.innerHTML = currentLang === "ar" ? 
+                '<i class="fas fa-globe"></i> English' : 
+                '<i class="fas fa-globe"></i> العربية';
+            
+            localStorage.setItem("myWebLang", currentLang);
+        }
+        
+        langBtn.onclick = function(){
+            currentLang = currentLang === "ar" ? "en" : "ar";
+            applyLang();
+        };
+        
+        applyLang();
+    })();
+    
+    // التحقق من تحميل iframe
+    const iframe = document.getElementById('freqFrame');
+    const fallback = document.getElementById('fallback');
+    let timeoutId;
+    
+    function showFallback() {
+        iframe.style.display = 'none';
+        fallback.style.display = 'block';
+    }
+    
+    // إذا لم يتم تحميل iframe خلال 5 ثوانٍ، تظهر الرسالة البديلة
+    timeoutId = setTimeout(showFallback, 5000);
+    
+    iframe.addEventListener('load', function() {
+        clearTimeout(timeoutId);
+        iframe.style.display = 'block';
+        fallback.style.display = 'none';
+    });
+    
+    iframe.addEventListener('error', function() {
+        showFallback();
+    });
+</script>
+
+<a href="https://wa.me/963990024693" class="whatsapp-btn" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+    <span class="btn-text">تواصل معنا</span>
+</a>
+
+</body>
+</html>

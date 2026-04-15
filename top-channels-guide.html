@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title id="pageTitle">دليل أفضل القنوات والإذاعات المفتوحة | ستالايت دمشق</title>
+    <link rel="icon" href="favicon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0;}
+        body{font-family:Arial,sans-serif;background:#f1f5f9;color:#0f172a;padding-bottom:50px;}
+        header{background:#fff;padding:15px 20px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 10px rgba(0,0,0,0.05);position:sticky;top:0;z-index:1000;}
+        header a{color:#22c55e;text-decoration:none;font-weight:bold;display:flex;align-items:center;gap:8px;}
+        .lang{cursor:pointer;background:#020617;color:#fff;padding:8px 15px;border-radius:20px;font-size:14px;font-weight:bold;}
+        .container{max-width:1100px;margin:40px auto;padding:20px;}
+        .page-title{text-align:center;margin-bottom:40px;}
+        .page-title h1{font-size:36px;color:#0f172a;margin-bottom:10px;}
+        .page-title p{color:#475569;font-size:18px;}
+        .section{background:#fff;border-radius:24px;padding:25px;margin-bottom:30px;box-shadow:0 4px 15px rgba(0,0,0,0.05);}
+        .section h2{color:#22c55e;margin-bottom:20px;border-right:3px solid #22c55e;padding-right:15px;font-size:24px;}
+        table{width:100%;border-collapse:collapse;margin-top:15px;}
+        th{background:#f1f5f9;padding:12px;text-align:center;}
+        td{padding:10px;border-bottom:1px solid #e2e8f0;}
+        .note-box{background:#fef9c3;padding:15px;border-radius:16px;margin-top:20px;border-right:3px solid #eab308;}
+        .back-btn{display:inline-block;padding:10px 20px;background:#020617;color:#fff;text-decoration:none;border-radius:30px;margin-top:20px;transition:0.3s;}
+        .back-btn:hover{background:#22c55e;transform:scale(1.05);}
+        @media (max-width:600px){th,td{font-size:12px;padding:6px;} .page-title h1{font-size:28px;}}
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="/"><i class="fas fa-home"></i> <span id="homeText">الرئيسية</span></a>
+    <div class="lang" id="langBtn"><i class="fas fa-globe"></i> English</div>
+</header>
+
+<div class="container">
+    <div class="page-title">
+        <h1><i class="fas fa-star" style="color:#22c55e;"></i> <span id="pageTitleH1">دليل أفضل القنوات والإذاعات المفتوحة</span></h1>
+        <p id="pageDesc">أقوى القنوات العربية والأجنبية والإذاعات غير المشفرة على الأقمار الصناعية</p>
+    </div>
+    
+    <!-- القنوات العربية -->
+    <div class="section">
+        <h2 id="arabTitle"><i class="fas fa-tv"></i> أقوى القنوات العربية (نايل سات 7° غرب)</h2>
+        <table id="arabTable">
+            <thead>——
+                <th id="th1">القناة</th>
+                <th id="th2">التردد</th>
+                <th id="th3">الاستقطاب</th>
+                <th id="th4">الترميز</th>
+                <th id="th5">التصنيف</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr><td>MBC 1 / MBC 2 / MBC 3 / MBC 4</td><td>11819</td><td>V</td><td>27500</td><td id="cat1">ترفيهية، منوعة</td></tr>
+                <tr><td>MBC Action / MBC Max / MBC Drama</td><td>11747</td><td>V</td><td>27500</td><td id="cat2">أفلام، مسلسلات</td></tr>
+                <tr><td>قناة الجزيرة الإخبارية</td><td>11137</td><td>V</td><td>27500</td><td id="cat3">إخبارية</td></tr>
+                <tr><td>قناة السعودية / القرآن / السنة</td><td>12188</td><td>H</td><td>27500</td><td id="cat4">دينية، إخبارية</td></tr>
+                <tr><td>LBC دراما</td><td>12226</td><td>H</td><td>27500</td><td id="cat5">دراما</td></tr>
+                <tr><td>قناة أبوظبي TV / دبي TV</td><td>12054 / 12418</td><td>H / H</td><td>30000 / 30000</td><td id="cat6">ترفيهية، منوعة</td></tr>
+                <tr><td>SBC HD</td><td>12284</td><td>V</td><td>27500</td><td id="cat7">ترفيهية سعودية</td></tr>
+            </tbody>
+        </table>
+        <div class="note-box"><i class="fas fa-satellite-dish"></i> <strong id="note1">ملاحظة:</strong> <span id="note1Text">هذه القنوات مفتوحة (FTA) وتستقبل على طبق 60-80 سم في دمشق.</span></div>
+    </div>
+    
+    <!-- القنوات الأجنبية -->
+    <div class="section">
+        <h2 id="intTitle"><i class="fas fa-globe"></i> أقوى القنوات الأجنبية (هوت بيرد 13° شرق)</h2>
+        <table id="intTable">
+            <thead>——
+                <th id="int1">القناة</th>
+                <th id="int2">التردد</th>
+                <th id="int3">الاستقطاب</th>
+                <th id="int4">الترميز</th>
+                <th id="int5">التصنيف</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr><td>RT / France 24 / BBC World / Euronews</td><td>11055</td><td>H</td><td>27500</td><td id="intCat1">إخبارية عالمية</td></tr>
+                <tr><td>Canale 5 Italia</td><td>11917</td><td>V</td><td>27500</td><td id="intCat2">ترفيهية إيطالية</td></tr>
+                <tr><td>FUN box 4k</td><td>10758</td><td>V</td><td>27500</td><td id="intCat3">أفلام، كوميديا</td></tr>
+                <tr><td>Nova Sport</td><td>11804 / 12168</td><td>V / H</td><td>27500</td><td id="intCat4">رياضية</td></tr>
+            </tbody>
+        </table>
+        <div class="note-box"><i class="fas fa-satellite-dish"></i> <strong id="note2">ملاحظة:</strong> <span id="note2Text">يوصى باستخدام طبق 90-100 سم لاستقبال هوت بيرد بشكل ممتاز.</span></div>
+    </div>
+    
+    <!-- الإذاعات العربية -->
+    <div class="section">
+        <h2 id="radioArTitle"><i class="fas fa-radio"></i> أقوى الإذاعات العربية (نايل سات)</h2>
+        <table id="radioArabTable">
+            <thead>——
+                <th id="r1">الإذاعة</th>
+                <th id="r2">التردد</th>
+                <th id="r3">الاستقطاب</th>
+                <th id="r4">الترميز</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr><td>إذاعة القرآن الكريم (السعودية)</td><td>12188</td><td>H</td><td>27500</td></tr>
+                <tr><td>MBC FM</td><td>11819 / 11747</td><td>V / V</td><td>27500</td></tr>
+                <tr><td id="radioNote">إذاعة الأغاني (مصر / لبنان)</td><td colspan="3">ضمن باقات القنوات الوطنية</td></tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <!-- الإذاعات الأجنبية -->
+    <div class="section">
+        <h2 id="radioIntTitle"><i class="fas fa-headphones"></i> أقوى الإذاعات الأجنبية (هوت بيرد)</h2>
+        <table id="radioIntTable">
+            <thead>——
+                <th id="ri1">الإذاعة</th>
+                <th id="ri2">التردد</th>
+                <th id="ri3">الاستقطاب</th>
+                <th id="ri4">الترميز</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr><td>BBC World Service</td><td>11055</td><td>H</td><td>27500</td></tr>
+                <tr><td>Deutsche Welle (DW)</td><td>11055</td><td>H</td><td>27500</td></tr>
+                <tr><td>RFI (Radio France Internationale)</td><td>11055</td><td>H</td><td>27500</td></tr>
+            </tbody>
+        </table>
+        <div class="note-box"><i class="fas fa-info-circle"></i> <strong id="note3">طريقة الاستقبال:</strong> <span id="note3Text">اضبط جهازك على التردد 11055 أفقي 27500 على هوت بيرد وقم بالبحث اليدوي أو التلقائي.</span></div>
+    </div>
+    
+    <div class="note-box" style="background:#eef2ff; border-right-color:#22c55e;">
+        <i class="fas fa-tools"></i> <strong id="tipsTitle">نصائح مهمة:</strong>
+        <ul style="margin-top:10px; padding-right:20px;" id="tipsList">
+            <li id="tip1">✅ تابع آخر الترددات على <a href="https://www.lyngsat.com/" target="_blank">Lyngsat</a> أو <a href="https://www.kingofsat.net/" target="_blank">KingOfSat</a>.</li>
+            <li id="tip2">✅ الباقات المشفرة (مثل beIN Sports) تحتاج اشتراكاً رسمياً ولا يمكن فتحها عبر الترددات المفتوحة.</li>
+            <li id="tip3">✅ للحصول على أفضل إشارة، تأكد من ضبط زوايا الطبق بدقة باستخدام <a href="satellite-calculator.html">حاسبة الزوايا</a> في موقعنا.</li>
+        </ul>
+    </div>
+    
+    <div style="text-align:center;"><a href="/" class="back-btn"><i class="fas fa-arrow-right"></i> <span id="backText">العودة للرئيسية</span></a></div>
+</div>
+
+<script>
+    (function(){
+        const langBtn = document.getElementById("langBtn");
+        let currentLang = localStorage.getItem("myWebLang") || "ar";
+        
+        function applyLang(){
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
+            
+            // تغيير عنوان الصفحة في تبويب المتصفح
+            document.title = currentLang === "ar" ? "دليل أفضل القنوات والإذاعات المفتوحة | ستالايت دمشق" : "Top Free Channels & Radio Guide | Damascus Satellite";
+            
+            if(currentLang === "ar"){
+                document.getElementById("homeText").innerText = "الرئيسية";
+                document.getElementById("pageTitleH1").innerText = "دليل أفضل القنوات والإذاعات المفتوحة";
+                document.getElementById("pageDesc").innerText = "أقوى القنوات العربية والأجنبية والإذاعات غير المشفرة على الأقمار الصناعية";
+                document.getElementById("arabTitle").innerHTML = '<i class="fas fa-tv"></i> أقوى القنوات العربية (نايل سات 7° غرب)';
+                document.getElementById("intTitle").innerHTML = '<i class="fas fa-globe"></i> أقوى القنوات الأجنبية (هوت بيرد 13° شرق)';
+                document.getElementById("radioArTitle").innerHTML = '<i class="fas fa-radio"></i> أقوى الإذاعات العربية (نايل سات)';
+                document.getElementById("radioIntTitle").innerHTML = '<i class="fas fa-headphones"></i> أقوى الإذاعات الأجنبية (هوت بيرد)';
+                document.getElementById("th1").innerText = "القناة"; document.getElementById("th2").innerText = "التردد"; document.getElementById("th3").innerText = "الاستقطاب"; document.getElementById("th4").innerText = "الترميز"; document.getElementById("th5").innerText = "التصنيف";
+                document.getElementById("int1").innerText = "القناة"; document.getElementById("int2").innerText = "التردد"; document.getElementById("int3").innerText = "الاستقطاب"; document.getElementById("int4").innerText = "الترميز"; document.getElementById("int5").innerText = "التصنيف";
+                document.getElementById("r1").innerText = "الإذاعة"; document.getElementById("r2").innerText = "التردد"; document.getElementById("r3").innerText = "الاستقطاب"; document.getElementById("r4").innerText = "الترميز";
+                document.getElementById("ri1").innerText = "الإذاعة"; document.getElementById("ri2").innerText = "التردد"; document.getElementById("ri3").innerText = "الاستقطاب"; document.getElementById("ri4").innerText = "الترميز";
+                document.getElementById("cat1").innerText = "ترفيهية، منوعة"; document.getElementById("cat2").innerText = "أفلام، مسلسلات"; document.getElementById("cat3").innerText = "إخبارية"; document.getElementById("cat4").innerText = "دينية، إخبارية"; document.getElementById("cat5").innerText = "دراما"; document.getElementById("cat6").innerText = "ترفيهية، منوعة"; document.getElementById("cat7").innerText = "ترفيهية سعودية";
+                document.getElementById("intCat1").innerText = "إخبارية عالمية"; document.getElementById("intCat2").innerText = "ترفيهية إيطالية"; document.getElementById("intCat3").innerText = "أفلام، كوميديا"; document.getElementById("intCat4").innerText = "رياضية";
+                document.getElementById("radioNote").innerText = "إذاعة الأغاني (مصر / لبنان)";
+                document.getElementById("note1").innerText = "ملاحظة:"; document.getElementById("note1Text").innerText = "هذه القنوات مفتوحة (FTA) وتستقبل على طبق 60-80 سم في دمشق.";
+                document.getElementById("note2").innerText = "ملاحظة:"; document.getElementById("note2Text").innerText = "يوصى باستخدام طبق 90-100 سم لاستقبال هوت بيرد بشكل ممتاز.";
+                document.getElementById("note3").innerText = "طريقة الاستقبال:"; document.getElementById("note3Text").innerText = "اضبط جهازك على التردد 11055 أفقي 27500 على هوت بيرد وقم بالبحث اليدوي أو التلقائي.";
+                document.getElementById("tipsTitle").innerText = "نصائح مهمة:";
+                document.getElementById("backText").innerText = "العودة للرئيسية";
+                document.getElementById("tip1").innerHTML = '✅ تابع آخر الترددات على <a href="https://www.lyngsat.com/" target="_blank">Lyngsat</a> أو <a href="https://www.kingofsat.net/" target="_blank">KingOfSat</a>.';
+                document.getElementById("tip2").innerHTML = '✅ الباقات المشفرة (مثل beIN Sports) تحتاج اشتراكاً رسمياً ولا يمكن فتحها عبر الترددات المفتوحة.';
+                document.getElementById("tip3").innerHTML = '✅ للحصول على أفضل إشارة، تأكد من ضبط زوايا الطبق بدقة باستخدام <a href="satellite-calculator.html">حاسبة الزوايا</a> في موقعنا.';
+            } else {
+                document.getElementById("homeText").innerText = "Home";
+                document.getElementById("pageTitleH1").innerText = "Top Free Channels & Radio Guide";
+                document.getElementById("pageDesc").innerText = "The strongest Arab and international free-to-air channels and radio stations on satellites";
+                document.getElementById("arabTitle").innerHTML = '<i class="fas fa-tv"></i> Top Arabic Channels (Nilesat 7° West)';
+                document.getElementById("intTitle").innerHTML = '<i class="fas fa-globe"></i> Top International Channels (Hotbird 13° East)';
+                document.getElementById("radioArTitle").innerHTML = '<i class="fas fa-radio"></i> Top Arab Radio (Nilesat)';
+                document.getElementById("radioIntTitle").innerHTML = '<i class="fas fa-headphones"></i> Top International Radio (Hotbird)';
+                document.getElementById("th1").innerText = "Channel"; document.getElementById("th2").innerText = "Frequency"; document.getElementById("th3").innerText = "Pol"; document.getElementById("th4").innerText = "SR"; document.getElementById("th5").innerText = "Category";
+                document.getElementById("int1").innerText = "Channel"; document.getElementById("int2").innerText = "Frequency"; document.getElementById("int3").innerText = "Pol"; document.getElementById("int4").innerText = "SR"; document.getElementById("int5").innerText = "Category";
+                document.getElementById("r1").innerText = "Radio"; document.getElementById("r2").innerText = "Frequency"; document.getElementById("r3").innerText = "Pol"; document.getElementById("r4").innerText = "SR";
+                document.getElementById("ri1").innerText = "Radio"; document.getElementById("ri2").innerText = "Frequency"; document.getElementById("ri3").innerText = "Pol"; document.getElementById("ri4").innerText = "SR";
+                document.getElementById("cat1").innerText = "Entertainment"; document.getElementById("cat2").innerText = "Movies, Series"; document.getElementById("cat3").innerText = "News"; document.getElementById("cat4").innerText = "Religious, News"; document.getElementById("cat5").innerText = "Drama"; document.getElementById("cat6").innerText = "Entertainment"; document.getElementById("cat7").innerText = "Saudi Entertainment";
+                document.getElementById("intCat1").innerText = "World News"; document.getElementById("intCat2").innerText = "Italian Entertainment"; document.getElementById("intCat3").innerText = "Movies, Comedy"; document.getElementById("intCat4").innerText = "Sports";
+                document.getElementById("radioNote").innerText = "Music Radio (Egypt / Lebanon)";
+                document.getElementById("note1").innerText = "Note:"; document.getElementById("note1Text").innerText = "These channels are free-to-air (FTA) and can be received with a 60-80 cm dish in Damascus.";
+                document.getElementById("note2").innerText = "Note:"; document.getElementById("note2Text").innerText = "A 90-100 cm dish is recommended for optimal Hotbird reception.";
+                document.getElementById("note3").innerText = "How to receive:"; document.getElementById("note3Text").innerText = "Tune your receiver to frequency 11055 Horizontal 27500 on Hotbird and perform a manual or automatic scan.";
+                document.getElementById("tipsTitle").innerText = "Important Tips:";
+                document.getElementById("backText").innerText = "Back to Home";
+                document.getElementById("tip1").innerHTML = '✅ Follow latest frequencies on <a href="https://www.lyngsat.com/" target="_blank">Lyngsat</a> or <a href="https://www.kingofsat.net/" target="_blank">KingOfSat</a>.';
+                document.getElementById("tip2").innerHTML = '✅ Encrypted packages (like beIN Sports) require an official subscription and cannot be opened via free frequencies.';
+                document.getElementById("tip3").innerHTML = '✅ For the best signal, ensure accurate dish alignment using our <a href="satellite-calculator.html">Angle Calculator</a>.';
+            }
+            
+            langBtn.innerHTML = currentLang === "ar" ? '<i class="fas fa-globe"></i> English' : '<i class="fas fa-globe"></i> العربية';
+            localStorage.setItem("myWebLang", currentLang);
+        }
+        
+        langBtn.onclick = function(){
+            currentLang = currentLang === "ar" ? "en" : "ar";
+            applyLang();
+        };
+        applyLang();
+    })();
+</script>
+
+</body>
+</html>

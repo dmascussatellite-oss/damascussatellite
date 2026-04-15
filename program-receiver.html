@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle" data-ar="كيف تبرمج رسيفر جديد خطوة بخطوة؟ | ستالايت دمشق" data-en="How to Program a New Receiver Step by Step? | Damascus Satellite">كيف تبرمج رسيفر جديد خطوة بخطوة؟ | ستالايت دمشق</title>
+    <meta name="description" id="pageDesc" data-ar="دليل كامل لبرمجة أي رسيفر جديد: ضبط القمر، البحث عن القنوات، ترتيبها، وحل المشاكل الشائعة. شرح مبسط." data-en="Complete guide to programming any new receiver: satellite setup, channel search, organizing, and common solutions.">
+    <meta name="keywords" content="برمجة رسيفر, ضبط ستالايت, ترتيب قنوات, رسيفر جديد, ستالايت دمشق">
+    
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+            color: #333;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #22c55e;
+            border-right: 5px solid #22c55e;
+            padding-right: 15px;
+        }
+        h2 {
+            color: #020617;
+            margin-top: 25px;
+        }
+        .step {
+            background: #eef2ff;
+            padding: 15px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+        .tip {
+            background: #e8f5e9;
+            padding: 15px;
+            border-radius: 12px;
+            border-right: 4px solid #22c55e;
+            margin: 20px 0;
+        }
+        .contact {
+            background: #020617;
+            color: white;
+            padding: 20px;
+            border-radius: 16px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .contact a {
+            color: #22c55e;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        hr {
+            margin: 30px 0;
+        }
+        .lang-btn {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        .lang-btn button {
+            background: #22c55e;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 30px;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div class="lang-btn">
+    <button id="langBtn">English</button>
+</div>
+
+<div class="container">
+    <h1 id="mainTitle" data-ar="كيف تبرمج رسيفر جديد خطوة بخطوة؟" data-en="How to Program a New Receiver Step by Step?">كيف تبرمج رسيفر جديد خطوة بخطوة؟</h1>
+    
+    <p id="p1" data-ar="إذا اشتريت رسيفراً جديداً أو قمت بإعادة ضبط المصنع لجهازك، ستحتاج إلى برمجته من جديد لاستقبال القنوات. لا تقلق، الأمر بسيط ولا يستغرق أكثر من 5 دقائق." data-en="If you bought a new receiver or factory reset your device, you need to reprogram it to receive channels. Don't worry, it's simple and takes no more than 5 minutes.">إذا اشتريت رسيفراً جديداً أو قمت بإعادة ضبط المصنع لجهازك، ستحتاج إلى برمجته من جديد لاستقبال القنوات. لا تقلق، الأمر بسيط ولا يستغرق أكثر من 5 دقائق.</p>
+    
+    <h2 id="h2_before" data-ar="قبل البدء: تأكد من التوصيلات" data-en="Before you start: Check the connections">قبل البدء: تأكد من التوصيلات</h2>
+    <ul>
+        <li id="li1" data-ar="🔌 تأكد أن كابل الستالايت (القادم من الطبق) موصول بمدخل LNB في الرسيفر." data-en="🔌 Make sure the satellite cable (from the dish) is connected to the LNB input on the receiver.">🔌 تأكد أن كابل الستالايت (القادم من الطبق) موصول بمدخل LNB في الرسيفر.</li>
+        <li id="li2" data-ar="📺 تأكد أن الرسيفر موصول بالتلفزيون عبر كابل HDMI أو AV." data-en="📺 Make sure the receiver is connected to the TV via HDMI or AV cable.">📺 تأكد أن الرسيفر موصول بالتلفزيون عبر كابل HDMI أو AV.</li>
+        <li id="li3" data-ar="⚡ تأكد أن الرسيفر موصول بالكهرباء ومضاء." data-en="⚡ Make sure the receiver is plugged in and powered on.">⚡ تأكد أن الرسيفر موصول بالكهرباء ومضاء.</li>
+    </ul>
+    
+    <div class="step">
+        <h2 id="step1_title" data-ar="الخطوة 1: الدخول إلى قائمة الإعدادات" data-en="Step 1: Enter the settings menu">الخطوة 1: الدخول إلى قائمة الإعدادات</h2>
+        <p id="step1_text" data-ar="اضغط على زر &quot;Menu&quot; أو &quot;قائمة&quot; في ريموت التحكم الخاص بالرسيفر." data-en="Press the &quot;Menu&quot; button on your receiver's remote control.">اضغط على زر <strong>"Menu"</strong> أو <strong>"قائمة"</strong> في ريموت التحكم الخاص بالرسيفر.</p>
+    </div>
+    
+    <div class="step">
+        <h2 id="step2_title" data-ar="الخطوة 2: اختيار &quot;تركيب&quot; أو &quot;Installation&quot;" data-en="Step 2: Choose &quot;Installation&quot;">الخطوة 2: اختيار "تركيب" أو "Installation"</h2>
+        <p id="step2_text" data-ar="ابحث عن خيار &quot;تركيب&quot; (Installation) أو &quot;الإعدادات&quot; (Settings). قد يكون في القائمة الرئيسية أو داخل &quot;خيارات متقدمة&quot;." data-en="Look for &quot;Installation&quot; or &quot;Settings&quot;. It may be in the main menu or under &quot;Advanced options&quot;.">ابحث عن خيار <strong>"تركيب" (Installation)</strong> أو <strong>"الإعدادات" (Settings)</strong>. قد يكون في القائمة الرئيسية أو داخل "خيارات متقدمة".</p>
+    </div>
+    
+    <div class="step">
+        <h2 id="step3_title" data-ar="الخطوة 3: اختيار القمر الصناعي" data-en="Step 3: Choose the satellite">الخطوة 3: اختيار القمر الصناعي</h2>
+        <p id="step3_text" data-ar="اختر &quot;بحث القنوات&quot; (Satellite Search) أو &quot;تثبيت القمر&quot; (Satellite Setup)." data-en="Choose &quot;Satellite Search&quot; or &quot;Satellite Setup&quot;.">اختر <strong>"بحث القنوات" (Satellite Search)</strong> أو <strong>"تثبيت القمر" (Satellite Setup)</strong>.</p>
+        <p id="step3_list_title" data-ar="من قائمة الأقمار، اختر القمر الذي تريد برمجته:" data-en="From the satellite list, choose the satellite you want to program:">من قائمة الأقمار، اختر القمر الذي تريد برمجته:</p>
+        <ul>
+            <li id="sat1" data-ar="نايلسات (Nilesat 7°W) – الأكثر شيوعاً في سوريا." data-en="Nilesat (7°W) – Most common in Syria."><strong>نايلسات (Nilesat 7°W)</strong> – الأكثر شيوعاً في سوريا.</li>
+            <li id="sat2" data-ar="عربسات (Arabsat 26°E) – خيار إضافي." data-en="Arabsat (26°E) – Additional option."><strong>عربسات (Arabsat 26°E)</strong> – خيار إضافي.</li>
+            <li id="sat3" data-ar="هوت بيرد (Hotbird 13°E) – قنوات أوروبية." data-en="Hotbird (13°E) – European channels."><strong>هوت بيرد (Hotbird 13°E)</strong> – قنوات أوروبية.</li>
+        </ul>
+    </div>
+    
+    <div class="step">
+        <h2 id="step4_title" data-ar="الخطوة 4: بدء البحث" data-en="Step 4: Start the search">الخطوة 4: بدء البحث</h2>
+        <p id="step4_text" data-ar="اختر نوع البحث:" data-en="Choose the search type:">اختر نوع البحث:</p>
+        <ul>
+            <li id="search1" data-ar="بحث تلقائي (Auto Scan / Blind Scan): يبحث عن جميع القنوات تلقائياً (يستغرق 5-15 دقيقة)." data-en="Auto Scan / Blind Scan: Searches for all channels automatically (takes 5-15 minutes)."><strong>بحث تلقائي (Auto Scan / Blind Scan):</strong> يبحث عن جميع القنوات تلقائياً (يستغرق 5-15 دقيقة).</li>
+            <li id="search2" data-ar="بحث يدوي (Manual Scan): تبحث عن قمر أو تردد محدد (أسرع)." data-en="Manual Scan: Search for a specific satellite or frequency (faster)."><strong>بحث يدوي (Manual Scan):</strong> تبحث عن قمر أو تردد محدد (أسرع).</li>
+        </ul>
+        <p id="step4_end" data-ar="اضغط &quot;بحث&quot; (Search) أو &quot;بدء&quot; (Start)." data-en="Press &quot;Search&quot; or &quot;Start&quot;.">اضغط <strong>"بحث" (Search)</strong> أو <strong>"بدء" (Start)</strong>.</p>
+    </div>
+    
+    <div class="step">
+        <h2 id="step5_title" data-ar="الخطوة 5: حفظ القنوات" data-en="Step 5: Save the channels">الخطوة 5: حفظ القنوات</h2>
+        <p id="step5_text" data-ar="بعد انتهاء البحث، ستظهر قائمة بالقنوات التي تم العثور عليها. اضغط &quot;حفظ&quot; (Save) أو &quot;موافق&quot; (OK)." data-en="After the search completes, a list of found channels will appear. Press &quot;Save&quot; or &quot;OK&quot;.">بعد انتهاء البحث، ستظهر قائمة بالقنوات التي تم العثور عليها. اضغط <strong>"حفظ" (Save)</strong> أو <strong>"موافق" (OK)</strong>.</p>
+    </div>
+    
+    <div class="step">
+        <h2 id="step6_title" data-ar="الخطوة 6: ترتيب القنوات (اختياري)" data-en="Step 6: Organize channels (optional)">الخطوة 6: ترتيب القنوات (اختياري)</h2>
+        <p id="step6_text" data-ar="يمكنك ترتيب القنوات حسب رغبتك:" data-en="You can arrange channels as you like:">يمكنك ترتيب القنوات حسب رغبتك:</p>
+        <ul>
+            <li id="org1" data-ar="اذهب إلى &quot;ترتيب القنوات&quot; (Channel Organize) أو &quot;تحرير القنوات&quot; (Edit Channels)." data-en="Go to &quot;Channel Organize&quot; or &quot;Edit Channels&quot;.">اذهب إلى <strong>"ترتيب القنوات" (Channel Organize)</strong> أو <strong>"تحرير القنوات" (Edit Channels)</strong>.</li>
+            <li id="org2" data-ar="اختر قناة ← اضغط زر &quot;نقل&quot; (Move) ← انقلها إلى المكان الذي تريده." data-en="Select a channel → Press &quot;Move&quot; → Move it where you want.">اختر قناة ← اضغط زر <strong>"نقل" (Move)</strong> ← انقلها إلى المكان الذي تريده.</li>
+            <li id="org3" data-ar="اضغط &quot;حفظ&quot; عند الانتهاء." data-en="Press &quot;Save&quot; when done.">اضغط <strong>"حفظ"</strong> عند الانتهاء.</li>
+        </ul>
+    </div>
+    
+    <div class="tip">
+        <strong id="tipTitle" data-ar="💡 نصيحة مهمة:" data-en="💡 Important tip:">💡 نصيحة مهمة:</strong><br>
+        <span id="tipText" data-ar="إذا لم تجد بعض القنوات بعد البحث، قد يكون ترددها قد تغير. يمكنك إضافة التردد يدوياً عبر &quot;بحث يدوي&quot; (Manual Scan) وإدخال التردد، الاستقطاب، ومعدل الترميز." data-en="If you don't find some channels after the search, their frequency may have changed. You can manually add them via &quot;Manual Scan&quot; by entering the frequency, polarization, and symbol rate.">إذا لم تجد بعض القنوات بعد البحث، قد يكون ترددها قد تغير. يمكنك إضافة التردد يدوياً عبر <strong>"بحث يدوي" (Manual Scan)</strong> وإدخال التردد، الاستقطاب، ومعدل الترميز.</span>
+    </div>
+    
+    <h2 id="problems_title" data-ar="مشاكل شائعة وحلولها" data-en="Common problems and solutions">مشاكل شائعة وحلولها</h2>
+    <ul>
+        <li id="prob1" data-ar="الرسيفر لا يجد أي قنوات: تأكد من توصيل كابل الستالايت بشكل صحيح، وأن الطبق موجه نحو القمر الصحيح." data-en="Receiver finds no channels: Make sure the satellite cable is connected correctly and the dish is pointing at the right satellite."><strong>الرسيفر لا يجد أي قنوات:</strong> تأكد من توصيل كابل الستالايت بشكل صحيح، وأن الطبق موجه نحو القمر الصحيح.</li>
+        <li id="prob2" data-ar="قوة الإشارة صفر: قد يكون الـ LNB تالفاً أو الكابل مقطوعاً. اتصل بفني لفحصه." data-en="Signal strength is zero: The LNB may be damaged or the cable cut. Call a technician to check it."><strong>قوة الإشارة صفر:</strong> قد يكون الـ LNB تالفاً أو الكابل مقطوعاً. اتصل بفني لفحصه.</li>
+        <li id="prob3" data-ar="القنوات مشوشة أو متقطعة: قد يكون الطبق بحاجة إلى إعادة ضبط أو الطقس سيئاً." data-en="Channels are distorted or intermittent: The dish may need realignment or the weather may be bad."><strong>القنوات مشوشة أو متقطعة:</strong> قد يكون الطبق بحاجة إلى إعادة ضبط أو الطقس سيئاً.</li>
+    </ul>
+    
+    <hr>
+    
+    <div class="contact">
+        <strong id="contactTitle" data-ar="📡 هل تحتاج مساعدة في البرمجة أو التركيب؟" data-en="📡 Need help with programming or installation?">📡 هل تحتاج مساعدة في البرمجة أو التركيب؟</strong><br>
+        <span id="contactPhone" data-ar="📞 اتصل بنا:" data-en="📞 Call us:">📞 اتصل بنا:</span> <a href="tel:0990024693">0990024693</a><br>
+        <span id="contactWhatsapp" data-ar="💬 واتساب:" data-en="💬 WhatsApp:">💬 واتساب:</span> <a href="https://wa.me/963990024693">0990024693</a><br>
+        <span id="contactWebsite" data-ar="🌐 موقعنا:" data-en="🌐 Our website:">🌐 موقعنا:</span> <a href="https://damascussatellite.gamer.gd">damascussatellite.gamer.gd</a>
+    </div>
+    
+    <p style="text-align: center; margin-top: 20px; font-size: 14px;">
+        <a href="/" id="homeLink" data-ar="🏠 العودة إلى الرئيسية" data-en="🏠 Back to Home">🏠 العودة إلى الرئيسية</a>
+    </p>
+</div>
+
+<script>
+    (function(){
+        const langBtn = document.getElementById("langBtn");
+        let currentLang = localStorage.getItem("myWebLang") || "ar";
+        
+        function applyLang(){
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
+            
+            document.querySelectorAll("[data-ar]").forEach(el => {
+                el.innerText = el.getAttribute("data-" + currentLang);
+            });
+            
+            if(langBtn){
+                langBtn.innerText = currentLang === "ar" ? "English" : "العربية";
+            }
+            
+            localStorage.setItem("myWebLang", currentLang);
+        }
+        
+        applyLang();
+        
+        if(langBtn){
+            langBtn.onclick = function(e){
+                e.preventDefault();
+                currentLang = currentLang === "ar" ? "en" : "ar";
+                applyLang();
+            };
+        }
+    })();
+</script>
+
+</body>
+</html>

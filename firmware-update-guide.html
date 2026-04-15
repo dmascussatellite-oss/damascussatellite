@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title id="pageTitle" data-ar="دليل تحديث السوفت وير للرسيفر والشاشة | ستالايت دمشق" data-en="Firmware Update Guide for Receivers and TVs | Damascus Satellite">دليل تحديث السوفت وير للرسيفر والشاشة | ستالايت دمشق</title>
+    <meta name="description" id="pageDesc" data-ar="دليل كامل لتحديث السوفت وير (Firmware) للرسيفر والشاشات الذكية: متى تحتاج، كيف تحدث، وتحذيرات مهمة." data-en="Complete guide to updating firmware for receivers and smart TVs: when you need it, how to update, and important warnings.">
+    <meta name="keywords" content="تحديث سوفت وير, تحديث رسيفر, تحديث شاشة, firmware update, برمجة رسيفر, ستالايت دمشق">
+    <link rel="icon" href="favicon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{font-family:'Segoe UI',Tahoma,Arial;background:#f1f5f9;color:#0f172a;line-height:1.7;}
+        header{background:#fff;padding:15px 20px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 10px rgba(0,0,0,0.05);position:sticky;top:0;z-index:1000;}
+        header a{color:#22c55e;text-decoration:none;font-weight:bold;}
+        .lang{cursor:pointer;background:#020617;color:#fff;padding:8px 15px;border-radius:20px;font-weight:bold;transition:0.3s;}
+        .lang:hover{background:#22c55e;color:#020617;}
+        .page-header{background:linear-gradient(135deg,#020617,#0f172a);color:#fff;padding:40px 20px;text-align:center;}
+        .page-header h1{font-size:32px;margin-bottom:15px;}
+        .container{max-width:1000px;margin:30px auto;padding:20px;background:#fff;border-radius:24px;box-shadow:0 4px 20px rgba(0,0,0,0.1);}
+        h2{color:#22c55e;margin:30px 0 15px;border-bottom:1px solid #e2e8f0;padding-bottom:5px;}
+        h3{color:#0f172a;margin:20px 0 10px;}
+        ul,ol{margin-right:25px;margin-bottom:20px;}
+        li{margin-bottom:8px;}
+        .tip{background:#eef2ff;padding:15px;border-radius:20px;margin:20px 0;border-right:3px solid #22c55e;}
+        .warning{background:#fef9c3;padding:15px;border-radius:20px;margin:20px 0;border-right:3px solid #eab308;}
+        .danger{background:#fee2e2;padding:15px;border-radius:20px;margin:20px 0;border-right:3px solid #dc2626;}
+        .ref{background:#f1f5f9;padding:15px;border-radius:20px;margin:30px 0 20px;font-size:14px;}
+        .whatsapp-btn{position:fixed;bottom:25px;right:25px;background:#25d366;color:#fff;padding:12px 22px;border-radius:50px;text-decoration:none;display:flex;align-items:center;gap:10px;z-index:9999;transition:0.3s;}
+        .whatsapp-btn:hover{background:#128c7e;transform:scale(1.05);}
+        footer{background:#020617;color:#94a3b8;text-align:center;padding:20px;margin-top:40px;}
+        @media (max-width:600px){
+            .page-header h1{font-size:24px;}
+            .container{padding:15px;}
+            .whatsapp-btn{padding:12px;border-radius:50%;}
+            .whatsapp-btn span{display:none;}
+        }
+    </style>
+</head>
+<body>
+<header>
+    <a href="/"><i class="fas fa-home"></i> <span data-ar="الرئيسية" data-en="Home">الرئيسية</span></a>
+    <div class="lang" id="langBtn">English</div>
+</header>
+
+<div class="page-header">
+    <h1><i class="fas fa-microchip"></i> <span data-ar="دليل تحديث السوفت وير للرسيفر والشاشة" data-en="Firmware Update Guide for Receivers and TVs">دليل تحديث السوفت وير للرسيفر والشاشة</span></h1>
+    <p><span data-ar="تعرف على متى تحتاج إلى تحديث، كيفية التحديث خطوة بخطوة، وتحذيرات مهمة" data-en="Learn when you need to update, how to update step by step, and important warnings">تعرف على متى تحتاج إلى تحديث، كيفية التحديث خطوة بخطوة، وتحذيرات مهمة</span></p>
+</div>
+
+<div class="container">
+    <!-- ===== القسم 1: ما هو السوفت وير ===== -->
+    <h2><span data-ar="🤔 أولاً: ما هو السوفت وير (Firmware)؟" data-en="🤔 First: What is Firmware?">🤔 أولاً: ما هو السوفت وير (Firmware)؟</span></h2>
+    <p><span data-ar="السوفت وير (أو البرنامج الثابت) هو نظام تشغيل صغير مدمج في جهاز الرسيفر أو الشاشة يتحكم في وظائفه الأساسية. تحديثه قد يحسن الأداء، يصلح أخطاء، أو يضيف ميزات جديدة." data-en="Firmware is a small operating system embedded in your receiver or TV that controls its basic functions. Updating it can improve performance, fix bugs, or add new features.">السوفت وير (أو البرنامج الثابت) هو نظام تشغيل صغير مدمج في جهاز الرسيفر أو الشاشة يتحكم في وظائفه الأساسية. تحديثه قد يحسن الأداء، يصلح أخطاء، أو يضيف ميزات جديدة.</span></p>
+
+    <!-- ===== القسم 2: متى تحتاج للتحديث ===== -->
+    <h2><span data-ar="⚠️ ثانياً: علامات تدل على حاجة جهازك للتحديث" data-en="⚠️ Second: Signs that your device needs an update">⚠️ ثانياً: علامات تدل على حاجة جهازك للتحديث</span></h2>
+    <ul>
+        <li><span data-ar="🔹 بطء شديد في الاستجابة أو تجمد متكرر." data-en="🔹 Extreme slowness or frequent freezing.">🔹 بطء شديد في الاستجابة أو تجمد متكرر.</span></li>
+        <li><span data-ar="🔹 ظهور رسائل خطأ غير مفهومة." data-en="🔹 Unexplained error messages.">🔹 ظهور رسائل خطأ غير مفهومة.</span></li>
+        <li><span data-ar="🔹 بعض القنوات لا تعمل رغم وجود إشارة." data-en="🔹 Some channels don't work despite having a signal.">🔹 بعض القنوات لا تعمل رغم وجود إشارة.</span></li>
+        <li><span data-ar="🔹 تطبيقات الشاشة الذكية (مثل يوتيوب، نتفلكس) لا تعمل بشكل جيد." data-en="🔹 Smart TV apps (YouTube, Netflix) don't work properly.">🔹 تطبيقات الشاشة الذكية (مثل يوتيوب، نتفلكس) لا تعمل بشكل جيد.</span></li>
+        <li><span data-ar="🔹 الشركة المصنعة أعلنت عن تحديث أمني أو تحسين أداء." data-en="🔹 The manufacturer announced a security or performance update.">🔹 الشركة المصنعة أعلنت عن تحديث أمني أو تحسين أداء.</span></li>
+    </ul>
+
+    <!-- ===== القسم 3: تحديث الرسيفر ===== -->
+    <h2><span data-ar="📡 ثالثاً: كيفية تحديث سوفت وير الرسيفر" data-en="📡 Third: How to update receiver firmware">📡 ثالثاً: كيفية تحديث سوفت وير الرسيفر</span></h2>
+    <p><span data-ar="تختلف الطريقة قليلاً حسب الماركة، لكن الخطوات العامة:" data-en="The method varies slightly by brand, but the general steps are:">تختلف الطريقة قليلاً حسب الماركة، لكن الخطوات العامة:</span></p>
+    <ol>
+        <li><span data-ar="اكتشف طراز الرسيفر الدقيق (موجود على الملصق الخلفي)." data-en="Find the exact receiver model (on the back label).">اكتشف طراز الرسيفر الدقيق (موجود على الملصق الخلفي).</span></li>
+        <li><span data-ar="ابحث في موقع الشركة المصنعة عن أحدث إصدار للسوفت وير (غالباً ملف `.bin` أو `.abs`)." data-en="Search the manufacturer's website for the latest firmware (usually a `.bin` or `.abs` file).">ابحث في موقع الشركة المصنعة عن أحدث إصدار للسوفت وير (غالباً ملف `.bin` أو `.abs`).</span></li>
+        <li><span data-ar="انسخ الملف إلى فلاشة USB (بعد تهيئتها بصيغة FAT32)." data-en="Copy the file to a USB flash drive (formatted to FAT32).">انسخ الملف إلى فلاشة USB (بعد تهيئتها بصيغة FAT32).</span></li>
+        <li><span data-ar="أدخل الفلاشة في الرسيفر." data-en="Insert the flash drive into the receiver.">أدخل الفلاشة في الرسيفر.</span></li>
+        <li><span data-ar="اذهب إلى قائمة الإعدادات ← دعم (Support) ← تحديث البرنامج (Software Update) ← عبر USB." data-en="Go to Settings → Support → Software Update → via USB.">اذهب إلى قائمة الإعدادات ← دعم (Support) ← تحديث البرنامج (Software Update) ← عبر USB.</span></li>
+        <li><span data-ar="اختر ملف التحديث وابدأ العملية (لا تقم بإيقاف التشغيل أو إزالة الفلاشة)." data-en="Select the update file and start the process (do not turn off or remove the flash drive).">اختر ملف التحديث وابدأ العملية (لا تقم بإيقاف التشغيل أو إزالة الفلاشة).</span></li>
+        <li><span data-ar="انتظر حتى يعيد الرسيفر تشغيل نفسه تلقائياً." data-en="Wait for the receiver to restart automatically.">انتظر حتى يعيد الرسيفر تشغيل نفسه تلقائياً.</span></li>
+    </ol>
+    <div class="danger">
+        <strong><span data-ar="⛔ تحذير شديد الخطورة:" data-en="⛔ Critical warning:">⛔ تحذير شديد الخطورة:</span></strong><br>
+        <span data-ar="لا تقم بإيقاف تشغيل الرسيفر أو إزالة الفلاشة أثناء التحديث. قد يؤدي ذلك إلى "تخبيث" الجهاز (تحويله إلى قطعة لا تعمل)." data-en="Do not turn off the receiver or remove the flash drive during the update. This may brick the device.">لا تقم بإيقاف تشغيل الرسيفر أو إزالة الفلاشة أثناء التحديث. قد يؤدي ذلك إلى "تخبيث" الجهاز (تحويله إلى قطعة لا تعمل).</span>
+    </div>
+
+    <!-- ===== القسم 4: تحديث الشاشة (Smart TV) ===== -->
+    <h2><span data-ar="📺 رابعاً: كيفية تحديث سوفت وير الشاشة الذكية" data-en="📺 Fourth: How to update smart TV firmware">📺 رابعاً: كيفية تحديث سوفت وير الشاشة الذكية</span></h2>
+    <p><span data-ar="لشاشات Samsung، LG، Sony، TCL، Hisense، Xiaomi:" data-en="For Samsung, LG, Sony, TCL, Hisense, Xiaomi TVs:">لشاشات Samsung، LG، Sony، TCL، Hisense، Xiaomi:</span></p>
+    <h3><span data-ar="الطريقة الأولى (عبر الإنترنت – الأسهل)" data-en="Method 1 (Online – easiest)">الطريقة الأولى (عبر الإنترنت – الأسهل)</span></h3>
+    <ul>
+        <li><span data-ar="تأكد من توصيل الشاشة بالإنترنت (Wi-Fi أو سلك)." data-en="Make sure the TV is connected to the internet (Wi-Fi or cable).">تأكد من توصيل الشاشة بالإنترنت (Wi-Fi أو سلك).</span></li>
+        <li><span data-ar="اذهب إلى الإعدادات (Settings) ← الدعم (Support) ← تحديث البرنامج (Software Update) ← تحديث عبر الإنترنت." data-en="Go to Settings → Support → Software Update → Update Online.">اذهب إلى الإعدادات (Settings) ← الدعم (Support) ← تحديث البرنامج (Software Update) ← تحديث عبر الإنترنت.</span></li>
+        <li><span data-ar="إذا كان هناك تحديث، اتبَع التعليمات (قد تستغرق بضع دقائق)." data-en="If an update is available, follow the instructions (may take a few minutes).">إذا كان هناك تحديث، اتبَع التعليمات (قد تستغرق بضع دقائق).</span></li>
+    </ul>
+    <h3><span data-ar="الطريقة الثانية (عبر USB – إذا لم يكن الإنترنت متوفراً)" data-en="Method 2 (via USB – if internet is not available)">الطريقة الثانية (عبر USB – إذا لم يكن الإنترنت متوفراً)</span></h3>
+    <ul>
+        <li><span data-ar="ابحث عن ملف التحديث لطراز شاشتك على موقع الشركة المصنعة." data-en="Find the update file for your TV model on the manufacturer's website.">ابحث عن ملف التحديث لطراز شاشتك على موقع الشركة المصنعة.</span></li>
+        <li><span data-ar="انسخ الملف إلى فلاشة USB (FAT32)." data-en="Copy the file to a USB flash drive (FAT32).">انسخ الملف إلى فلاشة USB (FAT32).</span></li>
+        <li><span data-ar="أدخل الفلاشة في الشاشة، ثم اذهب إلى الإعدادات ← تحديث البرنامج ← عبر USB." data-en="Insert the flash drive into the TV, then go to Settings → Software Update → via USB.">أدخل الفلاشة في الشاشة، ثم اذهب إلى الإعدادات ← تحديث البرنامج ← عبر USB.</span></li>
+    </ul>
+    <div class="danger">
+        <strong><span data-ar="⛔ تحذير مهم:" data-en="⛔ Important warning:">⛔ تحذير مهم:</span></strong><br>
+        <span data-ar="أثناء تحديث الشاشة، لا تقم بإيقاف التشغيل أو فصل الكهرباء. إذا انقطعت الكهرباء فجأة، قد تحتاج إلى فني لإعادة برمجة الجهاز." data-en="During the TV update, do not turn it off or unplug it. If power is suddenly cut, you may need a technician to reprogram the device.">أثناء تحديث الشاشة، لا تقم بإيقاف التشغيل أو فصل الكهرباء. إذا انقطعت الكهرباء فجأة، قد تحتاج إلى فني لإعادة برمجة الجهاز.</span>
+    </div>
+
+    <!-- ===== القسم 5: نصائح قبل التحديث ===== -->
+    <h2><span data-ar="✅ خامساً: نصائح قبل التحديث" data-en="✅ Fifth: Tips before updating">✅ خامساً: نصائح قبل التحديث</span></h2>
+    <ul>
+        <li><span data-ar="تأكد من أن ملف التحديث مخصص لطراز جهازك بالضبط (لا تستخدم ملفات من أجهزة أخرى)." data-en="Make sure the update file is exactly for your device model (do not use files from other devices).">تأكد من أن ملف التحديث مخصص لطراز جهازك بالضبط (لا تستخدم ملفات من أجهزة أخرى).</span></li>
+        <li><span data-ar="استخدم فلاشة USB موثوقة وبصيغة FAT32." data-en="Use a reliable USB flash drive formatted to FAT32.">استخدم فلاشة USB موثوقة وبصيغة FAT32.</span></li>
+        <li><span data-ar="تأكد من أن الشاشة أو الرسيفر متصل بمصدر طاقة مستقر (يفضل استخدام مثبت جهد)." data-en="Ensure the TV or receiver is connected to a stable power source (preferably a voltage stabilizer).">تأكد من أن الشاشة أو الرسيفر متصل بمصدر طاقة مستقر (يفضل استخدام مثبت جهد).</span></li>
+        <li><span data-ar="اقرأ تعليمات الشركة المصنعة قبل البدء." data-en="Read the manufacturer's instructions before starting.">اقرأ تعليمات الشركة المصنعة قبل البدء.</span></li>
+    </ul>
+
+    <!-- ===== القسم 6: مصادر الحصول على التحديثات ===== -->
+    <h2><span data-ar="🔍 سادساً: أين تجد ملفات التحديث الموثوقة؟" data-en="🔍 Sixth: Where to find reliable update files?">🔍 سادساً: أين تجد ملفات التحديث الموثوقة؟</span></h2>
+    <div class="ref">
+        <ul>
+            <li><span data-ar="الموقع الرسمي للشركة المصنعة (Samsung, LG, Sony, TCL, Hisense, Xiaomi...)." data-en="The official website of the manufacturer (Samsung, LG, Sony, TCL, Hisense, Xiaomi...)."></span></li>
+            <li><span data-ar="منتديات الدعم الفني المتخصصة (مثل forum.dvbcenter.com أو satellites.co.uk)." data-en="Specialized technical support forums (e.g., forum.dvbcenter.com or satellites.co.uk)."></span></li>
+            <li><span data-ar="قنوات اليوتيوب الموثوقة التي تشرح التحديثات مع روابط مباشرة." data-en="Trusted YouTube channels that explain updates with direct links."></span></li>
+        </ul>
+        <p style="margin-top:10px;">
+            <span data-ar="⚠️ تنبيه: تجنب مواقع التحديث العشوائية أو الروابط المختصرة المجهولة، فقد تحتوي على فيروسات." data-en="⚠️ Caution: Avoid random update sites or unknown short links, as they may contain viruses.">
+                ⚠️ تنبيه: تجنب مواقع التحديث العشوائية أو الروابط المختصرة المجهولة، فقد تحتوي على فيروسات.
+            </span>
+        </p>
+    </div>
+
+    <!-- ===== القسم 7: خدمة ستالايت دمشق ===== -->
+    <div class="tip">
+        <strong><span data-ar="🔧 خدمة تحديث البرامج من ستالايت دمشق:" data-en="🔧 Software update service from Damascus Satellite:">🔧 خدمة تحديث البرامج من ستالايت دمشق:</span></strong><br>
+        <span data-ar="- نقوم بتحديث سوفت وير الرسيفرات والشاشات الذكية." data-en="- We update firmware for receivers and smart TVs.">- نقوم بتحديث سوفت وير الرسيفرات والشاشات الذكية.</span><br>
+        <span data-ar="- نستخدم ملفات تحديث أصلية وآمنة." data-en="- We use original and safe update files.">- نستخدم ملفات تحديث أصلية وآمنة.</span><br>
+        <span data-ar="- نضمن سلامة جهازك بعد التحديث." data-en="- We guarantee your device's safety after the update.">- نضمن سلامة جهازك بعد التحديث.</span><br>
+        <span data-ar="📞 للاستفسار:" data-en="📞 For inquiries:">📞 للاستفسار:</span> <a href="tel:0990024693">0990024693</a> <span data-ar="(واتساب)" data-en="(WhatsApp)">(واتساب)</span>
+    </div>
+
+    <p style="text-align:center; margin-top:30px;">
+        <a href="index.html" style="background:#22c55e;color:#fff;padding:10px 25px;border-radius:40px;text-decoration:none;"><span data-ar="🏠 العودة للرئيسية" data-en="🏠 Back to Home">🏠 العودة للرئيسية</span></a>
+    </p>
+</div>
+
+<footer>
+    <span data-ar="© 2026 ستالايت دمشق | دليل تحديث السوفت وير" data-en="© 2026 Damascus Satellite | Firmware Update Guide">© 2026 ستالايت دمشق | دليل تحديث السوفت وير</span>
+</footer>
+
+<a href="https://wa.me/963990024693" class="whatsapp-btn" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+    <span data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</span>
+</a>
+
+<script>
+    (function(){
+        const langBtn = document.getElementById("langBtn");
+        let currentLang = localStorage.getItem("myWebLang") || "ar";
+        
+        function applyLang(){
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
+            
+            document.querySelectorAll("[data-ar]").forEach(el => {
+                el.innerText = el.getAttribute("data-" + currentLang);
+            });
+            
+            const titleEl = document.getElementById("pageTitle");
+            const descEl = document.getElementById("pageDesc");
+            if(titleEl) titleEl.innerText = titleEl.getAttribute("data-" + currentLang);
+            if(descEl) descEl.setAttribute("content", descEl.getAttribute("data-" + currentLang));
+            
+            if(langBtn){
+                langBtn.innerHTML = currentLang === "ar" ? '<i class="fas fa-globe"></i> English' : '<i class="fas fa-globe"></i> العربية';
+            }
+            
+            localStorage.setItem("myWebLang", currentLang);
+        }
+        
+        if(langBtn){
+            langBtn.onclick = function(){
+                currentLang = currentLang === "ar" ? "en" : "ar";
+                applyLang();
+            };
+        }
+        
+        applyLang();
+    })();
+</script>
+
+</body>
+</html>

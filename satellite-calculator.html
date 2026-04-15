@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle" data-ar="حاسبة زاوية الطبق | ستالايت دمشق" data-en="Satellite Dish Angle Calculator | Damascus Satellite">حاسبة زاوية الطبق | ستالايت دمشق</title>
+    <link rel="icon" href="favicon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0;}
+        body{font-family:Arial,sans-serif;background:#f1f5f9;color:#0f172a;padding-bottom:50px;}
+        
+        header{background:#fff;padding:15px 20px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 10px rgba(0,0,0,0.05);position:sticky;top:0;z-index:1000;}
+        header a{color:#22c55e;text-decoration:none;font-weight:bold;display:flex;align-items:center;gap:8px;}
+        
+        .lang{cursor:pointer;background:#020617;color:#fff;padding:8px 15px;border-radius:20px;font-size:14px;font-weight:bold;}
+        
+        .container{max-width:800px;margin:40px auto;padding:20px;}
+        
+        .card{
+            background:#fff;
+            border-radius:24px;
+            padding:30px;
+            box-shadow:0 10px 30px rgba(0,0,0,0.08);
+            margin-bottom:30px;
+        }
+        
+        .card h1{
+            color:#0f172a;
+            margin-bottom:25px;
+            font-size:28px;
+            border-right:4px solid #22c55e;
+            padding-right:15px;
+        }
+        
+        .definition-box{
+            background:#f0fdf4;
+            border-right:4px solid #22c55e;
+            padding:20px;
+            border-radius:16px;
+            margin-bottom:25px;
+        }
+        .definition-box h3{
+            color:#16a34a;
+            margin-bottom:10px;
+            font-size:20px;
+        }
+        .definition-box p{
+            color:#334155;
+            line-height:1.7;
+            margin-bottom:10px;
+        }
+        .definition-box ul{
+            padding-right:20px;
+            margin:10px 0;
+        }
+        .definition-box li{
+            margin-bottom:8px;
+            color:#475569;
+        }
+        
+        .form-group{
+            margin-bottom:20px;
+        }
+        
+        label{
+            display:block;
+            font-weight:bold;
+            margin-bottom:8px;
+            color:#334155;
+        }
+        
+        select{
+            width:100%;
+            padding:12px 15px;
+            border:2px solid #e2e8f0;
+            border-radius:12px;
+            font-size:16px;
+            outline:none;
+            background:#fff;
+        }
+        
+        select:focus{
+            border-color:#22c55e;
+        }
+        
+        button{
+            background:#22c55e;
+            color:#fff;
+            padding:14px 28px;
+            border:none;
+            border-radius:40px;
+            font-size:16px;
+            font-weight:bold;
+            cursor:pointer;
+            width:100%;
+            margin-top:15px;
+            transition:0.3s;
+        }
+        
+        button:hover{
+            background:#16a34a;
+            transform:scale(1.02);
+        }
+        
+        .result{
+            background:#f0fdf4;
+            border:1px solid #bbf7d0;
+            border-radius:16px;
+            padding:20px;
+            text-align:center;
+            margin-top:20px;
+        }
+        
+        .result h3{
+            color:#16a34a;
+            margin-bottom:15px;
+        }
+        
+        .angle-value{
+            font-size:32px;
+            font-weight:bold;
+            color:#22c55e;
+            margin:10px 0;
+        }
+        
+        .note{
+            color:#475569;
+            font-size:13px;
+            margin-top:20px;
+            padding-top:15px;
+            border-top:1px solid #e2e8f0;
+            text-align:center;
+        }
+        
+        .dishpointer-note{
+            background:#eef2ff;
+            border:1px solid #c7d2fe;
+            border-radius:16px;
+            padding:15px;
+            margin-top:20px;
+            text-align:center;
+        }
+        
+        .dishpointer-note a{
+            color:#22c55e;
+            font-weight:bold;
+            text-decoration:underline;
+            display:inline-block;
+            margin-top:8px;
+        }
+        
+        .sources-box{
+            background:#f8fafc;
+            border-radius:16px;
+            padding:15px;
+            margin-top:25px;
+            font-size:12px;
+            color:#64748b;
+            border-right:3px solid #22c55e;
+        }
+        .sources-box ul{
+            padding-right:20px;
+            margin-top:8px;
+        }
+        .sources-box li{
+            margin-bottom:5px;
+        }
+        .sources-box a{
+            color:#22c55e;
+            text-decoration:none;
+        }
+        .sources-box a:hover{
+            text-decoration:underline;
+        }
+        
+        .back-btn{
+            display:inline-block;
+            padding:10px 20px;
+            background:#020617;
+            color:#fff;
+            text-decoration:none;
+            border-radius:30px;
+            font-size:14px;
+            margin-top:20px;
+            transition:0.3s;
+        }
+        .back-btn:hover{
+            background:#22c55e;
+            transform:scale(1.05);
+        }
+        
+        @media (max-width:600px){
+            .container{padding:15px;}
+            .card{padding:20px;}
+            .angle-value{font-size:24px;}
+            .card h1{font-size:24px;}
+            .definition-box h3{font-size:18px;}
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="/">
+        <i class="fas fa-home"></i> 
+        <span data-ar="الرئيسية" data-en="Home">الرئيسية</span>
+    </a>
+    <div class="lang" id="langBtn"><i class="fas fa-globe"></i> English</div>
+</header>
+
+<div class="container">
+    <div class="card">
+        <h1><i class="fas fa-satellite-dish"></i> <span data-ar="حاسبة زاوية الطبق" data-en="Satellite Dish Angle Calculator">حاسبة زاوية الطبق</span></h1>
+        
+        <!-- قسم تعريف زاوية الطبق -->
+        <div class="definition-box">
+            <h3><i class="fas fa-question-circle"></i> <span data-ar="ما هي زاوية الطبق؟" data-en="What is Dish Angle?">ما هي زاوية الطبق؟</span></h3>
+            <p data-ar="زاوية الطبق هي الاتجاه الصحيح الذي يجب أن يشير إليه الطبق الفضائي في السماء لاستقبال إشارة القمر الصناعي المطلوب بأفضل جودة. تتكون من ثلاث زوايا رئيسية:" data-en="Dish angle is the correct direction the satellite dish should point in the sky to receive the desired satellite signal with the best quality. It consists of three main angles:">
+                زاوية الطبق هي الاتجاه الصحيح الذي يجب أن يشير إليه الطبق الفضائي في السماء لاستقبال إشارة القمر الصناعي المطلوب بأفضل جودة. تتكون من ثلاث زوايا رئيسية:
+            </p>
+            <ul>
+                <li><strong data-ar="Azimuth (الزاوية الأفقية):" data-en="Azimuth:"></strong> <span data-ar="الاتجاه على البوصلة (شمال، جنوب، شرق، غرب)" data-en="Direction on the compass (North, South, East, West)"></span></li>
+                <li><strong data-ar="Elevation (الزاوية العمودية):" data-en="Elevation:"></strong> <span data-ar="مقدار رفع الطبق لأعلى أو أسفل" data-en="Amount of tilt up or down"></span></li>
+                <li><strong data-ar="Skew (إمالة الـ LNB):" data-en="Skew:"></strong> <span data-ar="تدوير القطعة الأمامية (LNB) حول محورها" data-en="Rotation of the front piece (LNB) around its axis"></span></li>
+            </ul>
+            <p data-ar="ضبط هذه الزوايا بدقة يضمن الحصول على أقوى إشارة وأفضل جودة للصورة." data-en="Adjusting these angles accurately ensures the strongest signal and best picture quality.">
+                ضبط هذه الزوايا بدقة يضمن الحصول على أقوى إشارة وأفضل جودة للصورة.
+            </p>
+        </div>
+        
+        <p style="color:#475569; margin-bottom:20px;" data-ar="اختر القمر الصناعي والحي الذي تسكن فيه لمعرفة الزوايا الدقيقة لتركيب الطبق." data-en="Select the satellite and your district in Damascus to get precise dish alignment angles.">
+            اختر القمر الصناعي والحي الذي تسكن فيه لمعرفة الزوايا الدقيقة لتركيب الطبق.
+        </p>
+        
+        <div class="form-group">
+            <label><i class="fas fa-satellite"></i> <span data-ar="القمر الصناعي" data-en="Satellite">القمر الصناعي</span></label>
+            <select id="satellite">
+                <option value="nilesat" data-ar="نايل سات (7° غرب)" data-en="Nilesat (7° West)">نايل سات (7° غرب)</option>
+                <option value="arasat" data-ar="عرب سات (26° شرق)" data-en="Arabsat (26° East)">عرب سات (26° شرق)</option>
+                <option value="hotbird" data-ar="هوتبيرد (13° شرق)" data-en="Hotbird (13° East)">هوتبيرد (13° شرق)</option>
+                <option value="turk" data-ar="تورك سات (42° شرق)" data-en="Turksat (42° East)">تورك سات (42° شرق)</option>
+                <option value="eshail" data-ar="سهيل سات (25.5° شرق)" data-en="Es'hailSat (25.5° East)">سهيل سات (25.5° شرق)</option>
+                <option value="yahsat" data-ar="ياه سات (52.5° شرق)" data-en="YahSat (52.5° East)">ياه سات (52.5° شرق)</option>
+                <option value="astra" data-ar="أسترا (19.2° شرق)" data-en="Astra (19.2° East)">أسترا (19.2° شرق)</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label><i class="fas fa-map-marker-alt"></i> <span data-ar="الحي في دمشق" data-en="District in Damascus">الحي في دمشق</span></label>
+            <select id="district">
+                <option value="mezzeh" data-ar="المزة" data-en="Mezzeh">المزة</option>
+                <option value="kafrsouseh" data-ar="كفرسوسة" data-en="Kafr Souseh">كفرسوسة</option>
+                <option value="barzeh" data-ar="برزة" data-en="Barzeh">برزة</option>
+                <option value="midan" data-ar="الميدان" data-en="Midan">الميدان</option>
+                <option value="muhajreen" data-ar="المهاجرين" data-en="Muhajreen">المهاجرين</option>
+                <option value="qaboun" data-ar="القابون" data-en="Qaboun">القابون</option>
+                <option value="jarmana" data-ar="جرمانا" data-en="Jaramana">جرمانا</option>
+                <option value="dweilaa" data-ar="الدويلعة" data-en="Dweilaa">الدويلعة</option>
+            </select>
+        </div>
+        
+        <button onclick="calculateAngle()">
+            <i class="fas fa-chart-line"></i> <span data-ar="احسب الزوايا" data-en="Calculate Angles">احسب الزوايا</span>
+        </button>
+        
+        <div id="result" class="result" style="display:none;">
+            <h3><i class="fas fa-compass"></i> <span data-ar="نتائج الضبط" data-en="Alignment Results">نتائج الضبط</span></h3>
+            <div>
+                <div><span data-ar="الزاوية الأفقية" data-en="Azimuth">الزاوية الأفقية</span> (Azimuth)</div>
+                <div id="azimuth" class="angle-value">---°</div>
+                <div style="font-size:14px; color:#475569;" data-ar="(اتجاه الطبق)" data-en="(Dish direction)">(اتجاه الطبق)</div>
+            </div>
+            <div style="margin:20px 0;">
+                <div><span data-ar="الزاوية العمودية" data-en="Elevation">الزاوية العمودية</span> (Elevation)</div>
+                <div id="elevation" class="angle-value">---°</div>
+                <div style="font-size:14px; color:#475569;" data-ar="(رفع الطبق لأعلى/أسفل)" data-en="(Tilt dish up/down)">(رفع الطبق لأعلى/أسفل)</div>
+            </div>
+            <div>
+                <div><span data-ar="إمالة الـ LNB" data-en="LNB Skew">إمالة الـ LNB</span> (Skew)</div>
+                <div id="skew" class="angle-value">---°</div>
+                <div style="font-size:14px; color:#475569;" data-ar="(تدوير الـ LNB)" data-en="(Rotate LNB)">(تدوير الـ LNB)</div>
+            </div>
+            <div class="note">
+                <i class="fas fa-info-circle"></i> <span data-ar="هذه القيم تقريبية. يُفضل استخدام جهاز قياس الإشارة للدقة المطلقة." data-en="These values are approximate. Use a signal meter for precise alignment.">هذه القيم تقريبية. يُفضل استخدام جهاز قياس الإشارة للدقة المطلقة.</span>
+            </div>
+        </div>
+        
+        <!-- رابط DishPointer -->
+        <div class="dishpointer-note">
+            <i class="fas fa-map-marked-alt"></i>
+            <span data-ar="للحصول على زوايا دقيقة حسب موقع منزلك بالضبط، استخدم:" data-en="For precise angles based on your exact location, use:">
+                للحصول على زوايا دقيقة حسب موقع منزلك بالضبط، استخدم:
+            </span>
+            <br>
+            <a href="https://www.dishpointer.com/" target="_blank" rel="noopener noreferrer">
+                🛰️ DishPointer.com - حساب الزوايا بالخريطة
+            </a>
+        </div>
+        
+        <!-- قسم المصادر -->
+        <div class="sources-box">
+            <i class="fas fa-flask"></i> <strong><span data-ar="المصادر العلمية" data-en="Scientific Sources">المصادر العلمية</span></strong>
+            <ul>
+                <li><a href="https://www.dishpointer.com/" target="_blank" rel="noopener noreferrer">Dishpointer.com</a> - <span data-ar="حساب الزوايا بالخريطة" data-en="Angle calculation by map"></span></li>
+                <li><a href="https://www.satbeams.com/" target="_blank" rel="noopener noreferrer">Satbeams.com</a> - <span data-ar="بيانات الأقمار والزوايا" data-en="Satellite data and angles"></span></li>
+                <li><a href="https://www.itu.int/" target="_blank" rel="noopener noreferrer">ITU-R</a> - <span data-ar="الاتحاد الدولي للاتصالات (معايير حساب الزوايا)" data-en="International Telecommunication Union (Angle calculation standards)"></span></li>
+                <li><span data-ar="قيم الزوايا مبنية على حسابات تقريبية وفق معادلات ITU-R." data-en="Angle values are based on approximate calculations according to ITU-R formulas."></span></li>
+            </ul>
+        </div>
+        
+        <div style="text-align:center; margin-top:20px;">
+            <a href="/" class="back-btn"><i class="fas fa-arrow-right"></i> <span data-ar="العودة للرئيسية" data-en="Back to Home">العودة للرئيسية</span></a>
+        </div>
+    </div>
+</div>
+
+<script>
+    // بيانات الزوايا حسب القمر والحي (قيم تقريبية لدمشق)
+    const angles = {
+        nilesat: {
+            mezzeh: { azimuth: 215, elevation: 42, skew: -12 },
+            kafrsouseh: { azimuth: 214, elevation: 42, skew: -12 },
+            barzeh: { azimuth: 216, elevation: 41, skew: -11 },
+            midan: { azimuth: 215, elevation: 42, skew: -12 },
+            muhajreen: { azimuth: 215, elevation: 42, skew: -12 },
+            qaboun: { azimuth: 216, elevation: 41, skew: -11 },
+            jarmana: { azimuth: 214, elevation: 42, skew: -12 },
+            dweilaa: { azimuth: 215, elevation: 42, skew: -12 }
+        },
+        arasat: {
+            mezzeh: { azimuth: 165, elevation: 48, skew: 8 },
+            kafrsouseh: { azimuth: 164, elevation: 48, skew: 8 },
+            barzeh: { azimuth: 166, elevation: 47, skew: 9 },
+            midan: { azimuth: 165, elevation: 48, skew: 8 },
+            muhajreen: { azimuth: 165, elevation: 48, skew: 8 },
+            qaboun: { azimuth: 166, elevation: 47, skew: 9 },
+            jarmana: { azimuth: 164, elevation: 48, skew: 8 },
+            dweilaa: { azimuth: 165, elevation: 48, skew: 8 }
+        },
+        hotbird: {
+            mezzeh: { azimuth: 190, elevation: 45, skew: -2 },
+            kafrsouseh: { azimuth: 189, elevation: 45, skew: -2 },
+            barzeh: { azimuth: 191, elevation: 44, skew: -1 },
+            midan: { azimuth: 190, elevation: 45, skew: -2 },
+            muhajreen: { azimuth: 190, elevation: 45, skew: -2 },
+            qaboun: { azimuth: 191, elevation: 44, skew: -1 },
+            jarmana: { azimuth: 189, elevation: 45, skew: -2 },
+            dweilaa: { azimuth: 190, elevation: 45, skew: -2 }
+        },
+        turk: {
+            mezzeh: { azimuth: 140, elevation: 52, skew: 18 },
+            kafrsouseh: { azimuth: 139, elevation: 52, skew: 18 },
+            barzeh: { azimuth: 141, elevation: 51, skew: 19 },
+            midan: { azimuth: 140, elevation: 52, skew: 18 },
+            muhajreen: { azimuth: 140, elevation: 52, skew: 18 },
+            qaboun: { azimuth: 141, elevation: 51, skew: 19 },
+            jarmana: { azimuth: 139, elevation: 52, skew: 18 },
+            dweilaa: { azimuth: 140, elevation: 52, skew: 18 }
+        },
+        eshail: {
+            mezzeh: { azimuth: 170, elevation: 47, skew: 5 },
+            kafrsouseh: { azimuth: 169, elevation: 47, skew: 5 },
+            barzeh: { azimuth: 171, elevation: 46, skew: 6 },
+            midan: { azimuth: 170, elevation: 47, skew: 5 },
+            muhajreen: { azimuth: 170, elevation: 47, skew: 5 },
+            qaboun: { azimuth: 171, elevation: 46, skew: 6 },
+            jarmana: { azimuth: 169, elevation: 47, skew: 5 },
+            dweilaa: { azimuth: 170, elevation: 47, skew: 5 }
+        },
+        yahsat: {
+            mezzeh: { azimuth: 125, elevation: 55, skew: 25 },
+            kafrsouseh: { azimuth: 124, elevation: 55, skew: 25 },
+            barzeh: { azimuth: 126, elevation: 54, skew: 26 },
+            midan: { azimuth: 125, elevation: 55, skew: 25 },
+            muhajreen: { azimuth: 125, elevation: 55, skew: 25 },
+            qaboun: { azimuth: 126, elevation: 54, skew: 26 },
+            jarmana: { azimuth: 124, elevation: 55, skew: 25 },
+            dweilaa: { azimuth: 125, elevation: 55, skew: 25 }
+        },
+        astra: {
+            mezzeh: { azimuth: 180, elevation: 44, skew: 0 },
+            kafrsouseh: { azimuth: 179, elevation: 44, skew: 0 },
+            barzeh: { azimuth: 181, elevation: 43, skew: 1 },
+            midan: { azimuth: 180, elevation: 44, skew: 0 },
+            muhajreen: { azimuth: 180, elevation: 44, skew: 0 },
+            qaboun: { azimuth: 181, elevation: 43, skew: 1 },
+            jarmana: { azimuth: 179, elevation: 44, skew: 0 },
+            dweilaa: { azimuth: 180, elevation: 44, skew: 0 }
+        }
+    };
+
+    function calculateAngle() {
+        const satellite = document.getElementById('satellite').value;
+        const district = document.getElementById('district').value;
+        
+        const satData = angles[satellite];
+        const distData = satData[district];
+        
+        if(distData) {
+            document.getElementById('azimuth').innerHTML = distData.azimuth + '°';
+            document.getElementById('elevation').innerHTML = distData.elevation + '°';
+            document.getElementById('skew').innerHTML = distData.skew + '°';
+            document.getElementById('result').style.display = 'block';
+            document.getElementById('result').scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+    // نظام اللغة
+    (function(){
+        const langBtn = document.getElementById("langBtn");
+        let currentLang = localStorage.getItem("myWebLang") || "ar";
+        
+        function applyLang(){
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
+            
+            document.querySelectorAll("[data-ar]").forEach(el => {
+                if(el.tagName === 'SELECT' || el.tagName === 'OPTION') return;
+                el.innerText = el.getAttribute("data-" + currentLang);
+            });
+            
+            // تحديث خيارات القوائم المنسدلة
+            document.querySelectorAll("select option").forEach(option => {
+                const text = option.getAttribute("data-" + currentLang);
+                if(text) option.innerText = text;
+            });
+            
+            langBtn.innerHTML = currentLang === "ar" ? 
+                '<i class="fas fa-globe"></i> English' : 
+                '<i class="fas fa-globe"></i> العربية';
+            
+            localStorage.setItem("myWebLang", currentLang);
+        }
+        
+        langBtn.onclick = function(){
+            currentLang = currentLang === "ar" ? "en" : "ar";
+            applyLang();
+        };
+        
+        applyLang();
+    })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title id="pageTitle" data-ar="ترددات حسب الجودة | ستالايت دمشق" data-en="Frequency Quality Guide | Damascus Satellite">ترددات حسب الجودة | ستالايت دمشق</title>
+    <link rel="icon" href="favicon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0;}
+        body{font-family:Arial,sans-serif;background:#f1f5f9;color:#0f172a;padding-bottom:50px;}
+        
+        header{background:#fff;padding:15px 20px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 10px rgba(0,0,0,0.05);position:sticky;top:0;z-index:1000;}
+        header a{color:#22c55e;text-decoration:none;font-weight:bold;display:flex;align-items:center;gap:8px;}
+        
+        .lang{cursor:pointer;background:#020617;color:#fff;padding:8px 15px;border-radius:20px;font-size:14px;font-weight:bold;}
+        
+        .container{max-width:1000px;margin:40px auto;padding:20px;}
+        
+        .page-title{
+            text-align:center;
+            margin-bottom:40px;
+        }
+        .page-title h1{
+            font-size:36px;
+            color:#0f172a;
+            margin-bottom:10px;
+        }
+        .page-title p{
+            color:#475569;
+            font-size:18px;
+        }
+        
+        .quality-section{
+            background:#fff;
+            border-radius:24px;
+            padding:25px;
+            margin-bottom:30px;
+            box-shadow:0 4px 15px rgba(0,0,0,0.05);
+        }
+        
+        .quality-header{
+            display:flex;
+            align-items:center;
+            gap:15px;
+            margin-bottom:20px;
+            padding-bottom:15px;
+            border-bottom:2px solid #e2e8f0;
+        }
+        .quality-badge{
+            width:40px;
+            height:40px;
+            border-radius:40px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            font-weight:bold;
+            color:#fff;
+        }
+        .quality-excellent{background:#22c55e;}
+        .quality-good{background:#facc15; color:#0f172a;}
+        .quality-medium{background:#f97316;}
+        .quality-variable{background:#8b5cf6;}
+        
+        .freq-table{
+            width:100%;
+            border-collapse:collapse;
+        }
+        .freq-table th{
+            text-align:center;
+            padding:12px;
+            background:#f1f5f9;
+            color:#0f172a;
+            font-weight:bold;
+        }
+        .freq-table td{
+            padding:10px;
+            border-bottom:1px solid #e2e8f0;
+            color:#334155;
+        }
+        .freq-table tr:hover{
+            background:#f8fafc;
+        }
+        
+        .note-box{
+            background:#fef9c3;
+            padding:15px;
+            border-radius:12px;
+            margin-top:20px;
+            color:#854d0e;
+        }
+        
+        .sources{
+            background:#f8fafc;
+            border-radius:20px;
+            padding:25px;
+            margin-top:40px;
+            border-right:4px solid #22c55e;
+        }
+        
+        .back-btn{
+            display:inline-block;
+            padding:10px 20px;
+            background:#020617;
+            color:#fff;
+            text-decoration:none;
+            border-radius:30px;
+            font-size:14px;
+            margin-top:20px;
+        }
+        
+        @media (max-width:600px){
+            .page-title h1{font-size:28px;}
+            .freq-table th, .freq-table td{font-size:12px;padding:8px;}
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="/">
+        <i class="fas fa-home"></i> 
+        <span data-ar="الرئيسية" data-en="Home">الرئيسية</span>
+    </a>
+    <div class="lang" id="langBtn"><i class="fas fa-globe"></i> English</div>
+</header>
+
+<div class="container">
+    <div class="page-title">
+        <h1><i class="fas fa-chart-simple" style="color:#22c55e;"></i> <span data-ar="ترددات حسب الجودة" data-en="Frequency Quality Guide">ترددات حسب الجودة</span></h1>
+        <p data-ar="تصنيف ترددات نايل سات حسب قوة الإشارة في دمشق (بيانات محدثة مارس 2026)" data-en="Nilesat frequencies classified by signal strength in Damascus (Updated March 2026)">
+            تصنيف ترددات نايل سات حسب قوة الإشارة في دمشق (بيانات محدثة مارس 2026)
+        </p>
+    </div>
+    
+    <!-- قسم ممتازة -->
+    <div class="quality-section">
+        <div class="quality-header">
+            <div class="quality-badge quality-excellent"><i class="fas fa-star"></i></div>
+            <h2><span data-ar="ممتازة" data-en="Excellent">ممتازة</span> <span data-ar="(أقوى الإشارات في دمشق)" data-en="(Strongest signals in Damascus)">(أقوى الإشارات في دمشق)</span></h2>
+        </div>
+        <table class="freq-table">
+            <thead>
+                <tr>
+                    <th data-ar="التردد" data-en="Frequency">التردد</th>
+                    <th data-ar="الاستقطاب" data-en="Polarization">الاستقطاب</th>
+                    <th data-ar="الترميز" data-en="Symbol Rate">الترميز</th>
+                    <th data-ar="القنوات" data-en="Channels">القنوات</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>11747</td><td>V</td><td>27500</td><td data-ar="MBC 1, MBC 2, MBC 3, MBC 4" data-en="MBC 1, MBC 2, MBC 3, MBC 4">MBC 1, MBC 2, MBC 3, MBC 4</td></tr>
+                <tr><td>11819</td><td>V</td><td>27500</td><td data-ar="MBC Action, MBC Max, MBC Drama, MBC Bollywood" data-en="MBC Action, MBC Max, MBC Drama, MBC Bollywood">MBC Action, MBC Max, MBC Drama, MBC Bollywood</td></tr>
+                <tr><td>11938</td><td>H</td><td>27500</td><td data-ar="MBC Masr, MBC Iraq, MBC 5, MBC 6" data-en="MBC Masr, MBC Iraq, MBC 5, MBC 6">MBC Masr, MBC Iraq, MBC 5, MBC 6</td></tr>
+                <tr><td>11785</td><td>V</td><td>27500</td><td data-ar="سبيستون، قناة شباب المستقبل" data-en="Spacetoon, Future Youth Channel">سبيستون، قناة شباب المستقبل</td></tr>
+                <tr><td>11277</td><td>V</td><td>27500</td><td data-ar="زي ألوان، زي أفلام" data-en="Zee Alwan, Zee Aflam">زي ألوان، زي أفلام</td></tr>
+            </tbody>
+        </table>
+        <div class="note-box">
+            <i class="fas fa-chart-line"></i> <strong data-ar="نصيحة:" data-en="Tip:">نصيحة:</strong> <span data-ar="هذه الترددات توفر أقوى إشارة في دمشق. استخدمها كقاعدة أولى عند تركيب طبق جديد." data-en="These frequencies provide the strongest signal in Damascus. Use them as a first base when installing a new dish.">
+                هذه الترددات توفر أقوى إشارة في دمشق. استخدمها كقاعدة أولى عند تركيب طبق جديد.
+            </span>
+        </div>
+    </div>
+    
+    <!-- قسم جيدة -->
+    <div class="quality-section">
+        <div class="quality-header">
+            <div class="quality-badge quality-good"><i class="fas fa-thumbs-up"></i></div>
+            <h2><span data-ar="جيدة" data-en="Good">جيدة</span> <span data-ar="(إشارة مستقرة في معظم أحياء دمشق)" data-en="(Stable signal in most Damascus districts)">(إشارة مستقرة في معظم أحياء دمشق)</span></h2>
+        </div>
+        <table class="freq-table">
+            <thead>
+                <tr>
+                    <th data-ar="التردد" data-en="Frequency">التردد</th>
+                    <th data-ar="الاستقطاب" data-en="Polarization">الاستقطاب</th>
+                    <th data-ar="الترميز" data-en="Symbol Rate">الترميز</th>
+                    <th data-ar="القنوات" data-en="Channels">القنوات</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>12226</td><td>H</td><td>27500</td><td data-ar="روتانا سينما، روتانا دراما، روتانا كليب" data-en="Rotana Cinema, Rotana Drama, Rotana Clip">روتانا سينما، روتانا دراما، روتانا كليب</td></tr>
+                <tr><td>12322</td><td>V</td><td>30000</td><td data-ar="SBC، Sama Dubai، قنوات إماراتية" data-en="SBC, Sama Dubai, UAE channels">SBC، Sama Dubai، قنوات إماراتية</td></tr>
+                <tr><td>12341</td><td>V</td><td>27500</td><td data-ar="قنوات روتانا (مجموعة كاملة)" data-en="Rotana channels (complete package)">قنوات روتانا (مجموعة كاملة)</td></tr>
+                <tr><td>11470</td><td>V</td><td>27500</td><td data-ar="MBC 1 (بديل)، قنوات ترفيهية" data-en="MBC 1 (alternative), entertainment channels">MBC 1 (بديل)، قنوات ترفيهية</td></tr>
+            </tbody>
+        </table>
+        <div class="note-box">
+            <i class="fas fa-info-circle"></i> <strong data-ar="ملاحظة:" data-en="Note:">ملاحظة:</strong> <span data-ar="قناة روتانا سينما قد تحتاج طبق 80 سم لاستقبال مثالي في بعض أحياء دمشق." data-en="Rotana Cinema may require an 80 cm dish for optimal reception in some Damascus districts.">
+                قناة روتانا سينما قد تحتاج طبق 80 سم لاستقبال مثالي في بعض أحياء دمشق.
+            </span>
+        </div>
+    </div>
+    
+    <!-- قسم متوسطة -->
+    <div class="quality-section">
+        <div class="quality-header">
+            <div class="quality-badge quality-medium"><i class="fas fa-chart-line"></i></div>
+            <h2><span data-ar="متوسطة" data-en="Medium">متوسطة</span> <span data-ar="(قد تحتاج طبق أكبر أو ضبط دقيق)" data-en="(May require larger dish or precise alignment)">(قد تحتاج طبق أكبر أو ضبط دقيق)</span></h2>
+        </div>
+        <table class="freq-table">
+            <thead>
+                <tr>
+                    <th data-ar="التردد" data-en="Frequency">التردد</th>
+                    <th data-ar="الاستقطاب" data-en="Polarization">الاستقطاب</th>
+                    <th data-ar="الترميز" data-en="Symbol Rate">الترميز</th>
+                    <th data-ar="القنوات" data-en="Channels">القنوات</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>10873</td><td>V</td><td>27500</td><td data-ar="توب موفيز، رعب، قنوات أفلام" data-en="Top Movies, Horror, Movie channels">توب موفيز، رعب، قنوات أفلام</td></tr>
+                <tr><td>11314</td><td>H</td><td>27500</td><td data-ar="قنوات أطفال متنوعة" data-en="Various children's channels">قنوات أطفال متنوعة</td></tr>
+                <tr><td>11258</td><td>H</td><td>27500</td><td data-ar="طيور الجنة، كراميش" data-en="Tayoor Al Jannah, Karameesh">طيور الجنة، كراميش</td></tr>
+                <tr><td>12418</td><td>H</td><td>27500</td><td data-ar="SSC الرياضية (بعض القنوات المفتوحة)" data-en="SSC Sports (some open channels)">SSC الرياضية (بعض القنوات المفتوحة)</td></tr>
+            </tbody>
+        </table>
+        <div class="note-box">
+            <i class="fas fa-warning"></i> <strong data-ar="نصيحة:" data-en="Tip:">نصيحة:</strong> <span data-ar="لتحسين استقبال هذه الترددات، استخدم طبق 80 سم أو أكبر، وتأكد من ضبط الزوايا بدقة." data-en="To improve reception of these frequencies, use an 80 cm dish or larger, and ensure precise alignment.">
+                لتحسين استقبال هذه الترددات، استخدم طبق 80 سم أو أكبر، وتأكد من ضبط الزوايا بدقة.
+            </span>
+        </div>
+    </div>
+    
+    <!-- قسم متغيرة حسب الموسم -->
+    <div class="quality-section">
+        <div class="quality-header">
+            <div class="quality-badge quality-variable"><i class="fas fa-cloud-rain"></i></div>
+            <h2><span data-ar="متغيرة حسب الموسم" data-en="Seasonal Variable">متغيرة حسب الموسم</span> <span data-ar="(تتأثر بالأمطار والعواصف)" data-en="(Affected by rain and storms)">(تتأثر بالأمطار والعواصف)</span></h2>
+        </div>
+        <table class="freq-table">
+            <thead>
+                <tr>
+                    <th data-ar="التردد" data-en="Frequency">التردد</th>
+                    <th data-ar="الاستقطاب" data-en="Polarization">الاستقطاب</th>
+                    <th data-ar="الترميز" data-en="Symbol Rate">الترميز</th>
+                    <th data-ar="القنوات" data-en="Channels">القنوات</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>10971</td><td>V</td><td>27500</td><td data-ar="الجزيرة، العربية، الحدث، سكاي نيوز عربية" data-en="Al Jazeera, Al Arabiya, Al Hadath, Sky News Arabia">الجزيرة، العربية، الحدث، سكاي نيوز عربية</td></tr>
+                <tr><td>11178</td><td>V</td><td>27500</td><td data-ar="قناة سوريا، سورية دراما، سورية الإخبارية" data-en="Syria TV, Syria Drama, Syria News">قناة سوريا، سورية دراما، سورية الإخبارية</td></tr>
+                <tr><td>11977</td><td>V</td><td>27500</td><td data-ar="قنوات وثائقية (ناشيونال جيوغرافيك، بي بي سي)" data-en="Documentary channels (National Geographic, BBC)">قنوات وثائقية (ناشيونال جيوغرافيك، بي بي سي)</td></tr>
+            </tbody>
+        </table>
+        <div class="note-box">
+            <i class="fas fa-cloud-rain"></i> <strong data-ar="ملاحظة مهمة:" data-en="Important Note:">ملاحظة مهمة:</strong> <span data-ar="هذه الترددات تتأثر بشدة بالأمطار الغزيرة والعواصف. يفضل استخدام طبق 80 سم لتعويض فقدان الإشارة في الظروف الجوية السيئة." data-en="These frequencies are heavily affected by heavy rain and storms. It is recommended to use an 80 cm dish to compensate for signal loss in bad weather conditions.">
+                هذه الترددات تتأثر بشدة بالأمطار الغزيرة والعواصف. يفضل استخدام طبق 80 سم لتعويض فقدان الإشارة في الظروف الجوية السيئة.
+            </span>
+        </div>
+    </div>
+    
+    <div class="sources">
+        <h3><i class="fas fa-flask"></i> <span data-ar="المصادر العلمية والتحديثات" data-en="Scientific Sources and Updates">المصادر العلمية والتحديثات</span></h3>
+        <ul>
+            <li><a href="https://www.nilesat.com.eg" target="_blank" style="color:#22c55e;">Nilesat.com.eg</a> - <span data-ar="الموقع الرسمي لنايل سات (آخر تحديثات الترددات)" data-en="Official Nilesat website (latest frequency updates)">الموقع الرسمي لنايل سات (آخر تحديثات الترددات)</span></li>
+            <li><a href="https://www.lyngsat.com" target="_blank" style="color:#22c55e;">Lyngsat.com</a> - <span data-ar="قاعدة بيانات عالمية للترددات (تحديث يومي)" data-en="Global frequency database (daily updates)">قاعدة بيانات عالمية للترددات (تحديث يومي)</span></li>
+            <li><a href="https://www.satbeams.com" target="_blank" style="color:#22c55e;">Satbeams.com</a> - <span data-ar="خرائط التغطية وقوة الإشارة حسب المنطقة" data-en="Coverage maps and signal strength by region">خرائط التغطية وقوة الإشارة حسب المنطقة</span></li>
+            <li><a href="https://www.kingofsat.net" target="_blank" style="color:#22c55e;">KingOfSat.net</a> - <span data-ar="تحديثات فورية للترددات والقنوات الجديدة" data-en="Real-time updates of frequencies and new channels">تحديثات فورية للترددات والقنوات الجديدة</span></li>
+        </ul>
+        <p><i class="fas fa-calendar-alt"></i> <span data-ar="آخر تحديث: مارس 2026 (بناءً على بيانات Lyngsat و Nilesat الرسمية)" data-en="Last updated: March 2026 (based on official Lyngsat and Nilesat data)">آخر تحديث: مارس 2026 (بناءً على بيانات Lyngsat و Nilesat الرسمية)</span></p>
+        <p><i class="fas fa-map-marker-alt"></i> <span data-ar="* القياسات مأخوذة من مدينة دمشق (خط عرض 33.5° شمالاً). قد تختلف قوة الإشارة في المناطق الأخرى من سوريا." data-en="* Measurements taken from Damascus city (Latitude 33.5° N). Signal strength may vary in other parts of Syria.">
+            * القياسات مأخوذة من مدينة دمشق (خط عرض 33.5° شمالاً). قد تختلف قوة الإشارة في المناطق الأخرى من سوريا.
+        </span></p>
+    </div>
+    
+    <div style="text-align:center; margin-top:20px;">
+        <a href="/" class="back-btn"><i class="fas fa-arrow-right"></i> <span data-ar="العودة للرئيسية" data-en="Back to Home">العودة للرئيسية</span></a>
+    </div>
+</div>
+
+<script>
+    (function(){
+        const langBtn = document.getElementById("langBtn");
+        let currentLang = localStorage.getItem("myWebLang") || "ar";
+        
+        function applyLang(){
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
+            
+            document.querySelectorAll("[data-ar]").forEach(el => {
+                if(el.tagName === 'A') return;
+                el.innerText = el.getAttribute("data-" + currentLang);
+            });
+            
+            langBtn.innerHTML = currentLang === "ar" ? '<i class="fas fa-globe"></i> English' : '<i class="fas fa-globe"></i> العربية';
+            localStorage.setItem("myWebLang", currentLang);
+        }
+        
+        langBtn.onclick = function(){
+            currentLang = currentLang === "ar" ? "en" : "ar";
+            applyLang();
+        };
+        applyLang();
+    })();
+</script>
+
+</body>
+</html>

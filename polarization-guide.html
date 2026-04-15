@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title id="pageTitle" data-ar="دليل الاستقطاب | ستالايت دمشق" data-en="Polarization Guide | Damascus Satellite">دليل الاستقطاب | ستالايت دمشق</title>
+    <link rel="icon" href="favicon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0;}
+        body{font-family:Arial,sans-serif;background:#f1f5f9;color:#0f172a;padding-bottom:50px;}
+        
+        header{background:#fff;padding:15px 20px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 10px rgba(0,0,0,0.05);position:sticky;top:0;z-index:1000;}
+        header a{color:#22c55e;text-decoration:none;font-weight:bold;display:flex;align-items:center;gap:8px;}
+        
+        .lang{cursor:pointer;background:#020617;color:#fff;padding:8px 15px;border-radius:20px;font-size:14px;font-weight:bold;}
+        
+        .container{max-width:900px;margin:40px auto;padding:20px;}
+        
+        .page-title{
+            text-align:center;
+            margin-bottom:40px;
+        }
+        .page-title h1{
+            font-size:36px;
+            color:#0f172a;
+            margin-bottom:10px;
+        }
+        .page-title p{
+            color:#475569;
+            font-size:18px;
+        }
+        
+        .section-card{
+            background:#fff;
+            border-radius:24px;
+            padding:30px;
+            margin-bottom:30px;
+            box-shadow:0 4px 15px rgba(0,0,0,0.05);
+        }
+        .section-header{
+            display:flex;
+            align-items:center;
+            gap:15px;
+            margin-bottom:20px;
+            border-bottom:2px solid #e2e8f0;
+            padding-bottom:15px;
+        }
+        .section-icon{
+            width:50px;
+            height:50px;
+            background:linear-gradient(135deg, #22c55e, #16a34a);
+            border-radius:25px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            color:#fff;
+            font-size:24px;
+        }
+        .formula-box{
+            background:#f1f5f9;
+            padding:15px;
+            border-radius:12px;
+            text-align:center;
+            font-family:monospace;
+            margin:15px 0;
+        }
+        .sources{
+            background:#f8fafc;
+            border-radius:20px;
+            padding:25px;
+            margin-top:40px;
+            border-right:4px solid #22c55e;
+        }
+        .back-btn{
+            display:inline-block;
+            padding:10px 20px;
+            background:#020617;
+            color:#fff;
+            text-decoration:none;
+            border-radius:30px;
+            margin-top:20px;
+        }
+        @media (max-width:600px){.page-title h1{font-size:28px;}}
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="/"><i class="fas fa-home"></i> <span data-ar="الرئيسية" data-en="Home">الرئيسية</span></a>
+    <div class="lang" id="langBtn"><i class="fas fa-globe"></i> English</div>
+</header>
+
+<div class="container">
+    <div class="page-title">
+        <h1><i class="fas fa-waveform" style="color:#22c55e;"></i> <span data-ar="دليل الاستقطاب" data-en="Polarization Guide">دليل الاستقطاب</span></h1>
+        <p data-ar="شرح علمي للاستقطاب في الموجات الكهرومغناطيسية" data-en="Scientific explanation of polarization in electromagnetic waves">شرح علمي للاستقطاب في الموجات الكهرومغناطيسية</p>
+    </div>
+    
+    <div class="section-card">
+        <div class="section-header"><div class="section-icon"><i class="fas fa-question-circle"></i></div><h2><span data-ar="ما هو الاستقطاب؟" data-en="What is Polarization?">ما هو الاستقطاب؟</span></h2></div>
+        <p><span data-ar="الاستقطاب هو اتجاه اهتزاز الموجة الكهرومغناطيسية في الفضاء. في الأقمار الصناعية، يحدد الاستقطاب كيفية ترتيب المجال الكهربائي للموجة. يستخدم لتضاعف سعة الترددات بإرسال قناتين على نفس التردد باستقطابين مختلفين." data-en="Polarization is the direction of oscillation of the electromagnetic wave in space. In satellites, polarization determines how the electric field is oriented. It is used to double frequency capacity by sending two channels on the same frequency with different polarizations.">
+            الاستقطاب هو اتجاه اهتزاز الموجة الكهرومغناطيسية في الفضاء. في الأقمار الصناعية، يحدد الاستقطاب كيفية ترتيب المجال الكهربائي للموجة. يستخدم لتضاعف سعة الترددات بإرسال قناتين على نفس التردد باستقطابين مختلفين.
+        </span></p>
+    </div>
+    
+    <div class="section-card">
+        <div class="section-header"><div class="section-icon"><i class="fas fa-arrow-up"></i></div><h2><span data-ar="الاستقطاب الخطي (Linear)" data-en="Linear Polarization">الاستقطاب الخطي (Linear)</span></h2></div>
+        <p><span data-ar="نوعان رئيسيان: عمودي (Vertical - V) وأفقي (Horizontal - H). يستخدم في معظم الأقمار العربية (نايل سات، عرب سات)." data-en="Two main types: Vertical (V) and Horizontal (H). Used in most Arab satellites (Nilesat, Arabsat).">نوعان رئيسيان: عمودي (Vertical - V) وأفقي (Horizontal - H). يستخدم في معظم الأقمار العربية (نايل سات، عرب سات).</span></p>
+        <div class="formula-box"><span data-ar="الاستقطاب العمودي (V): المجال الكهربائي عمودي على سطح الأرض" data-en="Vertical Polarization (V): Electric field perpendicular to Earth's surface">الاستقطاب العمودي (V): المجال الكهربائي عمودي على سطح الأرض</span></div>
+        <div class="formula-box"><span data-ar="الاستقطاب الأفقي (H): المجال الكهربائي موازٍ لسطح الأرض" data-en="Horizontal Polarization (H): Electric field parallel to Earth's surface">الاستقطاب الأفقي (H): المجال الكهربائي موازٍ لسطح الأرض</span></div>
+        <p><small><span data-ar="المصدر:" data-en="Source:">المصدر:</span> <a href="https://www.itu.int/" target="_blank">ITU-R</a></small></p>
+    </div>
+    
+    <div class="section-card">
+        <div class="section-header"><div class="section-icon"><i class="fas fa-circle-notch"></i></div><h2><span data-ar="الاستقطاب الدائري (Circular)" data-en="Circular Polarization">الاستقطاب الدائري (Circular)</span></h2></div>
+        <p><span data-ar="يستخدم في بعض الأقمار (مثل هوتبيرد). نوعان: دائري أيمن (RHCP) ودائري أيسر (LHCP). أقل تأثراً بالعوائق الجوية." data-en="Used in some satellites (e.g., Hotbird). Two types: Right-Hand Circular (RHCP) and Left-Hand Circular (LHCP). Less affected by weather obstacles.">
+            يستخدم في بعض الأقمار (مثل هوتبيرد). نوعان: دائري أيمن (RHCP) ودائري أيسر (LHCP). أقل تأثراً بالعوائق الجوية.
+        </span></p>
+        <div class="formula-box"><span data-ar="RHCP: دوران المجال الكهربائي باتجاه عقارب الساعة" data-en="RHCP: Electric field rotates clockwise">RHCP: دوران المجال الكهربائي باتجاه عقارب الساعة</span></div>
+        <div class="formula-box"><span data-ar="LHCP: دوران المجال الكهربائي عكس عقارب الساعة" data-en="LHCP: Electric field rotates counter-clockwise">LHCP: دوران المجال الكهربائي عكس عقارب الساعة</span></div>
+    </div>
+    
+    <div class="section-card">
+        <div class="section-header"><div class="section-icon"><i class="fas fa-microchip"></i></div><h2><span data-ar="معادلة الاستقطاب" data-en="Polarization Equation">معادلة الاستقطاب</span></h2></div>
+        <div class="formula-box">Skew = arctan( sin(Δλ) / tan(φ) )</div>
+        <p><span data-ar="زاوية إمالة LNB (Skew) تعوض فرق الاستقطاب بين موقع الأرض والقمر." data-en="LNB skew angle compensates for polarization difference between Earth location and satellite.">
+            زاوية إمالة LNB (Skew) تعوض فرق الاستقطاب بين موقع الأرض والقمر.
+        </span></p>
+    </div>
+    
+    <div class="sources">
+        <h3><i class="fas fa-flask"></i> <span data-ar="المصادر العلمية" data-en="Scientific Sources">المصادر العلمية</span></h3>
+        <ul><li><a href="https://www.itu.int/" target="_blank">ITU-R Recommendations</a></li>
+        <li><a href="https://www.eutelsat.com/" target="_blank">Eutelsat - Polarization Guide</a></li>
+        <li><a href="https://www.satbeams.com/" target="_blank">Satbeams - Polarization</a></li></ul>
+    </div>
+    
+    <div style="text-align:center;"><a href="/" class="back-btn"><i class="fas fa-arrow-right"></i> <span data-ar="العودة للرئيسية" data-en="Back to Home">العودة للرئيسية</span></a></div>
+</div>
+
+<script>
+    (function(){
+        const langBtn = document.getElementById("langBtn");
+        let currentLang = localStorage.getItem("myWebLang") || "ar";
+        function applyLang(){
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
+            document.querySelectorAll("[data-ar]").forEach(el => {
+                if(el.tagName === 'A') return;
+                const text = el.getAttribute("data-" + currentLang);
+                if(text) el.innerText = text;
+            });
+            langBtn.innerHTML = currentLang === "ar" ? '<i class="fas fa-globe"></i> English' : '<i class="fas fa-globe"></i> العربية';
+            localStorage.setItem("myWebLang", currentLang);
+        }
+        langBtn.onclick = function(){ currentLang = currentLang === "ar" ? "en" : "ar"; applyLang(); };
+        applyLang();
+    })();
+</script>
+</body>
+</html>

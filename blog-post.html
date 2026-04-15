@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>مقال | ستالايت دمشق</title>
+    <link rel="icon" href="favicon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0;}
+        body{font-family:Arial,sans-serif;background:#f1f5f9;color:#0f172a;padding-bottom:50px;}
+        
+        header{background:#fff;padding:15px 20px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 10px rgba(0,0,0,0.05);position:sticky;top:0;z-index:1000;}
+        header a{color:#22c55e;text-decoration:none;font-weight:bold;display:flex;align-items:center;gap:8px;}
+        
+        .lang{cursor:pointer;background:#020617;color:#fff;padding:8px 15px;border-radius:20px;font-size:14px;font-weight:bold;}
+        
+        .container{max-width:800px;margin:40px auto;padding:20px;}
+        
+        .article-card{
+            background:#fff;
+            border-radius:24px;
+            padding:40px;
+            box-shadow:0 4px 15px rgba(0,0,0,0.05);
+        }
+        .article-card h1{
+            color:#0f172a;
+            margin-bottom:15px;
+            font-size:32px;
+        }
+        .article-date{
+            color:#22c55e;
+            font-size:14px;
+            margin-bottom:20px;
+            padding-bottom:15px;
+            border-bottom:1px solid #e2e8f0;
+        }
+        .article-content p{
+            line-height:1.8;
+            color:#334155;
+            margin-bottom:20px;
+        }
+        .article-content h2{
+            color:#22c55e;
+            margin:25px 0 15px 0;
+        }
+        .article-content ul{
+            padding-right:20px;
+            margin:15px 0;
+        }
+        .article-content li{
+            margin-bottom:8px;
+            color:#475569;
+        }
+        
+        .back-btn{
+            display:inline-block;
+            padding:10px 20px;
+            background:#020617;
+            color:#fff;
+            text-decoration:none;
+            border-radius:30px;
+            font-size:14px;
+            margin-top:20px;
+        }
+        
+        @media (max-width:600px){
+            .article-card{padding:25px;}
+            .article-card h1{font-size:26px;}
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="/">
+        <i class="fas fa-home"></i> 
+        <span data-ar="الرئيسية" data-en="Home">الرئيسية</span>
+    </a>
+    <div class="lang" id="langBtn"><i class="fas fa-globe"></i> English</div>
+</header>
+
+<div class="container">
+    <div class="article-card">
+        <h1 id="articleH1"></h1>
+        <div id="articleContent"></div>
+    </div>
+    
+    <div style="text-align:center; margin-top:20px;">
+        <a href="blog.html" class="back-btn"><i class="fas fa-arrow-right"></i> <span data-ar="العودة للمدونة" data-en="Back to Blog">العودة للمدونة</span></a>
+        <a href="/" class="back-btn" style="margin-right:10px;"><i class="fas fa-home"></i> <span data-ar="الرئيسية" data-en="Home">الرئيسية</span></a>
+    </div>
+</div>
+
+<script>
+    // بيانات المقالات
+    const articles = {
+        1: {
+            title: { ar: "كيف تختار حجم الطبق المناسب لمنزلك؟", en: "How to Choose the Right Dish Size for Your Home?" },
+            date: "25 مارس 2026",
+            content: {
+                ar: `
+                    <p>اختيار حجم الطبق المناسب هو أحد أهم العوامل التي تؤثر على جودة استقبال الإشارة. في هذا المقال، سنساعدك على فهم كيفية اختيار الحجم المثالي حسب موقعك والقمر الذي تريد استقباله.</p>
+                    
+                    <h2>حجم الطبق حسب القمر</h2>
+                    <p>لكل قمر صناعي متطلبات مختلفة لحجم الطبق:</p>
+                    <ul>
+                        <li>📡 نايل سات (7° غرب): 60-80 سم في دمشق وريفها</li>
+                        <li>📡 عرب سات (26° شرق): 90-120 سم للحصول على إشارة جيدة</li>
+                        <li>📡 هوتبيرد (13° شرق): 90-100 سم مناسب لاستقبال القنوات الأوروبية</li>
+                        <li>📡 تورك سات (42° شرق): 100-120 سم للحصول على أفضل إشارة</li>
+                    </ul>
+                    
+                    <h2>تأثير الموقع الجغرافي</h2>
+                    <p>موقع منزلك يلعب دوراً كبيراً في تحديد حجم الطبق المناسب:</p>
+                    <ul>
+                        <li>📍 المناطق المركزية (دمشق، المزة، كفرسوسة): 60-80 سم كافية</li>
+                        <li>📍 المناطق الجبلية (القلمون، قدسيا): تحتاج +20 سم عن الحجم الموصى به</li>
+                        <li>📍 المناطق المكشوفة (الريف): يمكن استخدام حجم أقل إذا كان الطبق بعيداً عن العوائق</li>
+                    </ul>
+                    
+                    <h2>نصائح إضافية</h2>
+                    <p>💡 كلما زاد حجم الطبق، زادت قوة الإشارة، لكن يجب التأكد من ثبات التركيب.</p>
+                    <p>💡 إذا كنت تخطط لتركيب أكثر من رسيفر، اختر LNB مزدوج أو رباعي مناسب لحجم الطبق.</p>
+                    <p>💡 استخدم كابل عالي الجودة لتجنب ضعف الإشارة.</p>
+                `,
+                en: `
+                    <p>Choosing the right dish size is one of the most important factors affecting signal reception quality. In this article, we'll help you understand how to choose the ideal size based on your location and the satellite you want to receive.</p>
+                    
+                    <h2>Dish Size by Satellite</h2>
+                    <p>Each satellite has different dish size requirements:</p>
+                    <ul>
+                        <li>📡 Nilesat (7° West): 60-80 cm in Damascus and suburbs</li>
+                        <li>📡 Arabsat (26° East): 90-120 cm for good signal</li>
+                        <li>📡 Hotbird (13° East): 90-100 cm suitable for European channels</li>
+                        <li>📡 Turksat (42° East): 100-120 cm for best signal</li>
+                    </ul>
+                    
+                    <h2>Geographic Location Effect</h2>
+                    <p>Your home's location plays a big role in determining the appropriate dish size:</p>
+                    <ul>
+                        <li>📍 Central areas (Damascus, Mezzeh, Kafr Souseh): 60-80 cm is sufficient</li>
+                        <li>📍 Mountainous areas (Qalamoun, Qudsaya): need +20 cm from recommended size</li>
+                        <li>📍 Open areas (suburbs): can use smaller size if dish is away from obstacles</li>
+                    </ul>
+                    
+                    <h2>Additional Tips</h2>
+                    <p>💡 The larger the dish, the stronger the signal, but ensure stable installation.</p>
+                    <p>💡 If you plan to install multiple receivers, choose a twin or quad LNB suitable for the dish size.</p>
+                    <p>💡 Use high-quality cable to avoid signal loss.</p>
+                `
+            }
+        },
+        2: {
+            title: { ar: "الفرق بين رسيفر HD و 4K: أيهما تختار؟", en: "HD vs 4K Receiver: Which One to Choose?" },
+            date: "18 مارس 2026",
+            content: {
+                ar: `<p>مع تطور التكنولوجيا، أصبحت رسيفرات 4K متاحة بأسعار مناسبة. لكن هل تحتاجها فعلاً؟ في هذا المقال نقارن بين النوعين ونساعدك على اتخاذ القرار المناسب.</p>
+                    <h2>الفرق الرئيسي</h2>
+                    <ul>
+                        <li>📺 HD (1080p): جودة عالية، مناسب لمعظم القنوات العربية والعالمية</li>
+                        <li>📺 4K (2160p): جودة فائقة الوضوح، يحتاج تلفزيون 4K وقنوات تدعم التقنية</li>
+                    </ul>
+                    <h2>نصيحة</h2>
+                    <p>إذا كان تلفزيونك يدعم 4K، استخدم رسيفر 4K لتجربة أفضل. وإذا كان تلفزيونك عادي، رسيفر HD كافٍ.</p>`,
+                en: `<p>With advancing technology, 4K receivers are now available at reasonable prices. But do you really need one? In this article, we compare both types and help you make the right decision.</p>
+                    <h2>Main Difference</h2>
+                    <ul>
+                        <li>📺 HD (1080p): High quality, suitable for most Arab and international channels</li>
+                        <li>📺 4K (2160p): Ultra HD quality, requires 4K TV and supported channels</li>
+                    </ul>
+                    <h2>Tip</h2>
+                    <p>If your TV supports 4K, use a 4K receiver for the best experience. If your TV is standard, an HD receiver is sufficient.</p>`
+            }
+        },
+        3: {
+            title: { ar: "أسباب ضعف الإشارة في الشتاء وكيفية حلها", en: "Causes of Weak Signal in Winter and How to Fix Them" },
+            date: "10 مارس 2026",
+            content: {
+                ar: `<p>مع قدوم فصل الشتاء، يعاني الكثير من ضعف إشارة الستالايت. في هذا المقال نستعرض الأسباب الرئيسية والحلول العملية.</p>
+                    <h2>الأسباب الرئيسية</h2>
+                    <ul>
+                        <li>❄️ تراكم الثلوج أو الأمطار على الطبق → نظفه برفق</li>
+                        <li>❄️ تحرك الطبق بسبب الرياح → أعد ضبط الزوايا</li>
+                        <li>❄️ رطوبة في الـ LNB → استبدله بآخر جديد</li>
+                    </ul>
+                    <h2>نصائح وقائية</h2>
+                    <p>يفضل تثبيت الطبق في مكان محمي من الرياح المباشرة، واستخدام أغطية واقية للـ LNB في المناطق الماطرة.</p>`,
+                en: `<p>With winter approaching, many suffer from weak satellite signals. In this article, we review the main causes and practical solutions.</p>
+                    <h2>Main Causes</h2>
+                    <ul>
+                        <li>❄️ Snow or rain accumulation on dish → Gently clean it</li>
+                        <li>❄️ Dish moved by wind → Readjust angles</li>
+                        <li>❄️ Moisture in LNB → Replace with a new one</li>
+                    </ul>
+                    <h2>Preventive Tips</h2>
+                    <p>It is preferable to install the dish in a location sheltered from direct wind, and use protective covers for the LNB in rainy areas.</p>`
+            }
+        },
+        4: {
+            title: { ar: "شرح أنواع الـ LNB: عادي، مزدوج، رباعي", en: "LNB Types Explained: Single, Twin, Quad" },
+            date: "2 مارس 2026",
+            content: {
+                ar: `<p>الـ LNB هو الجزء الموجود في مقدمة الطبق. يختلف حسب عدد الرسيفرات التي تريد توصيلها:</p>
+                    <h2>أنواع الـ LNB</h2>
+                    <ul>
+                        <li>📡 عادي (Single): لرسيفر واحد</li>
+                        <li>📡 مزدوج (Twin): لرسيفرين منفصلين</li>
+                        <li>📡 رباعي (Quad): لأربعة رسيفرات</li>
+                    </ul>
+                    <h2>كيف تختار النوع المناسب؟</h2>
+                    <p>اختر حسب عدد الغرف التي تحتاج فيها رسيفراً منفصلاً.</p>`,
+                en: `<p>The LNB is the part at the front of the dish. It varies depending on the number of receivers you want to connect:</p>
+                    <h2>LNB Types</h2>
+                    <ul>
+                        <li>📡 Single: For one receiver</li>
+                        <li>📡 Twin: For two separate receivers</li>
+                        <li>📡 Quad: For four receivers</li>
+                    </ul>
+                    <h2>How to Choose the Right Type?</h2>
+                    <p>Choose based on the number of rooms where you need a separate receiver.</p>`
+            }
+        },
+        5: {
+            title: { ar: "كيف تحمي طبقك من العواصف والرياح القوية", en: "How to Protect Your Dish from Storms and Strong Winds" },
+            date: "20 فبراير 2026",
+            content: {
+                ar: `<p>العواصف والرياح القوية قد تؤدي إلى تحرك الطبق أو تلفه. إليك نصائح عملية:</p>
+                    <h2>نصائح للحماية</h2>
+                    <ul>
+                        <li>✅ ثبت القاعدة بإحكام في الجدار أو الأرضية</li>
+                        <li>✅ استخدم مسامير مقاومة للصدأ</li>
+                        <li>✅ في المناطق المكشوفة، أضف دعامات جانبية للطبق</li>
+                    </ul>`,
+                en: `<p>Storms and strong winds can move or damage your dish. Here are practical tips:</p>
+                    <h2>Protection Tips</h2>
+                    <ul>
+                        <li>✅ Securely mount the base to the wall or ground</li>
+                        <li>✅ Use rust-resistant screws</li>
+                        <li>✅ In exposed areas, add side supports to the dish</li>
+                    </ul>`
+            }
+        },
+        6: {
+            title: { ar: "تحديث ترددات نايل سات: التغييرات الجديدة", en: "Nilesat Frequency Updates: New Changes" },
+            date: "10 فبراير 2026",
+            content: {
+                ar: `<p>شهدت ترددات نايل سات تغييرات جديدة. إليك أبرز التحديثات:</p>
+                    <h2>أبرز الترددات المحدثة</h2>
+                    <ul>
+                        <li>📡 قناة MBC 1: 11747 V 27500</li>
+                        <li>📡 قناة MBC 2: 11819 V 27500</li>
+                        <li>📡 قناة MBC Action: 11938 H 27500</li>
+                    </ul>`,
+                en: `<p>Nilesat frequencies have seen new changes. Here are the latest updates:</p>
+                    <h2>Latest Updated Frequencies</h2>
+                    <ul>
+                        <li>📡 MBC 1: 11747 V 27500</li>
+                        <li>📡 MBC 2: 11819 V 27500</li>
+                        <li>📡 MBC Action: 11938 H 27500</li>
+                    </ul>`
+            }
+        }
+    };
+    
+    // الحصول على رقم المقالة من الرابط
+    const urlParams = new URLSearchParams(window.location.search);
+    const articleId = urlParams.get('id') || '1';
+    
+    // عناصر الصفحة
+    const articleH1 = document.getElementById('articleH1');
+    const articleContent = document.getElementById('articleContent');
+    
+    // اللغة الحالية
+    let currentLang = localStorage.getItem("myWebLang") || "ar";
+    
+    // دالة عرض المقالة
+    function displayArticle() {
+        const article = articles[articleId];
+        if (article) {
+            const title = article.title[currentLang === "ar" ? "ar" : "en"];
+            const date = article.date;
+            const content = article.content[currentLang === "ar" ? "ar" : "en"];
+            
+            articleH1.innerText = title;
+            articleContent.innerHTML = `
+                <div class="article-date">${date}</div>
+                <div class="article-content">${content}</div>
+            `;
+            document.title = title + " | ستالايت دمشق";
+        } else {
+            articleH1.innerText = currentLang === "ar" ? "المقال غير موجود" : "Article Not Found";
+            articleContent.innerHTML = `<p>${currentLang === "ar" ? "عذراً، المقال الذي تبحث عنه غير موجود." : "Sorry, the article you are looking for does not exist."}</p>`;
+            document.title = (currentLang === "ar" ? "غير موجود" : "Not Found") + " | ستالايت دمشق";
+        }
+    }
+    
+    // دالة تحديث اللغة
+    function applyLang() {
+        document.documentElement.lang = currentLang;
+        document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
+        
+        document.querySelectorAll("[data-ar]").forEach(el => {
+            el.innerText = el.getAttribute("data-" + currentLang);
+        });
+        
+        const langBtn = document.getElementById("langBtn");
+        if(langBtn) {
+            langBtn.innerHTML = currentLang === "ar" ? '<i class="fas fa-globe"></i> English' : '<i class="fas fa-globe"></i> العربية';
+        }
+        
+        localStorage.setItem("myWebLang", currentLang);
+        
+        // إعادة عرض المقالة باللغة الجديدة
+        displayArticle();
+    }
+    
+    // تشغيل عرض المقالة
+    displayArticle();
+    
+    // زر تغيير اللغة
+    const langBtn = document.getElementById("langBtn");
+    if(langBtn) {
+        langBtn.onclick = function() {
+            currentLang = currentLang === "ar" ? "en" : "ar";
+            applyLang();
+        };
+    }
+</script>
+
+</body>
+</html>

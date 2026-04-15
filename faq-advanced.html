@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>الأسئلة الشائعة المتقدمة | ستالايت دمشق</title>
+    <link rel="icon" href="favicon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0;}
+        body{font-family:Arial,sans-serif;background:#f1f5f9;color:#0f172a;padding-bottom:50px;}
+        
+        header{background:#fff;padding:15px 20px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 10px rgba(0,0,0,0.05);position:sticky;top:0;z-index:1000;}
+        header a{color:#22c55e;text-decoration:none;font-weight:bold;display:flex;align-items:center;gap:8px;}
+        
+        .lang{cursor:pointer;background:#020617;color:#fff;padding:8px 15px;border-radius:20px;font-size:14px;font-weight:bold;}
+        
+        .container{max-width:900px;margin:40px auto;padding:20px;}
+        
+        .page-title{
+            text-align:center;
+            margin-bottom:30px;
+        }
+        .page-title h1{
+            font-size:32px;
+            color:#0f172a;
+            margin-bottom:10px;
+        }
+        .page-title p{
+            color:#475569;
+        }
+        
+        .section-title{
+            text-align:center;
+            margin:30px 0 25px;
+            color:#0f172a;
+            font-size:24px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            gap:12px;
+        }
+        .section-title i{
+            color:#22c55e;
+            font-size:28px;
+        }
+        
+        .faq-item{
+            background:#fff;
+            border-radius:20px;
+            margin-bottom:15px;
+            overflow:hidden;
+            box-shadow:0 2px 10px rgba(0,0,0,0.05);
+            transition:0.3s;
+        }
+        
+        .faq-question{
+            padding:18px 25px;
+            cursor:pointer;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            font-weight:bold;
+            font-size:18px;
+            background:#fff;
+            transition:0.2s;
+        }
+        
+        .faq-question:hover{
+            background:#f8fafc;
+        }
+        
+        .faq-question i{
+            color:#22c55e;
+            transition:0.3s;
+        }
+        
+        .faq-answer{
+            padding:0 25px;
+            max-height:0;
+            overflow:hidden;
+            transition:0.3s ease;
+            background:#fafcff;
+            border-top:1px solid #eef2ff;
+        }
+        
+        .faq-item.active .faq-answer{
+            padding:20px 25px;
+            max-height:500px;
+        }
+        
+        .faq-item.active .faq-question i{
+            transform:rotate(180deg);
+        }
+        
+        .faq-answer p{
+            color:#334155;
+            line-height:1.7;
+            margin-bottom:10px;
+        }
+        
+        .faq-answer ul{
+            padding-right:20px;
+            margin:10px 0;
+        }
+        
+        .faq-answer li{
+            margin-bottom:5px;
+            color:#475569;
+        }
+        
+        .back-btn{
+            display:inline-block;
+            padding:10px 20px;
+            background:#020617;
+            color:#fff;
+            text-decoration:none;
+            border-radius:30px;
+            font-size:14px;
+            margin-top:20px;
+            transition:0.3s;
+        }
+        .back-btn:hover{
+            background:#22c55e;
+            transform:scale(1.05);
+        }
+        
+        .contact-note{
+            background:#eef2ff;
+            border-radius:16px;
+            padding:20px;
+            text-align:center;
+            margin-top:30px;
+        }
+        
+        @media (max-width:600px){
+            .faq-question{font-size:16px;padding:15px;}
+            .faq-answer{padding:0 20px;}
+            .page-title h1{font-size:26px;}
+            .section-title{font-size:20px; margin:25px 0 20px;}
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="/">
+        <i class="fas fa-home"></i> 
+        <span data-ar="الرئيسية" data-en="Home">الرئيسية</span>
+    </a>
+    <div class="lang" id="langBtn"><i class="fas fa-globe"></i> English</div>
+</header>
+
+<div class="container">
+    <div class="page-title">
+        <h1><i class="fas fa-question-circle" style="color:#22c55e;"></i> <span data-ar="الأسئلة الشائعة المتقدمة" data-en="Advanced FAQ">الأسئلة الشائعة المتقدمة</span></h1>
+        <p data-ar="كل ما تريد معرفته عن الستالايت والأقمار الصناعية" data-en="Everything you need to know about satellites and dishes">
+            كل ما تريد معرفته عن الستالايت والأقمار الصناعية
+        </p>
+    </div>
+    
+    <!-- H2 للأسئلة العامة -->
+    <h2 class="section-title">
+        <i class="fas fa-question-circle"></i>
+        <span data-ar="أسئلة عامة" data-en="General Questions">أسئلة عامة</span>
+    </h2>
+    
+    <!-- سؤال 1 -->
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+            <span><i class="fas fa-question-circle" style="color:#22c55e; margin-left:10px;"></i> <span data-ar="كيف أعرف أن الطبق بحاجة لتغيير؟" data-en="How do I know if my dish needs replacement?">كيف أعرف أن الطبق بحاجة لتغيير؟</span></span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+            <p data-ar="هناك عدة علامات تشير إلى حاجة الطبق للتغيير:" data-en="Several signs indicate your dish needs replacement:">
+                هناك عدة علامات تشير إلى حاجة الطبق للتغيير:
+            </p>
+            <ul>
+                <li data-ar="🔧 ضعف مستمر في الإشارة رغم الضبط المتكرر" data-en="🔧 Constant weak signal despite repeated adjustments">🔧 ضعف مستمر في الإشارة رغم الضبط المتكرر</li>
+                <li data-ar="🔧 صدأ واضح أو تآكل في الطبق أو القاعدة" data-en="🔧 Visible rust or corrosion on the dish or mount">🔧 صدأ واضح أو تآكل في الطبق أو القاعدة</li>
+                <li data-ar="🔧 تشوه أو انحناء في الطبق بسبب الرياح" data-en="🔧 Deformation or bending due to strong winds">🔧 تشوه أو انحناء في الطبق بسبب الرياح</li>
+                <li data-ar="🔧 عمر الطبق يتجاوز 10 سنوات" data-en="🔧 Dish age exceeds 10 years">🔧 عمر الطبق يتجاوز 10 سنوات</li>
+            </ul>
+            <p data-ar="في هذه الحالات، يُفضل تغيير الطبق لضمان أفضل إشارة." data-en="In these cases, replacing the dish ensures the best signal quality.">
+                في هذه الحالات، يُفضل تغيير الطبق لضمان أفضل إشارة.
+            </p>
+        </div>
+    </div>
+    
+    <!-- سؤال 2 -->
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+            <span><i class="fas fa-question-circle" style="color:#22c55e; margin-left:10px;"></i> <span data-ar="هل يمكن تركيب طبق واحد لعدة غرف؟" data-en="Can one dish serve multiple rooms?">هل يمكن تركيب طبق واحد لعدة غرف؟</span></span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+            <p data-ar="نعم، يمكن ذلك بطرق مختلفة حسب احتياجاتك:" data-en="Yes, there are different ways depending on your needs:">
+                نعم، يمكن ذلك بطرق مختلفة حسب احتياجاتك:
+            </p>
+            <ul>
+                <li data-ar="✅ LNB مزدوج (Twin LNB): يسمح بتوصيل رسيفرين منفصلين" data-en="✅ Twin LNB: Allows connecting two separate receivers">✅ LNB مزدوج (Twin LNB): يسمح بتوصيل رسيفرين منفصلين</li>
+                <li data-ar="✅ LNB رباعي (Quad LNB): يسمح بتوصيل 4 رسيفرات" data-en="✅ Quad LNB: Allows connecting 4 receivers">✅ LNB رباعي (Quad LNB): يسمح بتوصيل 4 رسيفرات</li>
+                <li data-ar="✅ موزع إشارة (Splitter): لتوزيع الإشارة على أكثر من رسيفر بنفس الغرفة" data-en="✅ Splitter: Distributes signal to multiple receivers in the same room">✅ موزع إشارة (Splitter): لتوزيع الإشارة على أكثر من رسيفر بنفس الغرفة</li>
+            </ul>
+            <p data-ar="⚠️ ملاحظة: يجب استخدام كابل عالي الجودة لتجنب ضعف الإشارة." data-en="⚠️ Note: Use high-quality cables to avoid signal loss.">
+                ⚠️ ملاحظة: يجب استخدام كابل عالي الجودة لتجنب ضعف الإشارة.
+            </p>
+        </div>
+    </div>
+    
+    <!-- سؤال 5 -->
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+            <span><i class="fas fa-question-circle" style="color:#22c55e; margin-left:10px;"></i> <span data-ar="ما حجم الطبق المناسب لنايل سات؟" data-en="What dish size is suitable for Nilesat?">ما حجم الطبق المناسب لنايل سات؟</span></span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+            <p data-ar="حسب الموقع في سوريا:" data-en="Based on location in Syria:">
+                حسب الموقع في سوريا:
+            </p>
+            <ul>
+                <li data-ar="📡 دمشق وريفها: 60-80 سم (كافي لاستقبال ممتاز)" data-en="📡 Damascus and suburbs: 60-80 cm (excellent reception)">📡 دمشق وريفها: 60-80 سم (كافي لاستقبال ممتاز)</li>
+                <li data-ar="📡 حلب، حمص، حماة: 80-100 سم" data-en="📡 Aleppo, Homs, Hama: 80-100 cm">📡 حلب، حمص، حماة: 80-100 سم</li>
+                <li data-ar="📡 المناطق النائية والجبلية: 100-120 سم" data-en="📡 Remote and mountainous areas: 100-120 cm">📡 المناطق النائية والجبلية: 100-120 سم</li>
+            </ul>
+            <p data-ar="💡 نصيحة: كلما زاد حجم الطبق، زادت قوة الإشارة، لكن يجب التأكد من ثبات التركيب." data-en="💡 Tip: Larger dish means stronger signal, but ensure stable installation.">
+                💡 نصيحة: كلما زاد حجم الطبق، زادت قوة الإشارة، لكن يجب التأكد من ثبات التركيب.
+            </p>
+        </div>
+    </div>
+    <!-- سؤال جديد: اختيار طبق ستالايت -->
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+            <span><i class="fas fa-question-circle" style="color:#22c55e; margin-left:10px;"></i> 
+            <span data-ar="كيف تختار طبق ستالايت مناسب لمنزلك في دمشق؟" data-en="How to choose the right satellite dish for your home in Damascus?">
+                كيف تختار طبق ستالايت مناسب لمنزلك في دمشق؟
+            </span></span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+            <p data-ar="للإجابة على هذا السؤال بالتفصيل، يرجى قراءة المقال الكامل:" data-en="For a detailed answer, please read the full article:">
+                للإجابة على هذا السؤال بالتفصيل، يرجى قراءة المقال الكامل:
+            </p>
+            <p><a href="choose-satellite-dish.html" data-ar="اضغط هنا لقراءة المقال كاملاً" data-en="Click here to read the full article">اضغط هنا لقراءة المقال كاملاً</a></p>
+        </div>
+    </div>
+        
+    <!-- H2 للأسئلة الفنية -->
+    <h2 class="section-title" style="margin-top: 50px;">
+        <i class="fas fa-tools"></i>
+        <span data-ar="أسئلة فنية وتقنية" data-en="Technical Questions">أسئلة فنية وتقنية</span>
+    </h2>
+    
+    <!-- سؤال: الدايسك والكابل المحوري -->
+<div class="faq-item">
+    <div class="faq-question" onclick="toggleFAQ(this)">
+        <span><i class="fas fa-question-circle" style="color:#22c55e; margin-left:10px;"></i> 
+        <span data-ar="ما هو الدايسك (DiSEqC) وما الفرق بين أنواعه؟" data-en="What is DiSEqC and the difference between its types?">
+            ما هو الدايسك (DiSEqC) وما الفرق بين أنواعه؟
+        </span></span>
+        <i class="fas fa-chevron-down"></i>
+    </div>
+    <div class="faq-answer">
+        <p data-ar="للإجابة على هذا السؤال بالتفصيل، يرجى قراءة المقال الكامل:" data-en="For a detailed answer, please read the full article:">
+            للإجابة على هذا السؤال بالتفصيل، يرجى قراءة المقال الكامل:
+        </p>
+        <p><a href="diseqc-coaxial-fconnector.html" data-ar="📡 اضغط هنا لقراءة دليل الدايسك، الكابل المحوري، وجاك F" data-en="📡 Click here to read the DiSEqC, Coaxial Cable, and F-Connector Guide">📡 اضغط هنا لقراءة دليل الدايسك، الكابل المحوري، وجاك F</a></p>
+    </div>
+</div>
+    
+    <!-- سؤال 3 -->
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+            <span><i class="fas fa-question-circle" style="color:#22c55e; margin-left:10px;"></i> <span data-ar="كم تدوم الـ LNB؟" data-en="How long does an LNB last?">كم تدوم الـ LNB؟</span></span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+            <p data-ar="عمر الـ LNB يعتمد على عدة عوامل:" data-en="LNB lifespan depends on several factors:">
+                عمر الـ LNB يعتمد على عدة عوامل:
+            </p>
+            <ul>
+                <li data-ar="⏳ العادي (Standard): 3-5 سنوات" data-en="⏳ Standard: 3-5 years">⏳ العادي (Standard): 3-5 سنوات</li>
+                <li data-ar="⏳ عالي الجودة (High Quality): 5-8 سنوات" data-en="⏳ High Quality: 5-8 years">⏳ عالي الجودة (High Quality): 5-8 سنوات</li>
+                <li data-ar="⏳ في المناطق الساحلية (رطوبة عالية): عمر أقل" data-en="⏳ In coastal areas (high humidity): shorter lifespan">⏳ في المناطق الساحلية (رطوبة عالية): عمر أقل</li>
+            </ul>
+            <p data-ar="علامات تلف الـ LNB: ضعف الإشارة، عدم استقبال بعض القنوات، تشويش في الصورة." data-en="Signs of LNB failure: weak signal, missing channels, picture distortion.">
+                علامات تلف الـ LNB: ضعف الإشارة، عدم استقبال بعض القنوات، تشويش في الصورة.
+            </p>
+        </div>
+    </div>
+    
+    <!-- سؤال 4 -->
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+            <span><i class="fas fa-question-circle" style="color:#22c55e; margin-left:10px;"></i> <span data-ar="ما سبب اختفاء القنوات فجأة؟" data-en="Why do channels suddenly disappear?">ما سبب اختفاء القنوات فجأة؟</span></span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+            <p data-ar="الأسباب الأكثر شيوعاً:" data-en="Most common reasons:">
+                الأسباب الأكثر شيوعاً:
+            </p>
+            <ul>
+                <li data-ar="📡 تغير تردد القناة من قبل الناقل" data-en="📡 Channel frequency changed by the broadcaster">📡 تغير تردد القناة من قبل الناقل</li>
+                <li data-ar="📡 ضعف الإشارة بسبب الطقس (رياح قوية، أمطار غزيرة)" data-en="📡 Weak signal due to weather (strong winds, heavy rain)">📡 ضعف الإشارة بسبب الطقس (رياح قوية، أمطار غزيرة)</li>
+                <li data-ar="📡 تحرك الطبق عن مكانه بسبب الرياح" data-en="📡 Dish moved out of alignment due to wind">📡 تحرك الطبق عن مكانه بسبب الرياح</li>
+                <li data-ar="📡 تلف في الـ LNB أو الكابل" data-en="📡 Damaged LNB or cable">📡 تلف في الـ LNB أو الكابل</li>
+                <li data-ar="📡 انتهاء صلاحية التشفير للقنوات المشفرة" data-en="📡 Encryption expired for encrypted channels">📡 انتهاء صلاحية التشفير للقنوات المشفرة</li>
+            </ul>
+            <p data-ar="نصيحة: استخدم برامج تحديث الترددات تلقائياً أو اتصل بفني مختص." data-en="Tip: Use automatic frequency update apps or contact a specialist.">
+                نصيحة: استخدم برامج تحديث الترددات تلقائياً أو اتصل بفني مختص.
+            </p>
+        </div>
+    </div>
+    
+    <!-- سؤال 6 -->
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+            <span><i class="fas fa-question-circle" style="color:#22c55e; margin-left:10px;"></i> <span data-ar="كيف أحمي الطبق من العواصف والرياح؟" data-en="How to protect the dish from storms and wind?">كيف أحمي الطبق من العواصف والرياح؟</span></span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+            <p data-ar="نصائح لحماية الطبق:" data-en="Tips to protect your dish:">
+                نصائح لحماية الطبق:
+            </p>
+            <ul>
+                <li data-ar="✅ تأكد من تثبيت القاعدة بإحكام في الجدار أو الأرضية" data-en="✅ Ensure the mount is securely fixed to the wall or ground">✅ تأكد من تثبيت القاعدة بإحكام في الجدار أو الأرضية</li>
+                <li data-ar="✅ استخدم مسامير وبراغي مقاومة للصدأ" data-en="✅ Use rust-resistant screws and bolts">✅ استخدم مسامير وبراغي مقاومة للصدأ</li>
+                <li data-ar="✅ في المناطق المكشوفة، أضف دعامات جانبية للطبق" data-en="✅ In exposed areas, add side supports to the dish">✅ في المناطق المكشوفة، أضف دعامات جانبية للطبق</li>
+                <li data-ar="✅ افحص الطبق دورياً خاصة بعد العواصف" data-en="✅ Inspect the dish periodically, especially after storms">✅ افحص الطبق دورياً خاصة بعد العواصف</li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- سؤال 7 -->
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+            <span><i class="fas fa-question-circle" style="color:#22c55e; margin-left:10px;"></i> <span data-ar="ما الفرق بين رسيفر HD و 4K؟" data-en="What's the difference between HD and 4K receivers?">ما الفرق بين رسيفر HD و 4K؟</span></span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+            <p data-ar="الفرق الرئيسي:" data-en="Main difference:">
+                الفرق الرئيسي:
+            </p>
+            <ul>
+                <li data-ar="📺 HD (1080p): جودة عالية، مناسب لمعظم القنوات العربية والعالمية" data-en="📺 HD (1080p): High quality, suitable for most Arab and international channels">📺 HD (1080p): جودة عالية، مناسب لمعظم القنوات العربية والعالمية</li>
+                <li data-ar="📺 4K (2160p): جودة فائقة الوضوح، يحتاج تلفزيون 4K وقنوات تدعم التقنية" data-en="📺 4K (2160p): Ultra HD quality, requires 4K TV and supported channels">📺 4K (2160p): جودة فائقة الوضوح، يحتاج تلفزيون 4K وقنوات تدعم التقنية</li>
+                <li data-ar="💰 السعر: رسيفر 4K أغلى من HD" data-en="💰 Price: 4K receivers are more expensive than HD">💰 السعر: رسيفر 4K أغلى من HD</li>
+            </ul>
+            <p data-ar="نصيحة: إذا كان تلفزيونك يدعم 4K، استخدم رسيفر 4K لتجربة أفضل." data-en="Tip: If your TV supports 4K, use a 4K receiver for the best experience.">
+                نصيحة: إذا كان تلفزيونك يدعم 4K، استخدم رسيفر 4K لتجربة أفضل.
+            </p>
+        </div>
+    </div>
+    <!-- سؤال جديد: برمجة رسيفر -->
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+            <span><i class="fas fa-question-circle" style="color:#22c55e; margin-left:10px;"></i> 
+            <span data-ar="كيف أبرمج رسيفر جديد خطوة بخطوة؟" data-en="How to program a new receiver step by step?">
+                كيف أبرمج رسيفر جديد خطوة بخطوة؟
+            </span></span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+            <p data-ar="للإجابة على هذا السؤال بالتفصيل، يرجى قراءة المقال الكامل:" data-en="For a detailed answer, please read the full article:">
+                للإجابة على هذا السؤال بالتفصيل، يرجى قراءة المقال الكامل:
+            </p>
+            <p><a href="program-receiver.html" data-ar="اضغط هنا لقراءة المقال كاملاً" data-en="Click here to read the full article">اضغط هنا لقراءة المقال كاملاً</a></p>
+        </div>
+    </div>
+    <div class="faq-item">
+    <div class="faq-question" onclick="toggleFAQ(this)">
+        <span><i class="fas fa-question-circle" style="color:#22c55e; margin-left:10px;"></i> 
+        <span data-ar="ما أكثر مشكلة تواجهها في الستالايت أو الرسيفر؟" data-en="What is the most common problem you face with your satellite or receiver?">
+            ما أكثر مشكلة تواجهها في الستالايت أو الرسيفر؟
+        </span></span>
+        <i class="fas fa-chevron-down"></i>
+    </div>
+    <div class="faq-answer">
+        <p data-ar="شارك برأيك في التصويت:" data-en="Share your opinion in the poll:">
+            شارك برأيك في التصويت:
+        </p>
+        <p><a href="poll.html">📊 اضغط هنا للمشاركة</a></p>
+    </div>
+</div>
+    <!-- استفتاء: أكثر مشكلة شائعة (ثنائي اللغة) -->
+    <div style="background: linear-gradient(135deg, #eef2ff, #ffffff); padding: 25px; border-radius: 24px; margin: 40px 0; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+        <h3 style="color: #020617; margin-bottom: 15px;">
+            <i class="fas fa-chart-simple" style="color: #22c55e;"></i> 
+            <span id="pollQuestion" data-ar="ما أكثر مشكلة شائعة تواجهها في الستالايت أو الرسيفر؟" data-en="What is the most common problem you face with your satellite or receiver?">
+                ما أكثر مشكلة شائعة تواجهها في الستالايت أو الرسيفر؟
+            </span>
+        </h3>
+        
+        <div id="pollOptions" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 20px 0;">
+            <button class="pollBtn" data-value="weak_signal" style="background: #22c55e; color: white; padding: 10px 20px; border: none; border-radius: 40px; font-size: 14px; cursor: pointer; transition: 0.3s;">
+                <span class="btn-text" data-ar="📡 ضعف الإشارة" data-en="📡 Weak signal">📡 ضعف الإشارة</span>
+            </button>
+            <button class="pollBtn" data-value="channels_gone" style="background: #22c55e; color: white; padding: 10px 20px; border: none; border-radius: 40px; font-size: 14px; cursor: pointer; transition: 0.3s;">
+                <span class="btn-text" data-ar="📺 اختفاء قنوات فجأة" data-en="📺 Channels disappearing suddenly">📺 اختفاء قنوات فجأة</span>
+            </button>
+            <button class="pollBtn" data-value="lnb_damage" style="background: #22c55e; color: white; padding: 10px 20px; border: none; border-radius: 40px; font-size: 14px; cursor: pointer; transition: 0.3s;">
+                <span class="btn-text" data-ar="🔧 تلف في الـ LNB" data-en="🔧 LNB damage">🔧 تلف في الـ LNB</span>
+            </button>
+            <button class="pollBtn" data-value="dish_moved" style="background: #22c55e; color: white; padding: 10px 20px; border: none; border-radius: 40px; font-size: 14px; cursor: pointer; transition: 0.3s;">
+                <span class="btn-text" data-ar="🌬️ تحرك الطبق بسبب الرياح" data-en="🌬️ Dish moved due to wind">🌬️ تحرك الطبق بسبب الرياح</span>
+            </button>
+        </div>
+        
+        <div id="pollResult" style="margin-top: 20px; padding: 15px; background: #f8fafc; border-radius: 16px; font-weight: bold; color: #0f172a;">
+            <span id="noVotesText" data-ar="لم يتم التصويت بعد. كن أول من يشارك!" data-en="No votes yet. Be the first to share!">
+                لم يتم التصويت بعد. كن أول من يشارك!
+            </span>
+        </div>
+        
+        <p style="font-size: 12px; color: #64748b; margin-top: 15px;">
+            <i class="fas fa-chart-line"></i> 
+            <span id="pollFooter" data-ar="نتائج التصويت تساعدنا في تقديم حلول للمشاكل الأكثر شيوعاً" data-en="Vote results help us provide solutions for the most common problems">
+                نتائج التصويت تساعدنا في تقديم حلول للمشاكل الأكثر شيوعاً
+            </span>
+        </p>
+    </div>
+    
+    <script>
+        // استفتاء "مشكلة شائعة" - ثنائي اللغة مع حفظ في التخزين المحلي
+        (function() {
+            // تحميل الأصوات من التخزين المحلي (إن وجدت)
+            let votes = {
+                weak_signal: localStorage.getItem('poll_weak_signal') ? parseInt(localStorage.getItem('poll_weak_signal')) : 0,
+                channels_gone: localStorage.getItem('poll_channels_gone') ? parseInt(localStorage.getItem('poll_channels_gone')) : 0,
+                lnb_damage: localStorage.getItem('poll_lnb_damage') ? parseInt(localStorage.getItem('poll_lnb_damage')) : 0,
+                dish_moved: localStorage.getItem('poll_dish_moved') ? parseInt(localStorage.getItem('poll_dish_moved')) : 0
+            };
+            
+            // دالة لعرض النتائج (مع دعم اللغة)
+            function displayResults() {
+                const total = votes.weak_signal + votes.channels_gone + votes.lnb_damage + votes.dish_moved;
+                const resultDiv = document.getElementById('pollResult');
+                const currentLang = localStorage.getItem('myWebLang') || 'ar';
+                
+                if (total === 0) {
+                    resultDiv.innerHTML = `<span id="noVotesText" data-ar="لم يتم التصويت بعد. كن أول من يشارك!" data-en="No votes yet. Be the first to share!">${currentLang === 'ar' ? 'لم يتم التصويت بعد. كن أول من يشارك!' : 'No votes yet. Be the first to share!'}</span>`;
+                    return;
+                }
+                
+                const weakPercent = Math.round((votes.weak_signal / total) * 100);
+                const channelsPercent = Math.round((votes.channels_gone / total) * 100);
+                const lnbPercent = Math.round((votes.lnb_damage / total) * 100);
+                const dishPercent = Math.round((votes.dish_moved / total) * 100);
+                
+                if (currentLang === 'ar') {
+                    resultDiv.innerHTML = `
+                        <div style="text-align: center;">
+                            <div style="margin-bottom: 10px;"><strong>📡 ضعف الإشارة</strong> ${weakPercent}% (${votes.weak_signal} صوت)</div>
+                            <div style="margin-bottom: 10px;"><strong>📺 اختفاء قنوات</strong> ${channelsPercent}% (${votes.channels_gone} صوت)</div>
+                            <div style="margin-bottom: 10px;"><strong>🔧 تلف LNB</strong> ${lnbPercent}% (${votes.lnb_damage} صوت)</div>
+                            <div style="margin-bottom: 10px;"><strong>🌬️ تحرك الطبق</strong> ${dishPercent}% (${votes.dish_moved} صوت)</div>
+                            <div style="font-size: 13px; color: #22c55e;">إجمالي الأصوات: ${total}</div>
+                        </div>
+                    `;
+                } else {
+                    resultDiv.innerHTML = `
+                        <div style="text-align: center;">
+                            <div style="margin-bottom: 10px;"><strong>📡 Weak signal</strong> ${weakPercent}% (${votes.weak_signal} votes)</div>
+                            <div style="margin-bottom: 10px;"><strong>📺 Channels disappearing</strong> ${channelsPercent}% (${votes.channels_gone} votes)</div>
+                            <div style="margin-bottom: 10px;"><strong>🔧 LNB damage</strong> ${lnbPercent}% (${votes.lnb_damage} votes)</div>
+                            <div style="margin-bottom: 10px;"><strong>🌬️ Dish moved</strong> ${dishPercent}% (${votes.dish_moved} votes)</div>
+                            <div style="font-size: 13px; color: #22c55e;">Total votes: ${total}</div>
+                        </div>
+                    `;
+                }
+            }
+            
+            // دالة لتسجيل صوت جديد
+            function vote(option) {
+                if (votes[option] !== undefined) {
+                    votes[option]++;
+                    // حفظ في التخزين المحلي
+                    localStorage.setItem('poll_weak_signal', votes.weak_signal);
+                    localStorage.setItem('poll_channels_gone', votes.channels_gone);
+                    localStorage.setItem('poll_lnb_damage', votes.lnb_damage);
+                    localStorage.setItem('poll_dish_moved', votes.dish_moved);
+                    displayResults();
+                    
+                    // تعطيل الأزرار بعد التصويت
+                    const btns = document.querySelectorAll('.pollBtn');
+                    btns.forEach(btn => {
+                        btn.disabled = true;
+                        btn.style.opacity = '0.6';
+                        btn.style.cursor = 'default';
+                    });
+                }
+            }
+            
+            // ربط الأزرار
+            const btns = document.querySelectorAll('.pollBtn');
+            btns.forEach(btn => {
+                btn.onclick = function(e) {
+                    const value = this.getAttribute('data-value');
+                    vote(value);
+                };
+            });
+            
+            // عرض النتائج الحالية عند تحميل الصفحة
+            displayResults();
+            
+            // دالة لتحديث نصوص الأزرار والوصف عند تغيير اللغة
+            function updatePollTexts() {
+                const currentLang = localStorage.getItem('myWebLang') || 'ar';
+                const questionEl = document.getElementById('pollQuestion');
+                const footerEl = document.getElementById('pollFooter');
+                const noVotesEl = document.getElementById('noVotesText');
+                const btnTexts = document.querySelectorAll('.btn-text');
+                
+                if (questionEl) questionEl.innerText = questionEl.getAttribute('data-' + currentLang);
+                if (footerEl) footerEl.innerText = footerEl.getAttribute('data-' + currentLang);
+                if (noVotesEl && noVotesEl.getAttribute('data-' + currentLang)) {
+                    // فقط إذا لم تظهر النتائج بعد
+                    const total = votes.weak_signal + votes.channels_gone + votes.lnb_damage + votes.dish_moved;
+                    if (total === 0) {
+                        noVotesEl.innerText = noVotesEl.getAttribute('data-' + currentLang);
+                    }
+                }
+                
+                btnTexts.forEach(btn => {
+                    btn.innerText = btn.getAttribute('data-' + currentLang);
+                });
+                
+                // إعادة عرض النتائج باللغة الجديدة
+                displayResults();
+            }
+            
+            // مراقبة تغيير اللغة (من زر اللغة الموجود في الصفحة)
+            const originalLangBtn = document.getElementById("langBtn");
+            if (originalLangBtn) {
+                const originalOnClick = originalLangBtn.onclick;
+                originalLangBtn.onclick = function(e) {
+                    if (originalOnClick) originalOnClick.call(this, e);
+                    updatePollTexts();
+                };
+            }
+        })();
+    </script>
+    
+    <div class="contact-note">
+        <i class="fas fa-headset" style="color:#22c55e; font-size:24px;"></i>
+        <p style="margin-top:10px;" data-ar="لم تجد إجابة لسؤالك؟ تواصل معنا مباشرة" data-en="Didn't find an answer? Contact us directly">
+            لم تجد إجابة لسؤالك؟ تواصل معنا مباشرة
+        </p>
+        <a href="https://wa.me/963990024693" target="_blank" style="display:inline-block; background:#25d366; color:#fff; padding:10px 25px; border-radius:40px; text-decoration:none; margin-top:10px; transition:0.3s;">
+            <i class="fab fa-whatsapp"></i> <span data-ar="اتصل بنا عبر واتساب" data-en="Contact us on WhatsApp">اتصل بنا عبر واتساب</span>
+        </a>
+    </div>
+    
+    <div style="text-align:center; margin-top:20px;">
+        <a href="/" class="back-btn"><i class="fas fa-arrow-right"></i> <span data-ar="العودة للرئيسية" data-en="Back to Home">العودة للرئيسية</span></a>
+    </div>
+</div>
+
+<script>
+    function toggleFAQ(element) {
+        const faqItem = element.closest('.faq-item');
+        faqItem.classList.toggle('active');
+    }
+    
+    // نظام اللغة
+    (function(){
+        const langBtn = document.getElementById("langBtn");
+        let currentLang = localStorage.getItem("myWebLang") || "ar";
+        
+        function applyLang(){
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
+            
+            document.querySelectorAll("[data-ar]").forEach(el => {
+                el.innerText = el.getAttribute("data-" + currentLang);
+            });
+            
+            langBtn.innerHTML = currentLang === "ar" ? 
+                '<i class="fas fa-globe"></i> English' : 
+                '<i class="fas fa-globe"></i> العربية';
+            
+            localStorage.setItem("myWebLang", currentLang);
+        }
+        
+        langBtn.onclick = function(){
+            currentLang = currentLang === "ar" ? "en" : "ar";
+            applyLang();
+        };
+        
+        applyLang();
+    })();
+</script>
+
+</body>
+</html>

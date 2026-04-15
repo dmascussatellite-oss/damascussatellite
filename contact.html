@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>اتصل بنا | ستالايت دمشق</title>
+    <link rel="icon" href="favicon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0;}
+        body{font-family:Arial,sans-serif;background:#f1f5f9;color:#0f172a;padding-bottom:50px;}
+        
+        header{background:#fff;padding:15px 20px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 10px rgba(0,0,0,0.05);position:sticky;top:0;z-index:1000;}
+        header a{color:#22c55e;text-decoration:none;font-weight:bold;display:flex;align-items:center;gap:8px;}
+        
+        .lang{cursor:pointer;background:#020617;color:#fff;padding:8px 15px;border-radius:20px;font-size:14px;font-weight:bold;}
+        
+        .container{max-width:1000px;margin:40px auto;padding:20px;}
+        
+        .page-title{
+            text-align:center;
+            margin-bottom:40px;
+        }
+        .page-title h1{
+            font-size:36px;
+            color:#0f172a;
+            margin-bottom:10px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            gap:12px;
+        }
+        .page-title p{
+            color:#475569;
+            font-size:18px;
+        }
+        
+        .contact-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:25px;
+            margin-bottom:30px;
+        }
+        
+        .contact-card{
+            background:#fff;
+            border-radius:24px;
+            padding:30px;
+            text-align:center;
+            box-shadow:0 4px 15px rgba(0,0,0,0.05);
+            transition:0.3s;
+        }
+        .contact-card:hover{
+            transform:translateY(-5px);
+            box-shadow:0 15px 30px rgba(0,0,0,0.1);
+        }
+        .contact-card i{
+            font-size:50px;
+            color:#22c55e;
+            margin-bottom:15px;
+        }
+        .contact-card h3{
+            margin-bottom:10px;
+            font-size:22px;
+            color:#0f172a;
+        }
+        .contact-card a{
+            color:#22c55e;
+            text-decoration:none;
+            font-size:18px;
+            font-weight:bold;
+        }
+        .contact-card p{
+            color:#475569;
+            font-size:16px;
+        }
+        
+        .map-card{
+            background:#fff;
+            border-radius:24px;
+            overflow:hidden;
+            margin-top:20px;
+            box-shadow:0 4px 15px rgba(0,0,0,0.05);
+        }
+        .map-card iframe{
+            width:100%;
+            height:300px;
+            border:none;
+        }
+        
+        .back-btn{
+            display:inline-block;
+            padding:10px 20px;
+            background:#020617;
+            color:#fff;
+            text-decoration:none;
+            border-radius:30px;
+            font-size:14px;
+            margin-top:20px;
+            transition:0.3s;
+        }
+        .back-btn:hover{
+            background:#22c55e;
+            transform:scale(1.05);
+        }
+        
+        @media (max-width:600px){
+            .contact-card{padding:20px;}
+            .page-title h1{font-size:28px;}
+            .page-title p{font-size:16px;}
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="/">
+        <i class="fas fa-home"></i> 
+        <span data-ar="الرئيسية" data-en="Home">الرئيسية</span>
+    </a>
+    <div class="lang" id="langBtn"><i class="fas fa-globe"></i> English</div>
+</header>
+
+<div class="container">
+    <!-- H1 الرئيسي للصفحة -->
+    <div class="page-title">
+        <h1>
+            <i class="fas fa-envelope" style="color: #22c55e;"></i>
+            <span data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</span>
+        </h1>
+        <p>
+            <span data-ar="نحن هنا لخدمتك على مدار الساعة" data-en="We are here to serve you 24/7">
+                نحن هنا لخدمتك على مدار الساعة
+            </span>
+        </p>
+    </div>
+    
+    <div class="contact-grid">
+        <div class="contact-card">
+            <i class="fas fa-phone-alt"></i>
+            <h3 data-ar="اتصل بنا" data-en="Call Us">اتصل بنا</h3>
+            <a href="tel:0990024693">0990024693</a>
+        </div>
+        <div class="contact-card">
+            <i class="fab fa-whatsapp"></i>
+            <h3 data-ar="واتساب" data-en="WhatsApp">واتساب</h3>
+            <a href="https://wa.me/963990024693" target="_blank">+963 990 024 693</a>
+        </div>
+        <div class="contact-card">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3 data-ar="مناطق الخدمة" data-en="Service Areas">مناطق الخدمة</h3>
+            <p data-ar="جميع أحياء دمشق" data-en="All Damascus districts">جميع أحياء دمشق</p>
+        </div>
+    </div>
+    
+    <div class="map-card">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106456.14925725797!2d36.2081622!3d33.5138073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1518e6dc413cc6a7%3A0x6b9f66ee13f95091!2sDamascus%2C%20Syria!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    
+    <div style="text-align:center; margin-top:20px;">
+        <a href="/" class="back-btn"><i class="fas fa-arrow-right"></i> <span data-ar="العودة للرئيسية" data-en="Back to Home">العودة للرئيسية</span></a>
+    </div>
+</div>
+
+<script>
+    (function(){
+        const langBtn = document.getElementById("langBtn");
+        let currentLang = localStorage.getItem("myWebLang") || "ar";
+        
+        function applyLang(){
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
+            document.querySelectorAll("[data-ar]").forEach(el => {
+                el.innerText = el.getAttribute("data-" + currentLang);
+            });
+            langBtn.innerHTML = currentLang === "ar" ? '<i class="fas fa-globe"></i> English' : '<i class="fas fa-globe"></i> العربية';
+            localStorage.setItem("myWebLang", currentLang);
+        }
+        
+        langBtn.onclick = function(){
+            currentLang = currentLang === "ar" ? "en" : "ar";
+            applyLang();
+        };
+        applyLang();
+    })();
+</script>
+
+</body>
+</html>

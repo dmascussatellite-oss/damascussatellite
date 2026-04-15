@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title id="pageTitle" data-ar="أنواع المدارات الفضائية | ستالايت دمشق" data-en="Types of Satellite Orbits | Damascus Satellite">أنواع المدارات الفضائية | ستالايت دمشق</title>
+    <link rel="icon" href="favicon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0;}
+        body{font-family:Arial,sans-serif;background:#f1f5f9;color:#0f172a;padding-bottom:50px;}
+        
+        header{background:#fff;padding:15px 20px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 10px rgba(0,0,0,0.05);position:sticky;top:0;z-index:1000;}
+        header a{color:#22c55e;text-decoration:none;font-weight:bold;display:flex;align-items:center;gap:8px;}
+        
+        .lang{cursor:pointer;background:#020617;color:#fff;padding:8px 15px;border-radius:20px;font-size:14px;font-weight:bold;}
+        
+        .container{max-width:900px;margin:40px auto;padding:20px;}
+        
+        .page-title{
+            text-align:center;
+            margin-bottom:40px;
+        }
+        .page-title h1{
+            font-size:36px;
+            color:#0f172a;
+            margin-bottom:10px;
+        }
+        .page-title p{
+            color:#475569;
+            font-size:18px;
+        }
+        
+        .orbit-card{
+            background:#fff;
+            border-radius:24px;
+            padding:30px;
+            margin-bottom:30px;
+            box-shadow:0 4px 15px rgba(0,0,0,0.05);
+            transition:0.3s;
+        }
+        .orbit-card:hover{
+            transform:translateY(-5px);
+            box-shadow:0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .orbit-header{
+            display:flex;
+            align-items:center;
+            gap:15px;
+            margin-bottom:20px;
+            padding-bottom:15px;
+            border-bottom:2px solid #e2e8f0;
+        }
+        .orbit-icon{
+            width:60px;
+            height:60px;
+            background:linear-gradient(135deg, #22c55e, #16a34a);
+            border-radius:30px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            color:#fff;
+            font-size:28px;
+        }
+        .orbit-header h2{
+            font-size:28px;
+            color:#0f172a;
+        }
+        
+        .orbit-content p{
+            line-height:1.8;
+            color:#334155;
+            margin-bottom:15px;
+        }
+        .orbit-stats{
+            background:#f1f5f9;
+            border-radius:16px;
+            padding:15px;
+            margin:15px 0;
+            display:flex;
+            flex-wrap:wrap;
+            gap:15px;
+            justify-content:space-around;
+        }
+        .stat{
+            text-align:center;
+        }
+        .stat-value{
+            font-size:24px;
+            font-weight:bold;
+            color:#22c55e;
+        }
+        
+        .formula-box{
+            background:#f8fafc;
+            padding:12px;
+            border-radius:12px;
+            font-family:monospace;
+            text-align:center;
+            margin:15px 0;
+        }
+        
+        .sources{
+            background:#f8fafc;
+            border-radius:20px;
+            padding:25px;
+            margin-top:40px;
+            border-right:4px solid #22c55e;
+        }
+        .sources ul{
+            list-style:none;
+            padding:0;
+        }
+        .sources li{
+            margin-bottom:12px;
+        }
+        .sources a{
+            color:#22c55e;
+            text-decoration:none;
+            font-weight:bold;
+        }
+        .sources a:hover{
+            text-decoration:underline;
+        }
+        
+        .back-btn{
+            display:inline-block;
+            padding:10px 20px;
+            background:#020617;
+            color:#fff;
+            text-decoration:none;
+            border-radius:30px;
+            font-size:14px;
+            margin-top:20px;
+        }
+        
+        @media (max-width:600px){
+            .page-title h1{font-size:28px;}
+            .orbit-header h2{font-size:22px;}
+            .orbit-icon{width:45px;height:45px;font-size:22px;}
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="/">
+        <i class="fas fa-home"></i> 
+        <span data-ar="الرئيسية" data-en="Home">الرئيسية</span>
+    </a>
+    <div class="lang" id="langBtn"><i class="fas fa-globe"></i> English</div>
+</header>
+
+<div class="container">
+    <div class="page-title">
+        <h1><i class="fas fa-globe" style="color:#22c55e;"></i> <span data-ar="أنواع المدارات الفضائية" data-en="Types of Satellite Orbits">أنواع المدارات الفضائية</span></h1>
+        <p data-ar="تعرف على المدارات التي تدور فيها الأقمار الصناعية حول الأرض" data-en="Learn about the orbits in which satellites revolve around Earth">
+            تعرف على المدارات التي تدور فيها الأقمار الصناعية حول الأرض
+        </p>
+    </div>
+    
+    <!-- GEO - المدار الثابت الجغرافي -->
+    <div class="orbit-card">
+        <div class="orbit-header">
+            <div class="orbit-icon"><i class="fas fa-satellite"></i></div>
+            <h2><span data-ar="المدار الثابت الجغرافي" data-en="Geostationary Orbit (GEO)">المدار الثابت الجغرافي</span> <span style="font-size:16px; color:#22c55e;">GEO</span></h2>
+        </div>
+        <div class="orbit-content">
+            <p><span data-ar="المدار الثابت الجغرافي هو مدار دائري حول الأرض على ارتفاع 35,786 كيلومتراً فوق خط الاستواء. الأقمار في هذا المدار تدور بنفس سرعة دوران الأرض (24 ساعة)، مما يجعلها تبدو ثابتة في نفس الموقع في السماء." data-en="Geostationary orbit is a circular orbit around Earth at an altitude of 35,786 kilometers above the equator. Satellites in this orbit rotate at the same speed as Earth's rotation (24 hours), making them appear stationary in the same spot in the sky.">
+                المدار الثابت الجغرافي هو مدار دائري حول الأرض على ارتفاع 35,786 كيلومتراً فوق خط الاستواء. الأقمار في هذا المدار تدور بنفس سرعة دوران الأرض (24 ساعة)، مما يجعلها تبدو ثابتة في نفس الموقع في السماء.
+            </span></p>
+            <div class="orbit-stats">
+                <div class="stat">
+                    <div class="stat-value">35,786 كم</div>
+                    <span data-ar="الارتفاع" data-en="Altitude">الارتفاع</span>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">24 ساعة</div>
+                    <span data-ar="مدة الدورة" data-en="Orbital Period">مدة الدورة</span>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">3.07 كم/ث</div>
+                    <span data-ar="السرعة" data-en="Velocity">السرعة</span>
+                </div>
+            </div>
+            <div class="formula-box">
+                <strong><span data-ar="معادلة سرعة المدار:" data-en="Orbital Velocity Equation:">معادلة سرعة المدار:</span></strong><br>
+                v = √(GM / (R + h)) ≈ 3.07 كم/ث<br>
+                <small><span data-ar="حيث: G = ثابت الجاذبية، M = كتلة الأرض، R = نصف قطر الأرض، h = ارتفاع القمر" data-en="Where: G = gravitational constant, M = Earth mass, R = Earth radius, h = satellite altitude">حيث: G = ثابت الجاذبية، M = كتلة الأرض، R = نصف قطر الأرض، h = ارتفاع القمر</span></small>
+            </div>
+            <p><strong><span data-ar="أمثلة على أقمار GEO:" data-en="Examples of GEO Satellites:">أمثلة على أقمار GEO:</span></strong> <span data-ar="نايل سات (7° غرب)، عرب سات (26° شرق)، هوتبيرد (13° شرق)، تورك سات (42° شرق)" data-en="Nilesat (7° West), Arabsat (26° East), Hotbird (13° East), Turksat (42° East)">نايل سات (7° غرب)، عرب سات (26° شرق)، هوتبيرد (13° شرق)، تورك سات (42° شرق)</span></p>
+            <p><small><span data-ar="المصدر:" data-en="Source:">المصدر:</span> <a href="https://www.nasa.gov/" target="_blank" style="color:#22c55e;">NASA - Geostationary Orbit</a> / <a href="https://www.esa.int/" target="_blank" style="color:#22c55e;">ESA - Types of Orbits</a></small></p>
+        </div>
+    </div>
+    
+    <!-- MEO - المدار المتوسط -->
+    <div class="orbit-card">
+        <div class="orbit-header">
+            <div class="orbit-icon"><i class="fas fa-globe-asia"></i></div>
+            <h2><span data-ar="المدار المتوسط" data-en="Medium Earth Orbit (MEO)">المدار المتوسط</span> <span style="font-size:16px; color:#22c55e;">MEO</span></h2>
+        </div>
+        <div class="orbit-content">
+            <p><span data-ar="المدار المتوسط هو المدار الواقع بين المدار الأرضي المنخفض والمدار الثابت الجغرافي، على ارتفاع يتراوح بين 2,000 و 35,786 كيلومتراً. تستخدم هذه الأقمار غالباً لأنظمة الملاحة (GPS) والاتصالات." data-en="Medium Earth Orbit is the orbit located between low Earth orbit and geostationary orbit, at altitudes ranging from 2,000 to 35,786 kilometers. These satellites are often used for navigation systems (GPS) and communications.">
+                المدار المتوسط هو المدار الواقع بين المدار الأرضي المنخفض والمدار الثابت الجغرافي، على ارتفاع يتراوح بين 2,000 و 35,786 كيلومتراً. تستخدم هذه الأقمار غالباً لأنظمة الملاحة (GPS) والاتصالات.
+            </span></p>
+            <div class="orbit-stats">
+                <div class="stat">
+                    <div class="stat-value">2,000 - 35,786</div>
+                    <span data-ar="الارتفاع (كم)" data-en="Altitude (km)">الارتفاع (كم)</span>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">2 - 12 ساعة</div>
+                    <span data-ar="مدة الدورة" data-en="Orbital Period">مدة الدورة</span>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">3.9 - 7.8</div>
+                    <span data-ar="السرعة (كم/ث)" data-en="Velocity (km/s)">السرعة (كم/ث)</span>
+                </div>
+            </div>
+            <p><strong><span data-ar="أمثلة على أقمار MEO:" data-en="Examples of MEO Satellites:">أمثلة على أقمار MEO:</span></strong> <span data-ar="GPS (الملاحة العالمية)، Galileo (الملاحة الأوروبية)، GLONASS (الملاحة الروسية)" data-en="GPS (Global Positioning System), Galileo (European navigation), GLONASS (Russian navigation)">GPS (الملاحة العالمية)، Galileo (الملاحة الأوروبية)، GLONASS (الملاحة الروسية)</span></p>
+            <p><small><span data-ar="المصدر:" data-en="Source:">المصدر:</span> <a href="https://www.esa.int/" target="_blank" style="color:#22c55e;">ESA - Medium Earth Orbit</a> / <a href="https://www.gps.gov/" target="_blank" style="color:#22c55e;">GPS.gov</a></small></p>
+        </div>
+    </div>
+    
+    <!-- LEO - المدار الأرضي المنخفض -->
+    <div class="orbit-card">
+        <div class="orbit-header">
+            <div class="orbit-icon"><i class="fas fa-space-shuttle"></i></div>
+            <h2><span data-ar="المدار الأرضي المنخفض" data-en="Low Earth Orbit (LEO)">المدار الأرضي المنخفض</span> <span style="font-size:16px; color:#22c55e;">LEO</span></h2>
+        </div>
+        <div class="orbit-content">
+            <p><span data-ar="المدار الأرضي المنخفض هو المدار الأقرب إلى سطح الأرض، على ارتفاع يتراوح بين 160 و 2,000 كيلومتراً. تستخدم هذه الأقمار للاتصالات عبر الإنترنت (مثل Starlink)، والمراقبة الجوية، ومحطة الفضاء الدولية." data-en="Low Earth Orbit is the closest orbit to Earth's surface, at altitudes ranging from 160 to 2,000 kilometers. These satellites are used for internet communications (such as Starlink), weather monitoring, and the International Space Station.">
+                المدار الأرضي المنخفض هو المدار الأقرب إلى سطح الأرض، على ارتفاع يتراوح بين 160 و 2,000 كيلومتراً. تستخدم هذه الأقمار للاتصالات عبر الإنترنت (مثل Starlink)، والمراقبة الجوية، ومحطة الفضاء الدولية.
+            </span></p>
+            <div class="orbit-stats">
+                <div class="stat">
+                    <div class="stat-value">160 - 2,000</div>
+                    <span data-ar="الارتفاع (كم)" data-en="Altitude (km)">الارتفاع (كم)</span>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">88 - 128 دقيقة</div>
+                    <span data-ar="مدة الدورة" data-en="Orbital Period">مدة الدورة</span>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">7.8 - 8.2</div>
+                    <span data-ar="السرعة (كم/ث)" data-en="Velocity (km/s)">السرعة (كم/ث)</span>
+                </div>
+            </div>
+            <p><strong><span data-ar="أمثلة على أقمار LEO:" data-en="Examples of LEO Satellites:">أمثلة على أقمار LEO:</span></strong> <span data-ar="محطة الفضاء الدولية (ISS)، أقمار Starlink، أقمار Iridium، أقمار المراقبة البيئية" data-en="International Space Station (ISS), Starlink satellites, Iridium satellites, environmental monitoring satellites">محطة الفضاء الدولية (ISS)، أقمار Starlink، أقمار Iridium، أقمار المراقبة البيئية</span></p>
+            <p><small><span data-ar="المصدر:" data-en="Source:">المصدر:</span> <a href="https://www.nasa.gov/" target="_blank" style="color:#22c55e;">NASA - Low Earth Orbit</a> / <a href="https://www.starlink.com/" target="_blank" style="color:#22c55e;">SpaceX - Starlink</a></small></p>
+        </div>
+    </div>
+    
+    <!-- مقارنة بسيطة -->
+    <div class="orbit-card">
+        <div class="orbit-header">
+            <div class="orbit-icon"><i class="fas fa-chart-bar"></i></div>
+            <h2><span data-ar="مقارنة بين المدارات" data-en="Orbit Comparison">مقارنة بين المدارات</span></h2>
+        </div>
+        <div class="orbit-content">
+            <table style="width:100%; border-collapse:collapse;">
+                <tr style="background:#e2e8f0;">
+                    <th style="padding:10px; text-align:center;"><span data-ar="الخاصية" data-en="Property">الخاصية</span></th>
+                    <th style="padding:10px; text-align:center;">GEO</th>
+                    <th style="padding:10px; text-align:center;">MEO</th>
+                    <th style="padding:10px; text-align:center;">LEO</th>
+                </tr>
+                <tr>
+                    <td style="padding:8px; border-bottom:1px solid #e2e8f0;"><span data-ar="الارتفاع" data-en="Altitude">الارتفاع</span></td>
+                    <td style="padding:8px; border-bottom:1px solid #e2e8f0;">35,786 كم</td>
+                    <td style="padding:8px; border-bottom:1px solid #e2e8f0;">2,000 - 35,786 كم</td>
+                    <td style="padding:8px; border-bottom:1px solid #e2e8f0;">160 - 2,000 كم</td>
+                </tr>
+                <tr>
+                    <td style="padding:8px; border-bottom:1px solid #e2e8f0;"><span data-ar="مدة الدورة" data-en="Orbital Period">مدة الدورة</span></td>
+                    <td style="padding:8px; border-bottom:1px solid #e2e8f0;">24 ساعة</td>
+                    <td style="padding:8px; border-bottom:1px solid #e2e8f0;">2 - 12 ساعة</td>
+                    <td style="padding:8px; border-bottom:1px solid #e2e8f0;">88 - 128 دقيقة</td>
+                </tr>
+                <tr>
+                    <td style="padding:8px; border-bottom:1px solid #e2e8f0;"><span data-ar="السرعة" data-en="Velocity">السرعة</span></td>
+                    <td style="padding:8px; border-bottom:1px solid #e2e8f0;">3.07 كم/ث</td>
+                    <td style="padding:8px; border-bottom:1px solid #e2e8f0;">3.9 - 7.8 كم/ث</td>
+                    <td style="padding:8px; border-bottom:1px solid #e2e8f0;">7.8 - 8.2 كم/ث</td>
+                </tr>
+                <tr>
+                    <td style="padding:8px;"><span data-ar="الاستخدامات" data-en="Applications">الاستخدامات</span></td>
+                    <td style="padding:8px;"><span data-ar="بث تلفزيوني، اتصالات" data-en="TV broadcasting, communications">بث تلفزيوني، اتصالات</span></td>
+                    <td style="padding:8px;"><span data-ar="ملاحة (GPS)" data-en="Navigation (GPS)">ملاحة (GPS)</span></td>
+                    <td style="padding:8px;"><span data-ar="إنترنت، مراقبة، محطة فضاء" data-en="Internet, monitoring, space station">إنترنت، مراقبة، محطة فضاء</span></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+    <div class="sources">
+        <h3><i class="fas fa-flask"></i> <span data-ar="المصادر العلمية" data-en="Scientific Sources">المصادر العلمية</span></h3>
+        <ul>
+            <li><a href="https://www.nasa.gov/" target="_blank">NASA - Types of Orbits</a> - <span data-ar="شرح تفصيلي للمدارات الفضائية" data-en="Detailed explanation of space orbits">شرح تفصيلي للمدارات الفضائية</span></li>
+            <li><a href="https://www.esa.int/" target="_blank">ESA (European Space Agency) - Orbits</a> - <span data-ar="المدارات الثابتة والمتوسطة والمنخفضة" data-en="Geostationary, medium, and low orbits">المدارات الثابتة والمتوسطة والمنخفضة</span></li>
+            <li><a href="https://www.gps.gov/" target="_blank">GPS.gov</a> - <span data-ar="معلومات عن أقمار MEO للملاحة" data-en="Information about MEO navigation satellites">معلومات عن أقمار MEO للملاحة</span></li>
+            <li><a href="https://www.starlink.com/" target="_blank">SpaceX - Starlink</a> - <span data-ar="معلومات عن أقمار LEO للإنترنت" data-en="Information about LEO internet satellites">معلومات عن أقمار LEO للإنترنت</span></li>
+            <li><strong>Dennis Roddy - "Satellite Communications"</strong> - <span data-ar="المرجع الأساسي في هندسة الاتصالات عبر الأقمار" data-en="The fundamental reference in satellite communications engineering">المرجع الأساسي في هندسة الاتصالات عبر الأقمار</span></li>
+        </ul>
+        <p><i class="fas fa-info-circle"></i> <span data-ar="* جميع المعلومات مأخوذة من مصادر علمية موثوقة. تم تحديث البيانات وفق أحدث المعايير الفنية العالمية." data-en="* All information is taken from reliable scientific sources. Data has been updated according to the latest international technical standards.">
+            * جميع المعلومات مأخوذة من مصادر علمية موثوقة. تم تحديث البيانات وفق أحدث المعايير الفنية العالمية.
+        </span></p>
+    </div>
+    
+    <div style="text-align:center; margin-top:20px;">
+        <a href="/" class="back-btn"><i class="fas fa-arrow-right"></i> <span data-ar="العودة للرئيسية" data-en="Back to Home">العودة للرئيسية</span></a>
+    </div>
+</div>
+
+<script>
+    (function(){
+        const langBtn = document.getElementById("langBtn");
+        let currentLang = localStorage.getItem("myWebLang") || "ar";
+        
+        function applyLang(){
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
+            
+            // تحديث جميع العناصر التي تحمل data-ar و data-en
+            document.querySelectorAll("[data-ar]").forEach(el => {
+                // تخطي العناصر التي لها روابط
+                if(el.tagName === 'A') return;
+                // تحديث النص
+                const text = el.getAttribute("data-" + currentLang);
+                if(text) el.innerText = text;
+            });
+            
+            langBtn.innerHTML = currentLang === "ar" ? '<i class="fas fa-globe"></i> English' : '<i class="fas fa-globe"></i> العربية';
+            localStorage.setItem("myWebLang", currentLang);
+        }
+        
+        langBtn.onclick = function(){
+            currentLang = currentLang === "ar" ? "en" : "ar";
+            applyLang();
+        };
+        applyLang();
+    })();
+</script>
+
+</body>
+</html>

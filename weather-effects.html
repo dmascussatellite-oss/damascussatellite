@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title id="pageTitle" data-ar="تأثير الطقس على الإشارة | ستالايت دمشق" data-en="Weather Effects on Signal | Damascus Satellite">تأثير الطقس على الإشارة | ستالايت دمشق</title>
+    <link rel="icon" href="favicon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0;}
+        body{font-family:Arial,sans-serif;background:#f1f5f9;color:#0f172a;padding-bottom:50px;}
+        
+        header{background:#fff;padding:15px 20px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 10px rgba(0,0,0,0.05);position:sticky;top:0;z-index:1000;}
+        header a{color:#22c55e;text-decoration:none;font-weight:bold;display:flex;align-items:center;gap:8px;}
+        
+        .lang{cursor:pointer;background:#020617;color:#fff;padding:8px 15px;border-radius:20px;font-size:14px;font-weight:bold;}
+        
+        .container{max-width:900px;margin:40px auto;padding:20px;}
+        
+        .page-title{
+            text-align:center;
+            margin-bottom:40px;
+        }
+        .page-title h1{
+            font-size:36px;
+            color:#0f172a;
+            margin-bottom:10px;
+        }
+        .page-title p{
+            color:#475569;
+            font-size:18px;
+        }
+        
+        .effect-card{
+            background:#fff;
+            border-radius:24px;
+            padding:30px;
+            margin-bottom:30px;
+            box-shadow:0 4px 15px rgba(0,0,0,0.05);
+            transition:0.3s;
+        }
+        .effect-card:hover{
+            transform:translateY(-5px);
+            box-shadow:0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .effect-header{
+            display:flex;
+            align-items:center;
+            gap:15px;
+            margin-bottom:20px;
+            padding-bottom:15px;
+            border-bottom:2px solid #e2e8f0;
+        }
+        .effect-icon{
+            width:60px;
+            height:60px;
+            background:linear-gradient(135deg, #22c55e, #16a34a);
+            border-radius:30px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            color:#fff;
+            font-size:28px;
+        }
+        .effect-header h2{
+            font-size:28px;
+            color:#0f172a;
+        }
+        
+        .effect-content p{
+            line-height:1.8;
+            color:#334155;
+            margin-bottom:15px;
+        }
+        
+        .formula-box{
+            background:#f8fafc;
+            padding:12px;
+            border-radius:12px;
+            font-family:monospace;
+            text-align:center;
+            margin:15px 0;
+        }
+        
+        .signal-loss{
+            background:#fef9c3;
+            padding:12px;
+            border-radius:12px;
+            margin:15px 0;
+            text-align:center;
+        }
+        
+        .sources{
+            background:#f8fafc;
+            border-radius:20px;
+            padding:25px;
+            margin-top:40px;
+            border-right:4px solid #22c55e;
+        }
+        .sources ul{
+            list-style:none;
+            padding:0;
+        }
+        .sources li{
+            margin-bottom:12px;
+        }
+        .sources a{
+            color:#22c55e;
+            text-decoration:none;
+            font-weight:bold;
+        }
+        .sources a:hover{
+            text-decoration:underline;
+        }
+        
+        .back-btn{
+            display:inline-block;
+            padding:10px 20px;
+            background:#020617;
+            color:#fff;
+            text-decoration:none;
+            border-radius:30px;
+            font-size:14px;
+            margin-top:20px;
+        }
+        
+        @media (max-width:600px){
+            .page-title h1{font-size:28px;}
+            .effect-header h2{font-size:22px;}
+            .effect-icon{width:45px;height:45px;font-size:22px;}
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="/">
+        <i class="fas fa-home"></i> 
+        <span data-ar="الرئيسية" data-en="Home">الرئيسية</span>
+    </a>
+    <div class="lang" id="langBtn"><i class="fas fa-globe"></i> English</div>
+</header>
+
+<div class="container">
+    <div class="page-title">
+        <h1><i class="fas fa-cloud-rain" style="color:#22c55e;"></i> <span data-ar="تأثير الطقس على الإشارة" data-en="Weather Effects on Signal">تأثير الطقس على الإشارة</span></h1>
+        <p data-ar="كيف تؤثر الظروف الجوية على استقبال الإشارات الفضائية" data-en="How weather conditions affect satellite signal reception">
+            كيف تؤثر الظروف الجوية على استقبال الإشارات الفضائية
+        </p>
+    </div>
+    
+    <!-- المطر -->
+    <div class="effect-card">
+        <div class="effect-header">
+            <div class="effect-icon"><i class="fas fa-cloud-rain"></i></div>
+            <h2><span data-ar="المطر (Rain Fade)" data-en="Rain Fade">المطر (Rain Fade)</span></h2>
+        </div>
+        <div class="effect-content">
+            <p><span data-ar="المطر هو أكثر العوامل تأثيراً على الإشارات الفضائية، خاصة في نطاق Ku-Band. قطرات المطر تمتص وتشتت الموجات الكهرومغناطيسية، مما يسبب ضعفاً مؤقتاً في الإشارة." data-en="Rain is the most influential factor on satellite signals, especially in the Ku-Band. Raindrops absorb and scatter electromagnetic waves, causing temporary signal loss.">
+                المطر هو أكثر العوامل تأثيراً على الإشارات الفضائية، خاصة في نطاق Ku-Band. قطرات المطر تمتص وتشتت الموجات الكهرومغناطيسية، مما يسبب ضعفاً مؤقتاً في الإشارة.
+            </span></p>
+            <div class="formula-box">
+                <strong><span data-ar="معادلة التوهان الناتج عن المطر:" data-en="Rain Attenuation Formula:">معادلة التوهان الناتج عن المطر:</span></strong><br>
+                A = α × R<sup>β</sup> × L<br>
+                <small><span data-ar="حيث: A = التوهان (dB)، R = معدل هطول المطر (mm/h)، L = طول المسار في الغلاف الجوي (km)" data-en="Where: A = attenuation (dB), R = rainfall rate (mm/h), L = path length in the atmosphere (km)">حيث: A = التوهان (dB)، R = معدل هطول المطر (mm/h)، L = طول المسار في الغلاف الجوي (km)</span></small>
+            </div>
+            <div class="signal-loss">
+                <strong><span data-ar="فقدان الإشارة التقريبي:" data-en="Approximate Signal Loss:">فقدان الإشارة التقريبي:</span></strong>
+                <ul style="margin-top:10px; list-style:none;">
+                    <li><span data-ar="🌧️ مطر خفيف (2-5 mm/h): 1-3 dB (ضعف طفيف)" data-en="🌧️ Light rain (2-5 mm/h): 1-3 dB (slight loss)">🌧️ مطر خفيف (2-5 مم/س): 1-3 ديسيبل (ضعف طفيف)</span></li>
+                    <li><span data-ar="🌧️🌧️ مطر متوسط (10-20 mm/h): 5-10 dB (انقطاع محتمل)" data-en="🌧️🌧️ Moderate rain (10-20 mm/h): 5-10 dB (possible interruption)">🌧️🌧️ مطر متوسط (10-20 مم/س): 5-10 ديسيبل (انقطاع محتمل)</span></li>
+                    <li><span data-ar="🌧️🌧️🌧️ مطر غزير (30-50 mm/h): 15-25 dB (انقطاع شبه كامل)" data-en="🌧️🌧️🌧️ Heavy rain (30-50 mm/h): 15-25 dB (near complete loss)">🌧️🌧️🌧️ مطر غزير (30-50 مم/س): 15-25 ديسيبل (انقطاع شبه كامل)</span></li>
+                </ul>
+            </div>
+            <p><small><span data-ar="المصدر:" data-en="Source:">المصدر:</span> <a href="https://www.itu.int/" target="_blank" style="color:#22c55e;">ITU-R P.618-13</a> / <a href="https://www.eutelsat.com/" target="_blank" style="color:#22c55e;">Eutelsat Technical Guide</a></small></p>
+        </div>
+    </div>
+    
+    <!-- الثلج -->
+    <div class="effect-card">
+        <div class="effect-header">
+            <div class="effect-icon"><i class="fas fa-snowflake"></i></div>
+            <h2><span data-ar="الثلج" data-en="Snow">الثلج</span></h2>
+        </div>
+        <div class="effect-content">
+            <p><span data-ar="تراكم الثلج على سطح الطبق يعيق انعكاس الإشارة نحو الـ LNB، مما يسبب ضعفاً كبيراً في الاستقبال. كما أن الثلج الرطب أثقل وأكثر تأثيراً من الثلج الجاف." data-en="Snow accumulation on the dish surface obstructs signal reflection towards the LNB, causing significant reception loss. Wet snow is heavier and more impactful than dry snow.">
+                تراكم الثلج على سطح الطبق يعيق انعكاس الإشارة نحو الـ LNB، مما يسبب ضعفاً كبيراً في الاستقبال. كما أن الثلج الرطب أثقل وأكثر تأثيراً من الثلج الجاف.
+            </span></p>
+            <div class="signal-loss">
+                <strong><span data-ar="تأثير الثلج:" data-en="Snow Effect:">تأثير الثلج:</span></strong>
+                <ul style="margin-top:10px; list-style:none;">
+                    <li><span data-ar="❄️ ثلج جاف (خفيف): فقدان 3-8 dB" data-en="❄️ Dry snow (light): 3-8 dB loss">❄️ ثلج جاف (خفيف): فقدان 3-8 ديسيبل</span></li>
+                    <li><span data-ar="❄️❄️ ثلج رطب (ثقيل): فقدان 10-20 dB (انقطاع)" data-en="❄️❄️ Wet snow (heavy): 10-20 dB loss (interruption)">❄️❄️ ثلج رطب (ثقيل): فقدان 10-20 ديسيبل (انقطاع)</span></li>
+                </ul>
+            </div>
+            <p><strong><span data-ar="نصيحة عملية:" data-en="Practical Tip:">نصيحة عملية:</span></strong> <span data-ar="استخدم طلاء مقاوم للماء أو قم بتغطية الطبق بكيس بلاستيكي في المناطق الثلجية." data-en="Use a water-repellent coating or cover the dish with a plastic bag in snowy areas.">استخدم طلاء مقاوم للماء أو قم بتغطية الطبق بكيس بلاستيكي في المناطق الثلجية.</span></p>
+            <p><small><span data-ar="المصدر:" data-en="Source:">المصدر:</span> <a href="https://www.eutelsat.com/" target="_blank" style="color:#22c55e;">Eutelsat - Snow Effects</a></small></p>
+        </div>
+    </div>
+    
+    <!-- الغبار والعواصف الترابية -->
+    <div class="effect-card">
+        <div class="effect-header">
+            <div class="effect-icon"><i class="fas fa-dust"></i></div>
+            <h2><span data-ar="الغبار والعواصف الترابية" data-en="Dust and Sandstorms">الغبار والعواصف الترابية</span></h2>
+        </div>
+        <div class="effect-content">
+            <p><span data-ar="في المناطق الصحراوية، تؤثر العواصف الترابية على الإشارات الفضائية عبر امتصاص وتشتيت الموجات. جزيئات الغبار تعمل كحاجز بين الطبق والقمر." data-en="In desert regions, sandstorms affect satellite signals by absorbing and scattering waves. Dust particles act as a barrier between the dish and the satellite.">
+                في المناطق الصحراوية، تؤثر العواصف الترابية على الإشارات الفضائية عبر امتصاص وتشتيت الموجات. جزيئات الغبار تعمل كحاجز بين الطبق والقمر.
+            </span></p>
+            <div class="signal-loss">
+                <strong><span data-ar="فقدان الإشارة:" data-en="Signal Loss:">فقدان الإشارة:</span></strong>
+                <ul style="margin-top:10px; list-style:none;">
+                    <li><span data-ar="🏜️ غبار خفيف: 2-5 dB" data-en="🏜️ Light dust: 2-5 dB">🏜️ غبار خفيف: 2-5 ديسيبل</span></li>
+                    <li><span data-ar="🏜️🏜️ عاصفة ترابية: 10-15 dB (انقطاع متقطع)" data-en="🏜️🏜️ Sandstorm: 10-15 dB (intermittent interruption)">🏜️🏜️ عاصفة ترابية: 10-15 ديسيبل (انقطاع متقطع)</span></li>
+                </ul>
+            </div>
+            <p><strong><span data-ar="نصيحة:" data-en="Tip:">نصيحة:</span></strong> <span data-ar="بعد العاصفة، نظف الطبق برفق باستخدام قطعة قماش ناعمة." data-en="After the storm, gently clean the dish with a soft cloth.">بعد العاصفة، نظف الطبق برفق باستخدام قطعة قماش ناعمة.</span></p>
+            <p><small><span data-ar="المصدر:" data-en="Source:">المصدر:</span> <a href="https://www.itu.int/" target="_blank" style="color:#22c55e;">ITU-R - Propagation Data</a></small></p>
+        </div>
+    </div>
+    
+    <!-- الرياح -->
+    <div class="effect-card">
+        <div class="effect-header">
+            <div class="effect-icon"><i class="fas fa-wind"></i></div>
+            <h2><span data-ar="الرياح القوية" data-en="Strong Winds">الرياح القوية</span></h2>
+        </div>
+        <div class="effect-content">
+            <p><span data-ar="الرياح القوية قد تسبب تحرك الطبق عن مكانه الصحيح، مما يؤدي إلى تغير الزوايا (Azimuth و Elevation) وضعف الإشارة. الرياح المستمرة قد تسبب تلف القاعدة أو ارتخاء المسامير." data-en="Strong winds can cause the dish to move out of its correct position, changing the angles (Azimuth and Elevation) and weakening the signal. Continuous winds may damage the mount or loosen screws.">
+                الرياح القوية قد تسبب تحرك الطبق عن مكانه الصحيح، مما يؤدي إلى تغير الزوايا (Azimuth و Elevation) وضعف الإشارة. الرياح المستمرة قد تسبب تلف القاعدة أو ارتخاء المسامير.
+            </span></p>
+            <div class="signal-loss">
+                <strong><span data-ar="تأثير الرياح:" data-en="Wind Effect:">تأثير الرياح:</span></strong>
+                <ul style="margin-top:10px; list-style:none;">
+                    <li><span data-ar="💨 رياح معتدلة (30-50 كم/س): تشويش طفيف" data-en="💨 Moderate wind (30-50 km/h): slight interference">💨 رياح معتدلة (30-50 كم/س): تشويش طفيف</span></li>
+                    <li><span data-ar="💨💨 رياح قوية (60-80 كم/س): فقدان إشارة متقطع" data-en="💨💨 Strong wind (60-80 km/h): intermittent signal loss">💨💨 رياح قوية (60-80 كم/س): فقدان إشارة متقطع</span></li>
+                    <li><span data-ar="💨💨💨 عواصف (100+ كم/س): انقطاع كامل + خطر تلف الطبق" data-en="💨💨💨 Storms (100+ km/h): complete loss + risk of dish damage">💨💨💨 عواصف (100+ كم/س): انقطاع كامل + خطر تلف الطبق</span></li>
+                </ul>
+            </div>
+            <p><strong><span data-ar="نصيحة:" data-en="Tip:">نصيحة:</span></strong> <span data-ar="استخدم قاعدة تثبيت قوية ومسامير مقاومة للصدأ. افحص المسامير دورياً." data-en="Use a strong mount and rust-resistant screws. Check screws periodically.">استخدم قاعدة تثبيت قوية ومسامير مقاومة للصدأ. افحص المسامير دورياً.</span></p>
+            <p><small><span data-ar="المصدر:" data-en="Source:">المصدر:</span> <a href="https://www.eutelsat.com/" target="_blank" style="color:#22c55e;">Eutelsat - Wind Effects</a></small></p>
+        </div>
+    </div>
+    
+    <div class="sources">
+        <h3><i class="fas fa-flask"></i> <span data-ar="المصادر العلمية" data-en="Scientific Sources">المصادر العلمية</span></h3>
+        <ul>
+            <li><a href="https://www.itu.int/" target="_blank">ITU-R P.618-13</a> - <span data-ar="توصيات الاتحاد الدولي للاتصالات للتوهان الناتج عن المطر" data-en="ITU recommendations for rain attenuation">توصيات الاتحاد الدولي للاتصالات للتوهان الناتج عن المطر</span></li>
+            <li><a href="https://www.eutelsat.com/" target="_blank">Eutelsat Technical Guide</a> - <span data-ar="الدليل التقني ليوتلسات لتأثيرات الطقس" data-en="Eutelsat technical guide for weather effects">الدليل التقني ليوتلسات لتأثيرات الطقس</span></li>
+            <li><a href="https://www.intelsat.com/" target="_blank">Intelsat Propagation Data</a> - <span data-ar="بيانات انتشار الموجات في الظروف الجوية المختلفة" data-en="Wave propagation data in various weather conditions">بيانات انتشار الموجات في الظروف الجوية المختلفة</span></li>
+        </ul>
+        <p><i class="fas fa-info-circle"></i> <span data-ar="* جميع المعلومات مأخوذة من مصادر علمية موثوقة. قيم التوهان تقريبية وقد تختلف حسب التردد وحجم الطبق والموقع الجغرافي." data-en="* All information is taken from reliable scientific sources. Attenuation values are approximate and may vary depending on frequency, dish size, and geographic location.">
+            * جميع المعلومات مأخوذة من مصادر علمية موثوقة. قيم التوهان تقريبية وقد تختلف حسب التردد وحجم الطبق والموقع الجغرافي.
+        </span></p>
+    </div>
+    
+    <div style="text-align:center; margin-top:20px;">
+        <a href="/" class="back-btn"><i class="fas fa-arrow-right"></i> <span data-ar="العودة للرئيسية" data-en="Back to Home">العودة للرئيسية</span></a>
+    </div>
+</div>
+
+<script>
+    (function(){
+        const langBtn = document.getElementById("langBtn");
+        let currentLang = localStorage.getItem("myWebLang") || "ar";
+        
+        function applyLang(){
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
+            
+            document.querySelectorAll("[data-ar]").forEach(el => {
+                if(el.tagName === 'A') return;
+                const text = el.getAttribute("data-" + currentLang);
+                if(text) el.innerText = text;
+            });
+            
+            langBtn.innerHTML = currentLang === "ar" ? '<i class="fas fa-globe"></i> English' : '<i class="fas fa-globe"></i> العربية';
+            localStorage.setItem("myWebLang", currentLang);
+        }
+        
+        langBtn.onclick = function(){
+            currentLang = currentLang === "ar" ? "en" : "ar";
+            applyLang();
+        };
+        applyLang();
+    })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,204 @@
+{
+  "pages": [
+    {
+      "title": "ستالايت دمشق - الرئيسية",
+      "titleEn": "Damascus Satellite - Home",
+      "url": "/",
+      "content": "تركيب ستالايت صيانة رسيفرات تركيب شاشات دمشق ضبط إشارة برمجة قنوات",
+      "contentEn": "Satellite installation receiver repair TV mounting Damascus signal tuning channel programming",
+      "keywords": "ستالايت دش تركيب صيانة رسيفر شاشات دمشق"
+    },
+    {
+      "title": "تركيب ستالايت في دمشق",
+      "titleEn": "Satellite Installation in Damascus",
+      "url": "/satellite-install-damascus.html",
+      "content": "تركيب أطباق الستالايت ضبط إشارة تمديد كابلات برمجة رسيفر فني ستالايت متخصص",
+      "contentEn": "Satellite dish installation signal tuning cable extension receiver programming specialized technician",
+      "keywords": "تركيب دش فني ستالايت ضبط إشارة تمديد كابلات"
+    },
+    {
+      "title": "صيانة رسيفر في دمشق",
+      "titleEn": "Receiver Repair in Damascus",
+      "url": "/receiver-repair-damascus.html",
+      "content": "تصليح رسيفرات برمجة قنوات تحديث سوفت وير إصلاح أعطال جهاز الاستقبال",
+      "contentEn": "Receiver repair channel programming software update fixing issues satellite receiver",
+      "keywords": "صيانة رسيفر تصليح برمجة تحديث أعطال"
+    },
+    {
+      "title": "تركيب شاشات في دمشق",
+      "titleEn": "TV Installation in Damascus",
+      "url": "/tv-installation-damascus.html",
+      "content": "تركيب شاشات تلفزيون تثبيت جداري إخفاء أسلاك برمجة رسيفر مع الشاشة",
+      "contentEn": "TV installation wall mounting cable hiding receiver programming with TV",
+      "keywords": "تركيب شاشة تثبيت جداري حامل شاشة إخفاء أسلاك"
+    },
+    {
+      "title": "دليل الترددات",
+      "titleEn": "Frequency Guide",
+      "url": "/channels.html",
+      "content": "ترددات القنوات العربية والعالمية نايل سات عرب سات هوتبيرد تورك سات محدثة",
+      "contentEn": "Arab and international channels frequencies Nilesat Arabsat Hotbird Turksat updated",
+      "keywords": "ترددات قنوات نايل سات عرب سات هوتبيرد تورك سات"
+    },
+    {
+      "title": "حاسبة زاوية الطبق",
+      "titleEn": "Satellite Dish Angle Calculator",
+      "url": "/satellite-calculator.html",
+      "content": "حساب زوايا الطبق azimuth elevation skew لنايل سات وعرب سات وهوتبيرد وتورك سات",
+      "contentEn": "Calculate dish angles azimuth elevation skew for Nilesat Arabsat Hotbird Turksat",
+      "keywords": "حاسبة زوايا طبق azimuth elevation skew"
+    },
+    {
+      "title": "البحث عن ترددات الأقمار",
+      "titleEn": "Satellite Frequencies Search",
+      "url": "/frequencies.html",
+      "content": "البحث عن ترددات الأقمار الصناعية قائمة الترددات بحث سريع عن القنوات",
+      "contentEn": "Satellite frequencies search frequency list quick channel search",
+      "keywords": "بحث ترددات أقمار قائمة ترددات"
+    },
+    {
+      "title": "ترددات حسب الجودة",
+      "titleEn": "Frequency Quality Guide",
+      "url": "/frequency-quality.html",
+      "content": "تصنيف ترددات نايل سات حسب قوة الإشارة ممتازة جيدة متوسطة متغيرة حسب الموسم",
+      "contentEn": "Nilesat frequencies classified by signal strength excellent good medium seasonal variable",
+      "keywords": "ترددات جودة إشارة نايل سات تصنيف"
+    },
+    {
+      "title": "من نحن",
+      "titleEn": "About Us",
+      "url": "/about.html",
+      "content": "ستالايت دمشق خبراء تركيب وصيانة الستالايت في دمشق قصتنا إنجازاتنا قيمنا",
+      "contentEn": "Damascus Satellite experts in satellite installation and maintenance in Damascus our story achievements values",
+      "keywords": "من نحن عن الشركة خبراء ستالايت"
+    },
+    {
+      "title": "اتصل بنا",
+      "titleEn": "Contact Us",
+      "url": "/contact.html",
+      "content": "للتواصل والاستفسارات اتصل بنا عبر الهاتف أو واتساب 0990024693",
+      "contentEn": "For inquiries contact us via phone or WhatsApp 0990024693",
+      "keywords": "اتصل بنا تواصل رقم هاتف واتساب"
+    },
+    {
+      "title": "طلب عرض سعر",
+      "titleEn": "Request a Quote",
+      "url": "/quote-request.html",
+      "content": "طلب عرض سعر لخدمات التركيب والصيانة املأ النموذج وسنرد عليك خلال 24 ساعة",
+      "contentEn": "Request a quote for installation and maintenance services fill the form we will reply within 24 hours",
+      "keywords": "طلب عرض سعر احصل على سعر"
+    },
+    {
+      "title": "الأسئلة الشائعة",
+      "titleEn": "Frequently Asked Questions",
+      "url": "/faq-advanced.html",
+      "content": "أسئلة وأجوبة عن الستالايت والأقمار الصناعية أعطال وحلول نصائح مهمة",
+      "contentEn": "Questions and answers about satellites and dishes problems and solutions important tips",
+      "keywords": "أسئلة شائعة أجوبة استفسارات"
+    },
+    {
+      "title": "نصائح وحلول",
+      "titleEn": "Tips and Solutions",
+      "url": "/tips-solutions.html",
+      "content": "نصائح وحلول لمشاكل الستالايت والإشارة كيفية تنظيف الطبق تحسين جودة الصورة",
+      "contentEn": "Tips and solutions for satellite and signal problems how to clean dish improve picture quality",
+      "keywords": "نصائح حلول مشاكل إشارة"
+    },
+    {
+      "title": "آراء العملاء",
+      "titleEn": "Customer Reviews",
+      "url": "/customer-reviews.html",
+      "content": "آراء وتقييمات العملاء عن خدمات ستالايت دمشق شهادات حقيقية",
+      "contentEn": "Customer reviews and ratings about Damascus Satellite services real testimonials",
+      "keywords": "آراء تقييمات عملاء شهادات"
+    },
+    {
+      "title": "معرض الأعمال",
+      "titleEn": "Work Gallery",
+      "url": "/gallery.html",
+      "content": "معرض صور لأعمال تركيب الستالايت والشاشات نماذج من أعمالنا في دمشق",
+      "contentEn": "Photo gallery of satellite and TV installation work samples of our work in Damascus",
+      "keywords": "معرض صور أعمال تركيب"
+    },
+    {
+      "title": "المدونة",
+      "titleEn": "Blog",
+      "url": "/blog.html",
+      "content": "مقالات ونصائح عن الستالايت والأقمار الصناعية آخر التحديثات",
+      "contentEn": "Articles and tips about satellites and dishes latest updates",
+      "keywords": "مدونة مقالات نصائح"
+    },
+    {
+      "title": "سياسة الخصوصية",
+      "titleEn": "Privacy Policy",
+      "url": "/privacy.html",
+      "content": "سياسة الخصوصية وحماية المعلومات الشخصية كيفية جمع واستخدام بياناتك",
+      "contentEn": "Privacy policy and personal information protection how we collect and use your data",
+      "keywords": "خصوصية سياسة حماية معلومات"
+    },
+    {
+      "title": "سياسة الضمان",
+      "titleEn": "Warranty Policy",
+      "url": "/warranty-policy.html",
+      "content": "سياسة الضمان لمدة سنة على خدمات التركيب والصيانة ما يشمل وما لا يشمل الضمان",
+      "contentEn": "One year warranty on installation and maintenance services what is covered and what is not",
+      "keywords": "ضمان ضمانات سياسة ضمان"
+    },
+    {
+      "title": "المصطلحات الفنية",
+      "titleEn": "Technical Glossary",
+      "url": "/technical-glossary.html",
+      "content": "شرح المصطلحات الفنية للستالايت LNB Azimuth Elevation Skew Ku-Band FEC",
+      "contentEn": "Satellite technical terms explained LNB Azimuth Elevation Skew Ku-Band FEC",
+      "keywords": "مصطلحات فنية LNB Azimuth Elevation Skew"
+    },
+    {
+      "title": "مقارنة الأقمار",
+      "titleEn": "Satellite Comparison",
+      "url": "/satellite-comparison.html",
+      "content": "مقارنة بين أهم الأقمار الصناعية نايل سات عرب سات هوتبيرد تورك سات",
+      "contentEn": "Comparison between main satellites Nilesat Arabsat Hotbird Turksat",
+      "keywords": "مقارنة أقمار نايل سات عرب سات هوتبيرد تورك سات"
+    },
+    {
+      "title": "كيف تعمل الأقمار الصناعية",
+      "titleEn": "How Satellites Work",
+      "url": "/how-satellites-work.html",
+      "content": "شرح مبسط لكيفية عمل الأقمار الصناعية المدار الثابت نقل الإشارة",
+      "contentEn": "Simple explanation of how satellites work geostationary orbit signal transmission",
+      "keywords": "كيف تعمل الأقمار شرح مبسط"
+    },
+    {
+      "title": "خرائط التغطية",
+      "titleEn": "Coverage Maps",
+      "url": "/coverage-maps.html",
+      "content": "خرائط تغطية الأقمار الصناعية في سوريا والوطن العربي قوة الإشارة",
+      "contentEn": "Satellite coverage maps in Syria and the Arab world signal strength",
+      "keywords": "خرائط تغطية أقمار إشارة"
+    },
+    {
+      "title": "دليل الاستقطاب",
+      "titleEn": "Polarization Guide",
+      "url": "/polarization-guide.html",
+      "content": "شرح الاستقطاب في الموجات الكهرومغناطيسية عمودي V وأفقي H",
+      "contentEn": "Explanation of polarization in electromagnetic waves Vertical V and Horizontal H",
+      "keywords": "استقطاب polarization V H"
+    },
+    {
+      "title": "دليل الـ LNB",
+      "titleEn": "LNB Guide",
+      "url": "/lnb-guide.html",
+      "content": "شرح الـ LNB أنواعه Single Twin Quad Octo وكيفية عمله",
+      "contentEn": "LNB explanation types Single Twin Quad Octo how it works",
+      "keywords": "LNB دليل أنواع"
+    },
+    {
+      "title": "روابط مفيدة",
+      "titleEn": "Useful Links",
+      "url": "/useful-links.html",
+      "content": "روابط مفيدة لمواقع الترددات والخرائط والمشغلين والمصنعين",
+      "contentEn": "Useful links for frequencies maps operators and manufacturers websites",
+      "keywords": "روابط مفيدة مواقع ترددات خرائط"
+    }
+  ]
+}

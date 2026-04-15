@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title id="pageTitle" data-ar="المصطلحات الفنية | ستالايت دمشق" data-en="Technical Glossary | Damascus Satellite">المصطلحات الفنية | ستالايت دمشق</title>
+    <link rel="icon" href="favicon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0;}
+        body{font-family:Arial,sans-serif;background:#f1f5f9;color:#0f172a;padding-bottom:50px;}
+        
+        header{background:#fff;padding:15px 20px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 10px rgba(0,0,0,0.05);position:sticky;top:0;z-index:1000;}
+        header a{color:#22c55e;text-decoration:none;font-weight:bold;display:flex;align-items:center;gap:8px;}
+        
+        .lang{cursor:pointer;background:#020617;color:#fff;padding:8px 15px;border-radius:20px;font-size:14px;font-weight:bold;}
+        
+        .container{max-width:1000px;margin:40px auto;padding:20px;}
+        
+        .page-title{
+            text-align:center;
+            margin-bottom:40px;
+        }
+        .page-title h1{
+            font-size:36px;
+            color:#0f172a;
+            margin-bottom:10px;
+        }
+        .page-title p{
+            color:#475569;
+            font-size:18px;
+        }
+        
+        .section-title{
+            text-align:center;
+            margin:40px 0 25px;
+            color:#0f172a;
+            font-size:24px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            gap:12px;
+        }
+        .section-title i{
+            color:#22c55e;
+        }
+        
+        .glossary-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+            gap:25px;
+        }
+        
+        .term-card{
+            background:#fff;
+            border-radius:20px;
+            overflow:hidden;
+            box-shadow:0 4px 15px rgba(0,0,0,0.05);
+            transition:0.3s;
+            height:100%;
+        }
+        .term-card:hover{
+            transform:translateY(-5px);
+            box-shadow:0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .term-header{
+            background:linear-gradient(135deg, #22c55e, #16a34a);
+            padding:20px;
+            color:#fff;
+        }
+        .term-header h3{
+            font-size:22px;
+            margin-bottom:5px;
+        }
+        .term-header .abbreviation{
+            font-size:14px;
+            opacity:0.9;
+            font-family:monospace;
+        }
+        
+        .term-content{
+            padding:20px;
+        }
+        .term-content p{
+            color:#334155;
+            line-height:1.7;
+            margin-bottom:15px;
+        }
+        .term-content .formula{
+            background:#f1f5f9;
+            padding:12px;
+            border-radius:12px;
+            font-family:monospace;
+            font-size:14px;
+            text-align:center;
+            margin:10px 0;
+        }
+        
+        .sources{
+            background:#f8fafc;
+            border-radius:16px;
+            padding:20px;
+            margin-top:40px;
+            border-right:4px solid #22c55e;
+        }
+        .sources h3{
+            margin-bottom:15px;
+            font-size:20px;
+        }
+        .sources ul{
+            padding-right:20px;
+        }
+        .sources li{
+            margin-bottom:8px;
+            color:#475569;
+        }
+        .sources a{
+            color:#22c55e;
+            text-decoration:none;
+        }
+        .sources a:hover{
+            text-decoration:underline;
+        }
+        
+        .back-btn{
+            display:inline-block;
+            padding:10px 20px;
+            background:#020617;
+            color:#fff;
+            text-decoration:none;
+            border-radius:30px;
+            font-size:14px;
+            margin-top:20px;
+            transition:0.3s;
+        }
+        .back-btn:hover{
+            background:#22c55e;
+            transform:scale(1.05);
+        }
+        
+        @media (max-width:600px){
+            .page-title h1{font-size:28px;}
+            .term-header h3{font-size:18px;}
+            .section-title{font-size:20px; margin:30px 0 20px;}
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="/">
+        <i class="fas fa-home"></i> 
+        <span data-ar="الرئيسية" data-en="Home">الرئيسية</span>
+    </a>
+    <div class="lang" id="langBtn"><i class="fas fa-globe"></i> English</div>
+</header>
+
+<div class="container">
+    <div class="page-title">
+        <h1><i class="fas fa-book-open" style="color:#22c55e;"></i> <span data-ar="المصطلحات الفنية" data-en="Technical Glossary">المصطلحات الفنية</span></h1>
+        <p data-ar="دليل شامل لمصطلحات الستالايت والأقمار الصناعية" data-en="Comprehensive guide to satellite terminology">
+            دليل شامل لمصطلحات الستالايت والأقمار الصناعية
+        </p>
+    </div>
+    
+    <!-- H2 للمصطلحات الفيزيائية -->
+    <h2 class="section-title">
+        <i class="fas fa-compass"></i>
+        <span data-ar="مصطلحات فيزيائية (الاتجاهات والزوايا)" data-en="Physical Terms (Directions and Angles)">مصطلحات فيزيائية (الاتجاهات والزوايا)</span>
+    </h2>
+    
+    <div class="glossary-grid">
+        
+        <!-- Azimuth -->
+        <div class="term-card">
+            <div class="term-header">
+                <h3 data-ar="الزاوية الأفقية" data-en="Azimuth">الزاوية الأفقية</h3>
+                <div class="abbreviation">Azimuth</div>
+            </div>
+            <div class="term-content">
+                <p data-ar="الزاوية التي تحدد اتجاه الطبق على المستوى الأفقي. تقاس بالدرجات من الشمال الحقيقي (0°) باتجاه عقارب الساعة." data-en="The angle that determines the dish direction on the horizontal plane. Measured in degrees from true north (0°) clockwise.">
+                    الزاوية التي تحدد اتجاه الطبق على المستوى الأفقي. تقاس بالدرجات من الشمال الحقيقي (0°) باتجاه عقارب الساعة.
+                </p>
+                <div class="formula">
+                    Az = 180° + atan2(tan(ΔLong), sin(Latitude))
+                </div>
+                <p data-ar="مثال (دمشق - نايل سات): 215° (جنوب غرب)" data-en="Example (Damascus - Nilesat): 215° (Southwest)">مثال (دمشق - نايل سات): 215° (جنوب غرب)</p>
+                <p><small data-ar="المصدر: Satbeams.com / Dishpointer.com" data-en="Source: Satbeams.com / Dishpointer.com">المصدر: Satbeams.com / Dishpointer.com</small></p>
+            </div>
+        </div>
+        
+        <!-- Elevation -->
+        <div class="term-card">
+            <div class="term-header">
+                <h3 data-ar="الزاوية العمودية" data-en="Elevation">الزاوية العمودية</h3>
+                <div class="abbreviation">Elevation</div>
+            </div>
+            <div class="term-content">
+                <p data-ar="الزاوية التي تحدد ارتفاع الطبق لأعلى أو أسفل. تقاس بالدرجات من الأفق (0°) إلى السماء (90°)." data-en="The angle that determines the dish tilt up or down. Measured in degrees from the horizon (0°) to the sky (90°).">
+                    الزاوية التي تحدد ارتفاع الطبق لأعلى أو أسفل. تقاس بالدرجات من الأفق (0°) إلى السماء (90°).
+                </p>
+                <div class="formula">
+                    El = atan( (cos(ΔLong) × cos(Latitude) - 0.151) / sqrt(1 - (cos(ΔLong) × cos(Latitude))²) )
+                </div>
+                <p data-ar="مثال (دمشق - نايل سات): 42°" data-en="Example (Damascus - Nilesat): 42°">مثال (دمشق - نايل سات): 42°</p>
+                <p><small data-ar="المصدر: Satbeams.com / Dishpointer.com" data-en="Source: Satbeams.com / Dishpointer.com">المصدر: Satbeams.com / Dishpointer.com</small></p>
+            </div>
+        </div>
+        
+        <!-- Skew -->
+        <div class="term-card">
+            <div class="term-header">
+                <h3 data-ar="إمالة الـ LNB" data-en="Skew">إمالة الـ LNB</h3>
+                <div class="abbreviation">Skew</div>
+            </div>
+            <div class="term-content">
+                <p data-ar="تدوير الـ LNB حول محوره لتحسين استقبال الإشارة. يعوض فرق الاستقطاب بين موقع القمر وموقع الأرض." data-en="Rotation of the LNB around its axis to improve signal reception. Compensates for polarization difference between satellite position and earth location.">
+                    تدوير الـ LNB حول محوره لتحسين استقبال الإشارة. يعوض فرق الاستقطاب بين موقع القمر وموقع الأرض.
+                </p>
+                <div class="formula">
+                    Skew = atan( sin(ΔLong) / tan(Latitude) )
+                </div>
+                <p data-ar="مثال (دمشق - نايل سات): -12° (عكس عقارب الساعة)" data-en="Example (Damascus - Nilesat): -12° (counter-clockwise)">مثال (دمشق - نايل سات): -12° (عكس عقارب الساعة)</p>
+                <p><small data-ar="المصدر: Satbeams.com / Eutelsat" data-en="Source: Satbeams.com / Eutelsat">المصدر: Satbeams.com / Eutelsat</small></p>
+            </div>
+        </div>
+        
+        <!-- Polarization -->
+        <div class="term-card">
+            <div class="term-header">
+                <h3 data-ar="الاستقطاب" data-en="Polarization">الاستقطاب</h3>
+                <div class="abbreviation">V / H</div>
+            </div>
+            <div class="term-content">
+                <p data-ar="اتجاه الموجة الكهرومغناطيسية. نوعان رئيسيان: عمودي (Vertical - V) وأفقي (Horizontal - H). يسمح باستخدام نفس التردد لنقل قناتين مختلفتين." data-en="Direction of the electromagnetic wave. Two main types: Vertical (V) and Horizontal (H). Allows using the same frequency for two different channels.">
+                    اتجاه الموجة الكهرومغناطيسية. نوعان رئيسيان: عمودي (Vertical - V) وأفقي (Horizontal - H). يسمح باستخدام نفس التردد لنقل قناتين مختلفتين.
+                </p>
+                <p><small data-ar="المصدر: ITU-R Recommendations" data-en="Source: ITU-R Recommendations">المصدر: ITU-R Recommendations</small></p>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- H2 للمصطلحات التقنية -->
+    <h2 class="section-title">
+        <i class="fas fa-microchip"></i>
+        <span data-ar="مصطلحات تقنية" data-en="Technical Terms">مصطلحات تقنية</span>
+    </h2>
+    
+    <div class="glossary-grid">
+        
+        <!-- LNB -->
+        <div class="term-card">
+            <div class="term-header">
+                <h3>LNB</h3>
+                <div class="abbreviation">Low-Noise Block downconverter</div>
+            </div>
+            <div class="term-content">
+                <p data-ar="الجزء الموجود في مقدمة الطبق الذي يستقبل الإشارة من القمر الصناعي ويحولها من تردد عالي (Ku-Band) إلى تردد متوسط يمكن للرسيفر معالجته." data-en="The component at the front of the dish that receives the signal from the satellite and converts it from high frequency (Ku-Band) to intermediate frequency that the receiver can process.">
+                    الجزء الموجود في مقدمة الطبق الذي يستقبل الإشارة من القمر الصناعي ويحولها من تردد عالي (Ku-Band) إلى تردد متوسط يمكن للرسيفر معالجته.
+                </p>
+                <div class="formula">
+                    📡 تردد الخرج = تردد الدخل - تردد التذبذب المحلي (LOF)
+                </div>
+                <p><strong data-ar="الأنواع:" data-en="Types:">الأنواع:</strong> Single (رسيفر واحد), Twin (رسيفران), Quad (4 رسيفرات), Octo (8 رسيفرات)</p>
+                <p><small data-ar="المصدر: Eutelsat Technical Documentation" data-en="Source: Eutelsat Technical Documentation">المصدر: Eutelsat Technical Documentation</small></p>
+            </div>
+        </div>
+        
+        <!-- Ku-Band -->
+        <div class="term-card">
+            <div class="term-header">
+                <h3>Ku-Band</h3>
+                <div class="abbreviation">Kurzt-under Band</div>
+            </div>
+            <div class="term-content">
+                <p data-ar="نطاق الترددات المستخدم في الأقمار الصناعية التجارية. يتراوح بين 10.7 إلى 12.75 جيجاهرتز. يتميز بأطباق صغيرة نسبياً وحساسية عالية للمطر." data-en="Frequency band used in commercial satellites. Ranges from 10.7 to 12.75 GHz. Characterized by relatively small dishes and high sensitivity to rain.">
+                    نطاق الترددات المستخدم في الأقمار الصناعية التجارية. يتراوح بين 10.7 إلى 12.75 جيجاهرتز. يتميز بأطباق صغيرة نسبياً وحساسية عالية للمطر.
+                </p>
+                <div class="formula">
+                    📡 الطول الموجي (λ) = سرعة الضوء / التردد ≈ 2.5 سم
+                </div>
+                <p><small data-ar="المصدر: ITU-R Recommendations" data-en="Source: ITU-R Recommendations">المصدر: ITU-R Recommendations</small></p>
+            </div>
+        </div>
+        
+        <!-- FEC -->
+        <div class="term-card">
+            <div class="term-header">
+                <h3>FEC</h3>
+                <div class="abbreviation">Forward Error Correction</div>
+            </div>
+            <div class="term-content">
+                <p data-ar="تقنية تصحيح الأخطاء الأمامي. تسمح باستعادة البيانات التالفة أثناء الإرسال دون الحاجة لإعادة الإرسال. تظهر في إعدادات الترددات كرقم مثل 3/4 أو 5/6." data-en="Forward Error Correction technique. Allows recovery of corrupted data during transmission without retransmission. Appears in frequency settings as a number like 3/4 or 5/6.">
+                    تقنية تصحيح الأخطاء الأمامي. تسمح باستعادة البيانات التالفة أثناء الإرسال دون الحاجة لإعادة الإرسال. تظهر في إعدادات الترددات كرقم مثل 3/4 أو 5/6.
+                </p>
+                <p><strong data-ar="الأرقام الشائعة:" data-en="Common values:">الأرقام الشائعة:</strong> 1/2, 2/3, 3/4, 5/6, 7/8</p>
+                <p><small data-ar="المصدر: DVB-S Standards (ETSI EN 300 421)" data-en="Source: DVB-S Standards (ETSI EN 300 421)">المصدر: DVB-S Standards (ETSI EN 300 421)</small></p>
+            </div>
+        </div>
+        
+        <!-- Symbol Rate -->
+        <div class="term-card">
+            <div class="term-header">
+                <h3 data-ar="معدل الترميز" data-en="Symbol Rate">معدل الترميز</h3>
+                <div class="abbreviation">SR / Symbol Rate</div>
+            </div>
+            <div class="term-content">
+                <p data-ar="سرعة نقل البيانات عبر القناة. يقاس بالكيلو باود (kS/s). من القيم الشائعة: 27500، 22000، 30000." data-en="Data transmission speed over the channel. Measured in kilosymbols per second (kS/s). Common values: 27500, 22000, 30000.">
+                    سرعة نقل البيانات عبر القناة. يقاس بالكيلو باود (kS/s). من القيم الشائعة: 27500، 22000، 30000.
+                </p>
+                <div class="formula">
+                    📺 معدل البيانات (Mbps) = معدل الترميز × 2 × (FEC)
+                </div>
+                <p><small data-ar="المصدر: DVB-S Standards" data-en="Source: DVB-S Standards">المصدر: DVB-S Standards</small></p>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="sources">
+        <h3><i class="fas fa-flask"></i> <span data-ar="المصادر العلمية" data-en="Scientific Sources">المصادر العلمية</span></h3>
+        <ul>
+            <li><a href="https://www.satbeams.com" target="_blank">Satbeams.com</a> - <span data-ar="خرائط التغطية وحسابات الزوايا" data-en="Coverage maps and angle calculations">خرائط التغطية وحسابات الزوايا</span></li>
+            <li><a href="https://www.dishpointer.com" target="_blank">Dishpointer.com</a> - <span data-ar="حاسبة زوايا الطبق الدقيقة" data-en="Accurate dish pointing calculator">حاسبة زوايا الطبق الدقيقة</span></li>
+            <li><a href="https://www.eutelsat.com" target="_blank">Eutelsat.com</a> - <span data-ar="المواصفات الفنية للـ LNB والأقمار" data-en="Technical specifications for LNB and satellites">المواصفات الفنية للـ LNB والأقمار</span></li>
+            <li><a href="https://www.itu.int" target="_blank">ITU-R</a> - <span data-ar="الاتحاد الدولي للاتصالات - المعايير الفنية" data-en="International Telecommunication Union - Technical standards">الاتحاد الدولي للاتصالات - المعايير الفنية</span></li>
+            <li><a href="https://www.etsi.org" target="_blank">ETSI EN 300 421</a> - <span data-ar="معايير DVB-S للنقل عبر الأقمار" data-en="DVB-S standards for satellite transmission">معايير DVB-S للنقل عبر الأقمار</span></li>
+        </ul>
+        <p><i class="fas fa-info-circle"></i> <span data-ar="* جميع المصادر موثقة حسب أحدث المعايير الفنية العالمية. تم الاعتماد على بيانات رسمية من مشغلي الأقمار والهيئات المنظمة." data-en="* All sources are documented according to the latest international technical standards. Official data from satellite operators and regulatory bodies were used.">
+            * جميع المصادر موثقة حسب أحدث المعايير الفنية العالمية. تم الاعتماد على بيانات رسمية من مشغلي الأقمار والهيئات المنظمة.
+        </span></p>
+    </div>
+    
+    <div style="text-align:center; margin-top:20px;">
+        <a href="/" class="back-btn"><i class="fas fa-arrow-right"></i> <span data-ar="العودة للرئيسية" data-en="Back to Home">العودة للرئيسية</span></a>
+    </div>
+</div>
+
+<script>
+    (function(){
+        const langBtn = document.getElementById("langBtn");
+        let currentLang = localStorage.getItem("myWebLang") || "ar";
+        
+        function applyLang(){
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
+            
+            document.querySelectorAll("[data-ar]").forEach(el => {
+                if(el.tagName === 'A') return;
+                el.innerText = el.getAttribute("data-" + currentLang);
+            });
+            
+            langBtn.innerHTML = currentLang === "ar" ? '<i class="fas fa-globe"></i> English' : '<i class="fas fa-globe"></i> العربية';
+            localStorage.setItem("myWebLang", currentLang);
+        }
+        
+        langBtn.onclick = function(){
+            currentLang = currentLang === "ar" ? "en" : "ar";
+            applyLang();
+        };
+        applyLang();
+    })();
+</script>
+
+</body>
+</html>

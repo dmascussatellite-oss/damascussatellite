@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>معادلات حساب الزوايا | ستالايت دمشق</title>
+    <link rel="icon" href="favicon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0;}
+        body{font-family:Arial,sans-serif;background:#f1f5f9;color:#0f172a;padding-bottom:50px;}
+        header{background:#fff;padding:15px 20px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 10px rgba(0,0,0,0.05);position:sticky;top:0;z-index:1000;}
+        header a{color:#22c55e;text-decoration:none;font-weight:bold;display:flex;align-items:center;gap:8px;}
+        .lang{cursor:pointer;background:#020617;color:#fff;padding:8px 15px;border-radius:20px;font-size:14px;font-weight:bold;}
+        .container{max-width:1000px;margin:40px auto;padding:20px;}
+        .page-title{text-align:center;margin-bottom:40px;}
+        .page-title h1{font-size:36px;color:#0f172a;margin-bottom:10px;}
+        .page-title p{color:#475569;font-size:18px;}
+        .formula-card{background:#fff;border-radius:24px;padding:30px;margin-bottom:30px;box-shadow:0 4px 15px rgba(0,0,0,0.05);transition:0.3s;}
+        .formula-card:hover{box-shadow:0 15px 30px rgba(0,0,0,0.1);}
+        .formula-title{background:linear-gradient(135deg, #22c55e, #16a34a);color:#fff;padding:12px 20px;border-radius:40px;display:inline-block;margin-bottom:20px;font-size:20px;}
+        .formula-box{background:#f1f5f9;padding:20px;border-radius:16px;margin:20px 0;text-align:center;font-family:monospace;font-size:18px;overflow-x:auto;}
+        .variables{background:#f8fafc;padding:15px;border-radius:12px;margin:15px 0;}
+        .variables table{width:100%;}
+        .variables td{padding:8px;border-bottom:1px solid #e2e8f0;}
+        .example{background:#ecfdf5;border-right:4px solid #22c55e;padding:20px;border-radius:16px;margin:20px 0;}
+        .sources{background:#f8fafc;border-radius:20px;padding:25px;margin-top:40px;border-right:4px solid #22c55e;}
+        .back-btn{display:inline-block;padding:10px 20px;background:#020617;color:#fff;text-decoration:none;border-radius:30px;font-size:14px;margin-top:20px;}
+        @media (max-width:600px){.page-title h1{font-size:28px;}.formula-box{font-size:14px;}}
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="/"><i class="fas fa-home"></i> <span data-ar="الرئيسية" data-en="Home">الرئيسية</span></a>
+    <div class="lang" id="langBtn"><i class="fas fa-globe"></i> English</div>
+</header>
+
+<div class="container">
+    <div class="page-title">
+        <h1><i class="fas fa-calculator" style="color:#22c55e;"></i> <span data-ar="معادلات حساب الزوايا" data-en="Angle Calculation Formulas">معادلات حساب الزوايا</span></h1>
+        <p data-ar="الأسس الرياضية لضبط الأطباق والأقمار الصناعية" data-en="Mathematical foundations for satellite dish alignment">الأسس الرياضية لضبط الأطباق والأقمار الصناعية</p>
+    </div>
+    
+    <!-- المتغيرات الأساسية -->
+    <div class="formula-card">
+        <h2 class="formula-title">📐 <span data-ar="المتغيرات الأساسية" data-en="Basic Variables">المتغيرات الأساسية</span></h2>
+        <div class="variables">
+            <table>
+                <tr><td><strong>φ</strong></td><td data-ar="خط عرض الموقع الجغرافي (Latitude)" data-en="Geographic latitude">خط عرض الموقع الجغرافي (Latitude)</td></tr>
+                <tr><td><strong>λ<sub>site</sub></strong></td><td data-ar="خط طول الموقع الجغرافي (Longitude)" data-en="Geographic longitude">خط طول الموقع الجغرافي (Longitude)</td></tr>
+                <tr><td><strong>λ<sub>sat</sub></strong></td><td data-ar="خط طول القمر الصناعي المداري" data-en="Satellite orbital longitude">خط طول القمر الصناعي المداري</td></tr>
+                <tr><td><strong>Δλ</strong></td><td data-ar="فرق الطول = λ<sub>sat</sub> - λ<sub>site</sub>" data-en="Longitude difference = λ<sub>sat</sub> - λ<sub>site</sub>">فرق الطول = λ<sub>sat</sub> - λ<sub>site</sub></td></tr>
+                <tr><td><strong>R</strong></td><td data-ar="نصف قطر الأرض ≈ 6378 كم" data-en="Earth radius ≈ 6378 km">نصف قطر الأرض ≈ 6378 كم</td></tr>
+                <tr><td><strong>h</strong></td><td data-ar="ارتفاع القمر الصناعي عن سطح الأرض ≈ 35786 كم (المدار الثابت)" data-en="Satellite altitude ≈ 35786 km (geostationary)">ارتفاع القمر الصناعي ≈ 35786 كم (المدار الثابت)</td></tr>
+            </table>
+        </div>
+        <p><small data-ar="المصدر: ITU-R S.1541 / Satellite Communications by Dennis Roddy" data-en="Source: ITU-R S.1541 / Satellite Communications by Dennis Roddy">المصدر: ITU-R S.1541 / Satellite Communications by Dennis Roddy</small></p>
+    </div>
+    
+    <!-- الزاوية الأفقية (Azimuth) -->
+    <div class="formula-card">
+        <h2 class="formula-title">🧭 <span data-ar="الزاوية الأفقية (Azimuth)" data-en="Azimuth Angle">الزاوية الأفقية (Azimuth)</span></h2>
+        <div class="formula-box">Az = 180° + arctan( tan(Δλ) / sin(φ) )</div>
+        <div class="variables">
+            <p><strong data-ar="ملاحظة:" data-en="Note:">ملاحظة:</strong> <span data-ar="للمواقع في نصف الكرة الشمالي (مثل سوريا) تستخدم هذه الصيغة. إذا كانت النتيجة سالبة، أضف 360°." data-en="For locations in the Northern Hemisphere (like Syria) use this formula. If the result is negative, add 360°.">للمواقع في نصف الكرة الشمالي (مثل سوريا) تستخدم هذه الصيغة. إذا كانت النتيجة سالبة، أضف 360°.</span></p>
+        </div>
+        <div class="example">
+            <strong><i class="fas fa-calculator"></i> <span data-ar="مثال تطبيقي (دمشق - نايل سات)" data-en="Example (Damascus - Nilesat)">مثال تطبيقي (دمشق - نايل سات)</span></strong><br>
+            φ = 33.5°, λ<sub>site</sub> = 36.3°, λ<sub>sat</sub> = 7° غرب = -7°<br>
+            Δλ = -7° - 36.3° = -43.3°<br>
+            Az = 180° + arctan( tan(-43.3°) / sin(33.5°) ) = 180° + arctan(-1.706) = 120.3°<br>
+            <strong data-ar="النتيجة:" data-en="Result:">النتيجة:</strong> <span data-ar="بما أن القمر غرباً، النتيجة الفعلية هي 360° - 120.3° = 239.7° (جنوب غرب)" data-en="Since the satellite is west, the actual result is 360° - 120.3° = 239.7° (Southwest)">بما أن القمر غرباً، النتيجة الفعلية هي 360° - 120.3° = 239.7° (جنوب غرب)</span>
+        </div>
+        <p><small data-ar="المصدر: Satellite Communications, Dennis Roddy, Chapter 4" data-en="Source: Satellite Communications, Dennis Roddy, Chapter 4">المصدر: Satellite Communications, Dennis Roddy, Chapter 4</small></p>
+    </div>
+    
+    <!-- الزاوية العمودية (Elevation) -->
+    <div class="formula-card">
+        <h2 class="formula-title">⬆️ <span data-ar="الزاوية العمودية (Elevation)" data-en="Elevation Angle">الزاوية العمودية (Elevation)</span></h2>
+        <div class="formula-box">El = arctan( (cos(Δλ) × cos(φ) - 0.151) / √(1 - (cos(Δλ) × cos(φ))²) )</div>
+        <div class="example">
+            <strong><i class="fas fa-calculator"></i> <span data-ar="مثال تطبيقي (دمشق - نايل سات)" data-en="Example (Damascus - Nilesat)">مثال تطبيقي (دمشق - نايل سات)</span></strong><br>
+            cos(Δλ) = 0.728, cos(φ) = 0.834 → 0.607<br>
+            El = arctan((0.607 - 0.151) / √(1 - 0.368)) = arctan(0.456 / 0.795) = <strong>29.9°</strong>
+        </div>
+        <p><small data-ar="المصدر: Satellite Communications, Dennis Roddy, Chapter 4" data-en="Source: Satellite Communications, Dennis Roddy, Chapter 4">المصدر: Satellite Communications, Dennis Roddy, Chapter 4</small></p>
+    </div>
+    
+    <!-- إمالة LNB (Skew) -->
+    <div class="formula-card">
+        <h2 class="formula-title">🔄 <span data-ar="إمالة الـ LNB (Skew)" data-en="LNB Skew">إمالة الـ LNB (Skew)</span></h2>
+        <div class="formula-box">Skew = arctan( sin(Δλ) / tan(φ) )</div>
+        <div class="example">
+            <strong><i class="fas fa-calculator"></i> <span data-ar="مثال تطبيقي (دمشق - نايل سات)" data-en="Example (Damascus - Nilesat)">مثال تطبيقي (دمشق - نايل سات)</span></strong><br>
+            sin(43.3°) = 0.686, tan(33.5°) = 0.662 → Skew = arctan(1.036) = <strong>46°</strong>
+        </div>
+        <p><small data-ar="المصدر: Eutelsat Technical Documentation" data-en="Source: Eutelsat Technical Documentation">المصدر: Eutelsat Technical Documentation</small></p>
+    </div>
+    
+    <!-- حساب المسافة إلى القمر -->
+    <div class="formula-card">
+        <h2 class="formula-title">📡 <span data-ar="حساب المسافة إلى القمر" data-en="Distance to Satellite">حساب المسافة إلى القمر</span></h2>
+        <div class="formula-box">d = √( (R+h)² + R² - 2R(R+h) × cos(Δλ) × cos(φ) )</div>
+        <div class="example"><span data-ar="لنايل سات في دمشق: المسافة ≈ 37800 كم" data-en="For Nilesat in Damascus: Distance ≈ 37800 km">لنايل سات في دمشق: المسافة ≈ 37800 كم</span></div>
+        <p><small data-ar="المصدر: Satellite Communications, Dennis Roddy" data-en="Source: Satellite Communications, Dennis Roddy">المصدر: Satellite Communications, Dennis Roddy</small></p>
+    </div>
+    
+    <!-- المصادر العلمية -->
+    <div class="sources">
+        <h3><i class="fas fa-flask"></i> <span data-ar="المصادر العلمية" data-en="Scientific Sources">المصادر العلمية</span></h3>
+        <ul>
+            <li><strong>Dennis Roddy</strong> - "Satellite Communications" (الفصل 4)</li>
+            <li><strong>ITU-R S.1541</strong> - <span data-ar="توصيات الاتحاد الدولي للاتصالات" data-en="ITU recommendations">توصيات الاتحاد الدولي للاتصالات</span></li>
+            <li><strong>Eutelsat Technical Documentation</strong></li>
+            <li><strong>Dishpointer.com</strong></li>
+        </ul>
+    </div>
+    
+    <div style="text-align:center; margin-top:20px;">
+        <a href="/" class="back-btn"><i class="fas fa-arrow-right"></i> <span data-ar="العودة للرئيسية" data-en="Back to Home">العودة للرئيسية</span></a>
+    </div>
+</div>
+
+<script>
+    (function(){
+        const langBtn = document.getElementById("langBtn");
+        let currentLang = localStorage.getItem("myWebLang") || "ar";
+        function applyLang(){
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
+            document.querySelectorAll("[data-ar]").forEach(el => {
+                if(el.tagName === 'A') return;
+                el.innerText = el.getAttribute("data-" + currentLang);
+            });
+            langBtn.innerHTML = currentLang === "ar" ? '<i class="fas fa-globe"></i> English' : '<i class="fas fa-globe"></i> العربية';
+            localStorage.setItem("myWebLang", currentLang);
+        }
+        langBtn.onclick = function(){ currentLang = currentLang === "ar" ? "en" : "ar"; applyLang(); };
+        applyLang();
+    })();
+</script>
+</body>
+</html>

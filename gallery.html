@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title id="pageTitle" data-ar="معرض الأعمال | ستالايت دمشق" data-en="Work Gallery | Damascus Satellite">معرض الأعمال | ستالايت دمشق</title>
+    <link rel="icon" href="favicon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0;}
+        body{font-family:Arial,sans-serif;background:#f1f5f9;color:#0f172a;padding-bottom:50px;}
+        
+        header{background:#fff;padding:15px 20px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 10px rgba(0,0,0,0.05);position:sticky;top:0;z-index:1000;}
+        header a{color:#22c55e;text-decoration:none;font-weight:bold;display:flex;align-items:center;gap:8px;}
+        
+        .lang{cursor:pointer;background:#020617;color:#fff;padding:8px 15px;border-radius:20px;font-size:14px;font-weight:bold;}
+        
+        .container{max-width:1100px;margin:40px auto;padding:20px;}
+        
+        .page-title{
+            text-align:center;
+            margin-bottom:40px;
+        }
+        .page-title h1{
+            font-size:36px;
+            color:#0f172a;
+            margin-bottom:10px;
+        }
+        .page-title p{
+            color:#475569;
+            font-size:18px;
+        }
+        
+        .section-title{
+            text-align:center;
+            margin:30px 0 25px;
+            color:#0f172a;
+            font-size:24px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            gap:12px;
+        }
+        .section-title i{
+            color:#22c55e;
+            font-size:26px;
+        }
+        
+        .gallery-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+            gap:25px;
+        }
+        
+        .gallery-item{
+            background:#fff;
+            border-radius:24px;
+            overflow:hidden;
+            box-shadow:0 4px 15px rgba(0,0,0,0.05);
+            transition:0.3s;
+            text-align:center;
+        }
+        .gallery-item:hover{
+            transform:translateY(-5px);
+            box-shadow:0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .gallery-image{
+            background:linear-gradient(135deg, #f1f5f9, #e2e8f0);
+            padding:40px;
+            text-align:center;
+        }
+        .gallery-image i{
+            font-size:80px;
+            color:#22c55e;
+        }
+        
+        .gallery-info{
+            padding:20px;
+        }
+        .gallery-info h3{
+            margin-bottom:8px;
+            color:#0f172a;
+            font-size:20px;
+        }
+        .gallery-info .location{
+            color:#22c55e;
+            font-size:14px;
+            margin-bottom:10px;
+        }
+        .gallery-info .desc{
+            color:#475569;
+            font-size:14px;
+            line-height:1.6;
+        }
+        
+        .note-box{
+            background:linear-gradient(135deg, #eef2ff, #e6f0ff);
+            border-radius:24px;
+            padding:30px;
+            text-align:center;
+            margin-top:20px;
+            transition:0.3s;
+        }
+        .note-box:hover{
+            transform:translateY(-3px);
+            box-shadow:0 10px 25px rgba(0,0,0,0.1);
+        }
+        .note-box i{
+            font-size:48px;
+            color:#22c55e;
+            margin-bottom:15px;
+        }
+        .note-box h3{
+            font-size:22px;
+            margin-bottom:10px;
+            color:#0f172a;
+        }
+        
+        .back-btn{
+            display:inline-block;
+            padding:10px 20px;
+            background:#020617;
+            color:#fff;
+            text-decoration:none;
+            border-radius:30px;
+            font-size:14px;
+            margin-top:20px;
+            transition:0.3s;
+        }
+        .back-btn:hover{
+            background:#22c55e;
+            transform:scale(1.05);
+        }
+        
+        @media (max-width:600px){
+            .page-title h1{font-size:28px;}
+            .gallery-image i{font-size:60px;}
+            .section-title{font-size:20px; margin:25px 0 20px;}
+            .section-title i{font-size:22px;}
+            .note-box h3{font-size:18px;}
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="/">
+        <i class="fas fa-home"></i> 
+        <span data-ar="الرئيسية" data-en="Home">الرئيسية</span>
+    </a>
+    <div class="lang" id="langBtn"><i class="fas fa-globe"></i> English</div>
+</header>
+
+<div class="container">
+    <div class="page-title">
+        <h1><i class="fas fa-images" style="color:#22c55e;"></i> <span data-ar="معرض الأعمال" data-en="Work Gallery">معرض الأعمال</span></h1>
+        <p data-ar="نماذج من أعمالنا في مختلف أحياء دمشق" data-en="Samples of our work in various Damascus districts">
+            نماذج من أعمالنا في مختلف أحياء دمشق
+        </p>
+    </div>
+    
+    <!-- H2 لأعمالنا المنفذة -->
+    <h2 class="section-title">
+        <i class="fas fa-briefcase"></i>
+        <span data-ar="أعمالنا المنفذة" data-en="Our Completed Work">أعمالنا المنفذة</span>
+    </h2>
+    
+    <div class="gallery-grid">
+        
+        <!-- عمل 1 -->
+        <div class="gallery-item">
+            <div class="gallery-image">
+                <i class="fas fa-satellite-dish"></i>
+            </div>
+            <div class="gallery-info">
+                <h3 data-ar="تركيب طبق نايل سات" data-en="Nilesat Dish Installation">تركيب طبق نايل سات</h3>
+                <div class="location"><i class="fas fa-map-marker-alt"></i> <span data-ar="المزة" data-en="Mezzeh">المزة</span></div>
+                <div class="desc" data-ar="طبق 80 سم مع LNB مزدوج، إشارة ممتازة وجودة صورة عالية." data-en="80cm dish with twin LNB, excellent signal and high picture quality.">
+                    طبق 80 سم مع LNB مزدوج، إشارة ممتازة وجودة صورة عالية.
+                </div>
+            </div>
+        </div>
+        
+        <!-- عمل 2 -->
+        <div class="gallery-item">
+            <div class="gallery-image">
+                <i class="fas fa-tv"></i>
+            </div>
+            <div class="gallery-info">
+                <h3 data-ar="تركيب شاشة 65 بوصة" data-en="65-inch TV Installation">تركيب شاشة 65 بوصة</h3>
+                <div class="location"><i class="fas fa-map-marker-alt"></i> <span data-ar="كفرسوسة" data-en="Kafr Souseh">كفرسوسة</span></div>
+                <div class="desc" data-ar="تركيب جداري مع إخفاء الأسلاك، تثبيت آمن ومتين." data-en="Wall mounting with cable hiding, safe and durable installation.">
+                    تركيب جداري مع إخفاء الأسلاك، تثبيت آمن ومتين.
+                </div>
+            </div>
+        </div>
+        
+        <!-- عمل 3 -->
+        <div class="gallery-item">
+            <div class="gallery-image">
+                <i class="fas fa-microchip"></i>
+            </div>
+            <div class="gallery-info">
+                <h3 data-ar="برمجة رسيفر 4K" data-en="4K Receiver Programming">برمجة رسيفر 4K</h3>
+                <div class="location"><i class="fas fa-map-marker-alt"></i> <span data-ar="جرمانا" data-en="Jaramana">جرمانا</span></div>
+                <div class="desc" data-ar="تحديث السوفت وير، ترتيب القنوات، إضافة ترددات جديدة." data-en="Software update, channel sorting, adding new frequencies.">
+                    تحديث السوفت وير، ترتيب القنوات، إضافة ترددات جديدة.
+                </div>
+            </div>
+        </div>
+        
+        <!-- عمل 4 -->
+        <div class="gallery-item">
+            <div class="gallery-image">
+                <i class="fas fa-satellite"></i>
+            </div>
+            <div class="gallery-info">
+                <h3 data-ar="ضبط إشارة عرب سات" data-en="Arabsat Signal Tuning">ضبط إشارة عرب سات</h3>
+                <div class="location"><i class="fas fa-map-marker-alt"></i> <span data-ar="برزة" data-en="Barzeh">برزة</span></div>
+                <div class="desc" data-ar="إعادة ضبط زوايا الطبق بعد العاصفة، تحسين الإشارة بنسبة 40%." data-en="Realigning dish angles after storm, signal improved by 40%.">
+                    إعادة ضبط زوايا الطبق بعد العاصفة، تحسين الإشارة بنسبة 40%.
+                </div>
+            </div>
+        </div>
+        
+        <!-- عمل 5 -->
+        <div class="gallery-item">
+            <div class="gallery-image">
+                <i class="fas fa-network-wired"></i>
+            </div>
+            <div class="gallery-info">
+                <h3 data-ar="تمديد شبكة 4 نقاط" data-en="4-Point Network Extension">تمديد شبكة 4 نقاط</h3>
+                <div class="location"><i class="fas fa-map-marker-alt"></i> <span data-ar="الميدان" data-en="Midan">الميدان</span></div>
+                <div class="desc" data-ar="توزيع الإشارة على 4 غرف باستخدام LNB رباعي وكابلات عالية الجودة." data-en="Signal distribution to 4 rooms using quad LNB and high-quality cables.">
+                    توزيع الإشارة على 4 غرف باستخدام LNB رباعي وكابلات عالية الجودة.
+                </div>
+            </div>
+        </div>
+        
+        <!-- عمل 6 -->
+        <div class="gallery-item">
+            <div class="gallery-image">
+                <i class="fas fa-tools"></i>
+            </div>
+            <div class="gallery-info">
+                <h3 data-ar="صيانة طبق متحرك" data-en="Motorized Dish Maintenance">صيانة طبق متحرك</h3>
+                <div class="location"><i class="fas fa-map-marker-alt"></i> <span data-ar="المهاجرين" data-en="Muhajreen">المهاجرين</span></div>
+                <div class="desc" data-ar="إصلاح محرك الطبق، إعادة برمجة المواقع، ضبط زوايا جميع الأقمار." data-en="Dish motor repair, reprogramming satellite positions, aligning all satellites.">
+                    إصلاح محرك الطبق، إعادة برمجة المواقع، ضبط زوايا جميع الأقمار.
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- H2 لقريباً في المعرض -->
+    <h2 class="section-title" style="margin-top: 50px;">
+        <i class="fas fa-camera"></i>
+        <span data-ar="قريباً في المعرض" data-en="Coming Soon to Gallery">قريباً في المعرض</span>
+    </h2>
+    
+    <div class="note-box">
+        <i class="fas fa-camera-retro"></i>
+        <h3 data-ar="قريباً... صور حقيقية لأعمالنا" data-en="Coming soon... Real photos of our work">قريباً... صور حقيقية لأعمالنا</h3>
+        <p data-ar="نقوم بتوثيق أعمالنا باستمرار. سنضيف قريباً صوراً حقيقية لتركيباتنا في مختلف أحياء دمشق." data-en="We are constantly documenting our work. We will soon add real photos of our installations in various Damascus districts.">
+            نقوم بتوثيق أعمالنا باستمرار. سنضيف قريباً صوراً حقيقية لتركيباتنا في مختلف أحياء دمشق.
+        </p>
+    </div>
+    
+    <div style="text-align:center; margin-top:20px;">
+        <a href="/" class="back-btn"><i class="fas fa-arrow-right"></i> <span data-ar="العودة للرئيسية" data-en="Back to Home">العودة للرئيسية</span></a>
+    </div>
+</div>
+
+<script>
+    // نظام اللغة
+    (function(){
+        const langBtn = document.getElementById("langBtn");
+        let currentLang = localStorage.getItem("myWebLang") || "ar";
+        
+        function applyLang(){
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
+            
+            document.querySelectorAll("[data-ar]").forEach(el => {
+                el.innerText = el.getAttribute("data-" + currentLang);
+            });
+            
+            langBtn.innerHTML = currentLang === "ar" ? 
+                '<i class="fas fa-globe"></i> English' : 
+                '<i class="fas fa-globe"></i> العربية';
+            
+            localStorage.setItem("myWebLang", currentLang);
+        }
+        
+        langBtn.onclick = function(){
+            currentLang = currentLang === "ar" ? "en" : "ar";
+            applyLang();
+        };
+        
+        applyLang();
+    })();
+</script>
+
+</body>
+</html>

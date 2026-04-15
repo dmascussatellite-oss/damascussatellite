@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <title id="pageTitle" 
+    data-ar="البحث عن ترددات الأقمار الصناعية | ستالايت دمشق" 
+    data-en="Satellite Frequencies Search | Damascus Satellite">
+    البحث عن ترددات الأقمار الصناعية
+    </title>
+
+    <style>
+        /* التنسيق الموحد للموقع */
+        *{box-sizing:border-box;margin:0;padding:0;transition: background-color 0.3s ease;}
+        body{font-family:Arial,sans-serif;line-height:1.8;background:#f1f5f9;color:#0f172a;padding:20px;}
+
+        .lang{position:fixed;top:20px;min-width:120px;text-align:center;background:#fff;padding:10px 18px;border-radius:25px;font-weight:bold;cursor:pointer;box-shadow:0 3px 10px rgba(0,0,0,.25);z-index:9999;direction:ltr;color:#020617}
+        html[dir="rtl"] .lang{left:20px}
+        html[dir="ltr"] .lang{right:20px}
+
+        .container{max-width:1000px; margin:60px auto; background:#fff; padding:30px; border-radius:16px; box-shadow:0 4px 12px rgba(0,0,0,0.05);}
+        h1{color:#020617; margin-bottom:20px; text-align:center; font-size: 24px;}
+
+        .section-title{
+            text-align:center;
+            margin:25px 0 20px;
+            color:#0f172a;
+            font-size:20px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            gap:10px;
+        }
+        .section-title i{
+            color:#22c55e;
+            font-size:22px;
+        }
+
+        /* تحسين خانة البحث للموبايل */
+        .search-box{position: relative; margin-bottom: 30px;}
+        input{width:100%; padding:15px 45px 15px 15px; font-size:16px; border-radius:12px; border:2px solid #e2e8f0; outline:none; -webkit-appearance: none; background:#fff;}
+        html[dir="rtl"] input{padding:15px 15px 15px 45px;}
+        input:focus{border-color:#22c55e; box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1);}
+        .search-icon{position: absolute; top: 50%; transform: translateY(-50%); color: #94a3b8; font-size: 18px;}
+        html[dir="rtl"] .search-icon{left: 15px;}
+        html[dir="ltr"] .search-icon{right: 15px;}
+
+        .table-wrapper{overflow-x:auto; background: #fff; border-radius: 8px;}
+        table{width:100%; border-collapse:collapse; margin-top:10px; font-size:14px;}
+        th,td{padding:12px; border:1px solid #edf2f7; text-align:center;}
+        th{background:#f8fafc; color:#64748b; font-weight: bold;}
+        tr:nth-child(even){background:#fcfcfc;}
+        
+        .status-msg{text-align: center; padding: 15px; font-size: 13px; font-weight: bold;}
+        .no-data{color: #94a3b8;}
+        .back-home{display:inline-block; margin-top:20px; padding:10px 20px; background:#020617; color:#fff !important; border-radius:8px; text-decoration:none; font-size:14px; transition:0.3s;}
+        .back-home:hover{background:#22c55e; transform:scale(1.02);}
+        
+        /* تنسيق زر الواتساب */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25d366;
+            color: white;
+            padding: 12px 22px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            z-index: 9999;
+            transition:0.3s;
+        }
+        .whatsapp-btn i { font-size: 24px; }
+        .whatsapp-btn:hover {
+            background-color: #128c7e;
+            transform: scale(1.05);
+        }
+        @media (max-width: 480px) {
+            .btn-text { display: none; }
+            .whatsapp-btn { padding: 15px; border-radius: 50%; bottom: 20px; right: 20px; }
+            .section-title{font-size:18px;}
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="lang" id="langBtn"><i class="fas fa-globe"></i> English</div>
+
+<div class="container">
+    <h1 id="mainTitle" data-ar="البحث عن تردد القنوات" data-en="Satellite Frequencies Search">البحث عن تردد القنوات</h1>
+    
+    <div class="search-box">
+        <input id="search" type="text" autocomplete="off"
+               data-ar-placeholder="اكتب اسم القمر أو التردد..." 
+               data-en-placeholder="Type satellite or frequency..." 
+               placeholder="اكتب اسم القمر أو التردد...">
+        <i class="fas fa-search search-icon"></i>
+    </div>
+    
+    <!-- H2 المضافة -->
+    <h2 class="section-title">
+        <i class="fas fa-satellite-dish"></i>
+        <span data-ar="قائمة الترددات المتاحة" data-en="Available Frequencies List">قائمة الترددات المتاحة</span>
+    </h2>
+
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th data-ar="القمر" data-en="Satellite">القمر</th>
+                    <th data-ar="التردد" data-en="Frequency">التردد</th>
+                    <th data-ar="الاستقطاب" data-en="Pol">الاستقطاب</th>
+                    <th data-ar="الترميز" data-en="SR">الترميز</th>
+                    <th data-ar="النظام" data-en="System">النظام</th>
+                </tr>
+            </thead>
+            <tbody id="results">
+                <tr><td colspan="5" id="loader" class="status-msg no-data" data-ar="جاري تحميل قاعدة البيانات..." data-en="Loading database...">جاري تحميل قاعدة البيانات...</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <a href="/" class="back-home" data-ar="← العودة للرئيسية" data-en="← Back to Home">العودة للرئيسية</a>
+</div>
+
+<script>
+let xmlData = [];
+
+// جلب البيانات مع إضافة ميزة منع الكاش وتتبع الحالة
+const loadData = () => {
+    const resultsContainer = document.getElementById("results");
+    
+    // إضافة علامة عشوائية للرابط لمنع المتصفح من جلب نسخة قديمة
+    fetch("satellites.xml?nocache=" + new Date().getTime())
+        .then(res => {
+            if (!res.ok) throw new Error("File not found");
+            return res.text();
+        })
+        .then(str => {
+            const parser = new DOMParser();
+            const xmlDoc = parser.parseFromString(str, "text/xml");
+            const sats = xmlDoc.getElementsByTagName("sat");
+            
+            for (let s of sats) {
+                let satName = s.getAttribute("name");
+                let trans = s.getElementsByTagName("transponder");
+                for (let t of trans) {
+                    xmlData.push({
+                        sat: satName,
+                        freq: t.getAttribute("frequency"),
+                        sr: t.getAttribute("symbol_rate"),
+                        pol: t.getAttribute("polarization"),
+                        sys: t.getAttribute("system")
+                    });
+                }
+            }
+            
+            // إعلام المستخدم بنجاح التحميل
+            resultsContainer.innerHTML = `<tr><td colspan="5" class="status-msg" style="color:#22c55e" data-ar="تم تحديث البيانات، ابدأ البحث الآن" data-en="Data ready, start searching">تم تحديث البيانات، ابدأ البحث الآن</td></tr>`;
+        })
+        .catch(err => {
+            resultsContainer.innerHTML = `<tr><td colspan="5" class="status-msg" style="color:#ef4444" data-ar="خطأ في تحميل الملف، تأكد من وجود satellites.xml" data-en="Error: satellites.xml not found">خطأ في تحميل الملف، تأكد من وجود satellites.xml</td></tr>`;
+        });
+};
+
+const searchInput = document.getElementById("search");
+const resultsContainer = document.getElementById("results");
+
+// تفعيل البحث اللحظي للموبايل عبر حدث input
+searchInput.addEventListener("input", function() {
+    let q = this.value.toLowerCase().trim();
+    
+    if (q.length < 2) {
+        // إذا كان النص أقل من حرفين، نعرض رسالة تحفيزية
+        if (xmlData.length > 0) {
+            resultsContainer.innerHTML = `<tr><td colspan="5" class="status-msg no-data" data-ar="اكتب على الأقل حرفين للبحث" data-en="Type at least 2 characters to search">اكتب على الأقل حرفين للبحث</td></tr>`;
+        }
+        return;
+    }
+
+    let html = "";
+    let count = 0;
+
+    for (let item of xmlData) {
+        if (item.sat.toLowerCase().includes(q) || item.freq.includes(q)) {
+            let pol = (item.pol == "0" || item.pol == "H") ? "H" : "V";
+            let sys = (item.sys == "1") ? "DVB-S2" : "DVB-S";
+            html += `<tr><td>${item.sat}</td><td>${item.freq}</td><td>${pol}</td><td>${item.sr}</td><td>${sys}</td></tr>`;
+            count++;
+            if (count > 40) break; 
+        }
+    }
+    
+    if (html) {
+        resultsContainer.innerHTML = html;
+    } else {
+        resultsContainer.innerHTML = `<tr><td colspan="5" class="status-msg no-data" data-ar="لا توجد نتائج" data-en="No results">لا توجد نتائج</td></tr>`;
+    }
+});
+
+// نظام اللغات الموحد
+(function(){
+    const langBtn = document.getElementById("langBtn");
+    let currentLang = localStorage.getItem("myWebLang") || "ar";
+
+    function applyLang(){
+        document.documentElement.lang = currentLang;
+        document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
+        document.querySelectorAll("[data-ar]").forEach(el => {
+            if(el.tagName === "INPUT") {
+                el.placeholder = el.getAttribute("data-" + currentLang + "-placeholder");
+            } else {
+                el.innerText = el.getAttribute("data-" + currentLang);
+            }
+        });
+        langBtn.innerHTML = currentLang === "ar" ? '<i class="fas fa-globe"></i> English' : '<i class="fas fa-globe"></i> العربية';
+        localStorage.setItem("myWebLang", currentLang);
+    }
+
+    langBtn.onclick = function(){
+        currentLang = currentLang === "ar" ? "en" : "ar";
+        applyLang();
+    };
+    
+    applyLang();
+    loadData(); // تحميل البيانات عند فتح الصفحة
+})();
+</script>
+
+<a href="https://wa.me/963990024693" class="whatsapp-btn" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+    <span class="btn-text">تواصل معنا</span>
+</a>
+
+</body>
+</html>

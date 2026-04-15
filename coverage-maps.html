@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title id="pageTitle" data-ar="خرائط التغطية | ستالايت دمشق" data-en="Coverage Maps | Damascus Satellite">خرائط التغطية | ستالايت دمشق</title>
+    <link rel="icon" href="favicon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0;}
+        body{font-family:Arial,sans-serif;background:#f1f5f9;color:#0f172a;padding-bottom:50px;}
+        
+        header{background:#fff;padding:15px 20px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 10px rgba(0,0,0,0.05);position:sticky;top:0;z-index:1000;}
+        header a{color:#22c55e;text-decoration:none;font-weight:bold;display:flex;align-items:center;gap:8px;}
+        
+        .lang{cursor:pointer;background:#020617;color:#fff;padding:8px 15px;border-radius:20px;font-size:14px;font-weight:bold;}
+        
+        .container{max-width:1100px;margin:40px auto;padding:20px;}
+        
+        .page-title{
+            text-align:center;
+            margin-bottom:40px;
+        }
+        .page-title h1{
+            font-size:36px;
+            color:#0f172a;
+            margin-bottom:10px;
+        }
+        .page-title p{
+            color:#475569;
+            font-size:18px;
+        }
+        
+        .coverage-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+            gap:30px;
+            margin-bottom:40px;
+        }
+        
+        .coverage-card{
+            background:#fff;
+            border-radius:24px;
+            overflow:hidden;
+            box-shadow:0 4px 15px rgba(0,0,0,0.05);
+            transition:0.3s;
+        }
+        .coverage-card:hover{
+            transform:translateY(-5px);
+            box-shadow:0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .coverage-header{
+            background:linear-gradient(135deg, #22c55e, #16a34a);
+            padding:20px;
+            color:#fff;
+            text-align:center;
+        }
+        .coverage-header h2{
+            font-size:24px;
+            margin-bottom:5px;
+        }
+        .coverage-header .position{
+            font-size:14px;
+            opacity:0.9;
+        }
+        
+        .map-container{
+            background:#f1f5f9;
+            padding:20px;
+            text-align:center;
+            border-bottom:1px solid #e2e8f0;
+        }
+        .map-placeholder{
+            background:#e2e8f0;
+            border-radius:16px;
+            padding:40px;
+            text-align:center;
+        }
+        .map-placeholder i{
+            font-size:80px;
+            color:#94a3b8;
+        }
+        
+        .coverage-info{
+            padding:20px;
+        }
+        .coverage-info h3{
+            color:#22c55e;
+            margin-bottom:15px;
+            font-size:18px;
+        }
+        .signal-strength{
+            margin:15px 0;
+        }
+        .signal-bar{
+            background:#e2e8f0;
+            border-radius:10px;
+            height:12px;
+            overflow:hidden;
+            margin:8px 0;
+        }
+        .signal-fill{
+            background:#22c55e;
+            height:100%;
+            border-radius:10px;
+        }
+        
+        .signal-excellent{background:#22c55e; width:85%;}
+        .signal-good{background:#facc15; width:70%;}
+        .signal-medium{background:#f97316; width:55%;}
+        .signal-low{background:#ef4444; width:35%;}
+        
+        .sources{
+            background:#f8fafc;
+            border-radius:20px;
+            padding:25px;
+            margin-top:40px;
+            border-right:4px solid #22c55e;
+        }
+        
+        .back-btn{
+            display:inline-block;
+            padding:10px 20px;
+            background:#020617;
+            color:#fff;
+            text-decoration:none;
+            border-radius:30px;
+            font-size:14px;
+            margin-top:20px;
+        }
+        
+        @media (max-width:600px){
+            .page-title h1{font-size:28px;}
+            .coverage-header h2{font-size:20px;}
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="/">
+        <i class="fas fa-home"></i> 
+        <span data-ar="الرئيسية" data-en="Home">الرئيسية</span>
+    </a>
+    <div class="lang" id="langBtn"><i class="fas fa-globe"></i> English</div>
+</header>
+
+<div class="container">
+    <div class="page-title">
+        <h1><i class="fas fa-map" style="color:#22c55e;"></i> <span data-ar="خرائط التغطية" data-en="Coverage Maps">خرائط التغطية</span></h1>
+        <p data-ar="مناطق استقبال الأقمار الصناعية في سوريا والوطن العربي" data-en="Satellite reception areas in Syria and the Arab world">
+            مناطق استقبال الأقمار الصناعية في سوريا والوطن العربي
+        </p>
+    </div>
+    
+    <div class="coverage-grid">
+        
+        <!-- نايل سات -->
+        <div class="coverage-card">
+            <div class="coverage-header">
+                <h2>📡 <span data-ar="نايل سات" data-en="Nilesat">نايل سات</span></h2>
+                <div class="position"><span data-ar="7° غرب" data-en="7° West">7° غرب</span></div>
+            </div>
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <i class="fas fa-globe-asia"></i>
+                    <p><span data-ar="بصمة نايل سات تغطي سوريا والعراق ومصر والمغرب العربي" data-en="Nilesat footprint covers Syria, Iraq, Egypt, and the Maghreb">بصمة نايل سات تغطي سوريا والعراق ومصر والمغرب العربي</span></p>
+                </div>
+            </div>
+            <div class="coverage-info">
+                <h3><i class="fas fa-chart-line"></i> <span data-ar="قوة الإشارة في دمشق" data-en="Signal Strength in Damascus">قوة الإشارة في دمشق</span></h3>
+                <div class="signal-strength">
+                    <span data-ar="ممتازة" data-en="Excellent">ممتازة</span>
+                    <div class="signal-bar"><div class="signal-fill signal-excellent"></div></div>
+                </div>
+                <p><strong data-ar="حجم الطبق المناسب:" data-en="Recommended Dish Size:">حجم الطبق المناسب:</strong> <span data-ar="60-80 سم" data-en="60-80 cm">60-80 سم</span></p>
+                <p><strong data-ar="الاستقطاب:" data-en="Polarization:">الاستقطاب:</strong> V / H</p>
+                <p><strong data-ar="المناطق التي تغطيها:" data-en="Covered Areas:">المناطق التي تغطيها:</strong> <span data-ar="سوريا، لبنان، الأردن، فلسطين، مصر، السعودية، العراق، الكويت، الإمارات، قطر، البحرين، اليمن، عُمان، ليبيا، تونس، الجزائر، المغرب، موريتانيا" data-en="Syria, Lebanon, Jordan, Palestine, Egypt, Saudi Arabia, Iraq, Kuwait, UAE, Qatar, Bahrain, Yemen, Oman, Libya, Tunisia, Algeria, Morocco, Mauritania">سوريا، لبنان، الأردن، فلسطين، مصر، السعودية، العراق، الكويت، الإمارات، قطر، البحرين، اليمن، عُمان، ليبيا، تونس، الجزائر، المغرب، موريتانيا</span></p>
+                <p><small data-ar="المصدر: Nilesat.com.eg / Satbeams.com" data-en="Source: Nilesat.com.eg / Satbeams.com">المصدر: Nilesat.com.eg / Satbeams.com</small></p>
+            </div>
+        </div>
+        
+        <!-- عرب سات -->
+        <div class="coverage-card">
+            <div class="coverage-header">
+                <h2>📡 <span data-ar="عرب سات" data-en="Arabsat">عرب سات</span></h2>
+                <div class="position"><span data-ar="26° شرق" data-en="26° East">26° شرق</span></div>
+            </div>
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <i class="fas fa-globe-asia"></i>
+                    <p><span data-ar="بصمة عرب سات مركزها على شبه الجزيرة العربية وشمال أفريقيا" data-en="Arabsat footprint centered on the Arabian Peninsula and North Africa">بصمة عرب سات مركزها على شبه الجزيرة العربية وشمال أفريقيا</span></p>
+                </div>
+            </div>
+            <div class="coverage-info">
+                <h3><i class="fas fa-chart-line"></i> <span data-ar="قوة الإشارة في دمشق" data-en="Signal Strength in Damascus">قوة الإشارة في دمشق</span></h3>
+                <div class="signal-strength">
+                    <span data-ar="جيدة" data-en="Good">جيدة</span>
+                    <div class="signal-bar"><div class="signal-fill signal-good"></div></div>
+                </div>
+                <p><strong data-ar="حجم الطبق المناسب:" data-en="Recommended Dish Size:">حجم الطبق المناسب:</strong> <span data-ar="90-120 سم" data-en="90-120 cm">90-120 سم</span></p>
+                <p><strong data-ar="الاستقطاب:" data-en="Polarization:">الاستقطاب:</strong> V / H</p>
+                <p><strong data-ar="المناطق التي تغطيها:" data-en="Covered Areas:">المناطق التي تغطيها:</strong> <span data-ar="شبه الجزيرة العربية، شمال أفريقيا، الشام (بإشارة متوسطة)" data-en="Arabian Peninsula, North Africa, Levant (medium signal)">شبه الجزيرة العربية، شمال أفريقيا، الشام (بإشارة متوسطة)</span></p>
+                <p><small data-ar="المصدر: Arabsat.com / Satbeams.com" data-en="Source: Arabsat.com / Satbeams.com">المصدر: Arabsat.com / Satbeams.com</small></p>
+            </div>
+        </div>
+        
+        <!-- هوتبيرد -->
+        <div class="coverage-card">
+            <div class="coverage-header">
+                <h2>📡 <span data-ar="هوتبيرد" data-en="Hotbird">هوتبيرد</span></h2>
+                <div class="position"><span data-ar="13° شرق" data-en="13° East">13° شرق</span></div>
+            </div>
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <i class="fas fa-globe-europe"></i>
+                    <p><span data-ar="بصمة هوتبيرد مركزها على أوروبا والبحر المتوسط" data-en="Hotbird footprint centered on Europe and the Mediterranean">بصمة هوتبيرد مركزها على أوروبا والبحر المتوسط</span></p>
+                </div>
+            </div>
+            <div class="coverage-info">
+                <h3><i class="fas fa-chart-line"></i> <span data-ar="قوة الإشارة في دمشق" data-en="Signal Strength in Damascus">قوة الإشارة في دمشق</span></h3>
+                <div class="signal-strength">
+                    <span data-ar="متوسطة" data-en="Medium">متوسطة</span>
+                    <div class="signal-bar"><div class="signal-fill signal-medium"></div></div>
+                </div>
+                <p><strong data-ar="حجم الطبق المناسب:" data-en="Recommended Dish Size:">حجم الطبق المناسب:</strong> <span data-ar="90-100 سم" data-en="90-100 cm">90-100 سم</span></p>
+                <p><strong data-ar="الاستقطاب:" data-en="Polarization:">الاستقطاب:</strong> V / H</p>
+                <p><strong data-ar="المناطق التي تغطيها:" data-en="Covered Areas:">المناطق التي تغطيها:</strong> <span data-ar="أوروبا، شمال أفريقيا، الشرق الأوسط (بإشارة متوسطة)" data-en="Europe, North Africa, Middle East (medium signal)">أوروبا، شمال أفريقيا، الشرق الأوسط (بإشارة متوسطة)</span></p>
+                <p><small data-ar="المصدر: Eutelsat.com / Satbeams.com" data-en="Source: Eutelsat.com / Satbeams.com">المصدر: Eutelsat.com / Satbeams.com</small></p>
+            </div>
+        </div>
+        
+        <!-- تورك سات -->
+        <div class="coverage-card">
+            <div class="coverage-header">
+                <h2>📡 <span data-ar="تورك سات" data-en="Turksat">تورك سات</span></h2>
+                <div class="position"><span data-ar="42° شرق" data-en="42° East">42° شرق</span></div>
+            </div>
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <i class="fas fa-globe-asia"></i>
+                    <p><span data-ar="بصمة تورك سات مركزها على تركيا والشرق الأوسط" data-en="Turksat footprint centered on Turkey and the Middle East">بصمة تورك سات مركزها على تركيا والشرق الأوسط</span></p>
+                </div>
+            </div>
+            <div class="coverage-info">
+                <h3><i class="fas fa-chart-line"></i> <span data-ar="قوة الإشارة في دمشق" data-en="Signal Strength in Damascus">قوة الإشارة في دمشق</span></h3>
+                <div class="signal-strength">
+                    <span data-ar="متوسطة" data-en="Medium">متوسطة</span>
+                    <div class="signal-bar"><div class="signal-fill signal-medium"></div></div>
+                </div>
+                <p><strong data-ar="حجم الطبق المناسب:" data-en="Recommended Dish Size:">حجم الطبق المناسب:</strong> <span data-ar="100-120 سم" data-en="100-120 cm">100-120 سم</span></p>
+                <p><strong data-ar="الاستقطاب:" data-en="Polarization:">الاستقطاب:</strong> V / H</p>
+                <p><strong data-ar="المناطق التي تغطيها:" data-en="Covered Areas:">المناطق التي تغطيها:</strong> <span data-ar="تركيا، الشرق الأوسط، أوروبا الشرقية، آسيا الوسطى" data-en="Turkey, Middle East, Eastern Europe, Central Asia">تركيا، الشرق الأوسط، أوروبا الشرقية، آسيا الوسطى</span></p>
+                <p><small data-ar="المصدر: Turksat.com.tr / Satbeams.com" data-en="Source: Turksat.com.tr / Satbeams.com">المصدر: Turksat.com.tr / Satbeams.com</small></p>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- خريطة توضيحية لسوريا -->
+    <div class="coverage-card" style="margin-bottom:30px;">
+        <div class="coverage-header">
+            <h2><i class="fas fa-map-marked-alt"></i> <span data-ar="خريطة سوريا - مناطق التغطية" data-en="Syria Map - Coverage Areas">خريطة سوريا - مناطق التغطية</span></h2>
+        </div>
+        <div class="map-container">
+            <div class="map-placeholder">
+                <i class="fas fa-map"></i>
+                <p><span data-ar="📍 دمشق (خط عرض 33.5° شمالاً، خط طول 36.3° شرقاً)" data-en="📍 Damascus (Latitude 33.5° N, Longitude 36.3° E)">📍 دمشق (خط عرض 33.5° شمالاً، خط طول 36.3° شرقاً)</span></p>
+                <p><span data-ar="📍 حلب (خط عرض 36.2° شمالاً)" data-en="📍 Aleppo (Latitude 36.2° N)">📍 حلب (خط عرض 36.2° شمالاً)</span></p>
+                <p><span data-ar="📍 حمص (خط عرض 34.7° شمالاً)" data-en="📍 Homs (Latitude 34.7° N)">📍 حمص (خط عرض 34.7° شمالاً)</span></p>
+                <p><span data-ar="📍 اللاذقية (خط عرض 35.5° شمالاً)" data-en="📍 Latakia (Latitude 35.5° N)">📍 اللاذقية (خط عرض 35.5° شمالاً)</span></p>
+            </div>
+        </div>
+        <div class="coverage-info">
+            <p><i class="fas fa-info-circle"></i> <span data-ar="في المناطق الشمالية من سوريا (حلب، إدلب) تزداد قوة إشارة عرب سات قليلاً، بينما في المناطق الساحلية (اللاذقية، طرطوس) تتأثر الإشارة بالتضاريس الجبلية." data-en="In northern Syria (Aleppo, Idlib), Arabsat signal strength increases slightly, while in coastal areas (Latakia, Tartus), signal is affected by mountainous terrain.">
+                في المناطق الشمالية من سوريا (حلب، إدلب) تزداد قوة إشارة عرب سات قليلاً، بينما في المناطق الساحلية (اللاذقية، طرطوس) تتأثر الإشارة بالتضاريس الجبلية.
+            </span></p>
+        </div>
+    </div>
+    
+    <div class="sources">
+        <h3><i class="fas fa-flask"></i> <span data-ar="المصادر العلمية" data-en="Scientific Sources">المصادر العلمية</span></h3>
+        <ul>
+            <li><a href="https://www.nilesat.com.eg" target="_blank" style="color:#22c55e;">Nilesat.com.eg</a> - <span data-ar="خرائط التغطية الرسمية لنايل سات" data-en="Official Nilesat coverage maps">خرائط التغطية الرسمية لنايل سات</span></li>
+            <li><a href="https://www.arabsat.com" target="_blank" style="color:#22c55e;">Arabsat.com</a> - <span data-ar="خرائط التغطية الرسمية لعرب سات" data-en="Official Arabsat coverage maps">خرائط التغطية الرسمية لعرب سات</span></li>
+            <li><a href="https://www.eutelsat.com" target="_blank" style="color:#22c55e;">Eutelsat.com</a> - <span data-ar="خرائط التغطية الرسمية لهوتبيرد" data-en="Official Hotbird coverage maps">خرائط التغطية الرسمية لهوتبيرد</span></li>
+            <li><a href="https://www.turksat.com.tr" target="_blank" style="color:#22c55e;">Turksat.com.tr</a> - <span data-ar="خرائط التغطية الرسمية لتورك سات" data-en="Official Turksat coverage maps">خرائط التغطية الرسمية لتورك سات</span></li>
+            <li><a href="https://www.satbeams.com" target="_blank" style="color:#22c55e;">Satbeams.com</a> - <span data-ar="خرائط تفاعلية دقيقة لتغطية الأقمار" data-en="Accurate interactive satellite coverage maps">خرائط تفاعلية دقيقة لتغطية الأقمار</span></li>
+            <li><a href="https://www.lyngsat.com" target="_blank" style="color:#22c55e;">Lyngsat.com</a> - <span data-ar="قاعدة بيانات ترددات الأقمار" data-en="Satellite frequency database">قاعدة بيانات ترددات الأقمار</span></li>
+        </ul>
+        <p><i class="fas fa-info-circle"></i> <span data-ar="* الخرائط أعلاه مأخوذة من بيانات رسمية للمشغلين وموقع Satbeams.com. قوة الإشارة قد تختلف حسب العوائق المحلية (المباني، الأشجار، التضاريس)." data-en="* The maps above are taken from official operator data and Satbeams.com. Signal strength may vary depending on local obstacles (buildings, trees, terrain).">
+            * الخرائط أعلاه مأخوذة من بيانات رسمية للمشغلين وموقع Satbeams.com. قوة الإشارة قد تختلف حسب العوائق المحلية (المباني، الأشجار، التضاريس).
+        </span></p>
+    </div>
+    
+    <div style="text-align:center; margin-top:20px;">
+        <a href="/" class="back-btn"><i class="fas fa-arrow-right"></i> <span data-ar="العودة للرئيسية" data-en="Back to Home">العودة للرئيسية</span></a>
+    </div>
+</div>
+
+<script>
+    (function(){
+        const langBtn = document.getElementById("langBtn");
+        let currentLang = localStorage.getItem("myWebLang") || "ar";
+        
+        function applyLang(){
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
+            
+            document.querySelectorAll("[data-ar]").forEach(el => {
+                if(el.tagName === 'A') return;
+                el.innerText = el.getAttribute("data-" + currentLang);
+            });
+            
+            langBtn.innerHTML = currentLang === "ar" ? '<i class="fas fa-globe"></i> English' : '<i class="fas fa-globe"></i> العربية';
+            localStorage.setItem("myWebLang", currentLang);
+        }
+        
+        langBtn.onclick = function(){
+            currentLang = currentLang === "ar" ? "en" : "ar";
+            applyLang();
+        };
+        applyLang();
+    })();
+</script>
+
+</body>
+</html>
