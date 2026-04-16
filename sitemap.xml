@@ -3,291 +3,320 @@
 
   <!-- الصفحة الرئيسية -->
   <url>
-    <loc>https://damascussatellite.gamer.gd/</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://dmascussatellite-oss.github.io/damascussatellite/</loc>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- صفحات الخدمات الرئيسية -->
   <url>
-    <loc>https://damascussatellite.gamer.gd/satellite-install-damascus.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://dmascussatellite-oss.github.io/damascussatellite/satellite-install-damascus.html</loc>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://damascussatellite.gamer.gd/receiver-repair-damascus.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://dmascussatellite-oss.github.io/damascussatellite/receiver-repair-damascus.html</loc>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://damascussatellite.gamer.gd/tv-installation-damascus.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://dmascussatellite-oss.github.io/damascussatellite/tv-installation-damascus.html</loc>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- صفحات المحتوى -->
   <url>
-    <loc>https://damascussatellite.gamer.gd/channels.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://dmascussatellite-oss.github.io/damascussatellite/channels.html</loc>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://damascussatellite.gamer.gd/frequency-quality.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://dmascussatellite-oss.github.io/damascussatellite/frequency-quality.html</loc>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://damascussatellite.gamer.gd/live-tv.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://dmascussatellite-oss.github.io/damascussatellite/live-tv.html</loc>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://damascussatellite.gamer.gd/radio.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://dmascussatellite-oss.github.io/damascussatellite/radio.html</loc>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://damascussatellite.gamer.gd/frequencies.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://dmascussatellite-oss.github.io/damascussatellite/frequencies.html</loc>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://damascussatellite.gamer.gd/satellite-calculator.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://dmascussatellite-oss.github.io/damascussatellite/satellite-calculator.html</loc>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- صفحات الأدوات والحاسبات -->
   <url>
-    <loc>https://damascussatellite.gamer.gd/focal-length-calculator.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://dmascussatellite-oss.github.io/damascussatellite/focal-length-calculator.html</loc>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- صفحات الدليل والترددات -->
   <url>
-    <loc>https://damascussatellite.gamer.gd/top-channels-guide.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://dmascussatellite-oss.github.io/damascussatellite/top-channels-guide.html</loc>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- صفحات المعلومات -->
   <url>
-    <loc>https://damascussatellite.gamer.gd/about.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://dmascussatellite-oss.github.io/damascussatellite/about.html</loc>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://damascussatellite.gamer.gd/contact.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://dmascussatellite-oss.github.io/damascussatellite/contact.html</loc>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://damascussatellite.gamer.gd/privacy.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://dmascussatellite-oss.github.io/damascussatellite/privacy.html</loc>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://damascussatellite.gamer.gd/quote-request.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://dmascussatellite-oss.github.io/damascussatellite/quote-request.html</loc>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- صفحات المدونة والمقالات -->
   <url>
-    <loc>https://damascussatellite.gamer.gd/blog.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://dmascussatellite-oss.github.io/damascussatellite/blog.html</loc>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <!-- المقالات الفردية -->
   <url>
-    <loc>https://damascussatellite.gamer.gd/blog-post.html?id=1</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://dmascussatellite-oss.github.io/damascussatellite/blog-post.html?id=1</loc>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://damascussatellite.gamer.gd/blog-post.html?id=2</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://dmascussatellite-oss.github.io/damascussatellite/blog-post.html?id=2</loc>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://damascussatellite.gamer.gd/blog-post.html?id=3</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://dmascussatellite-oss.github.io/damascussatellite/blog-post.html?id=3</loc>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://damascussatellite.gamer.gd/blog-post.html?id=4</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://dmascussatellite-oss.github.io/damascussatellite/blog-post.html?id=4</loc>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://damascussatellite.gamer.gd/blog-post.html?id=5</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://dmascussatellite-oss.github.io/damascussatellite/blog-post.html?id=5</loc>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://damascussatellite.gamer.gd/blog-post.html?id=6</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://dmascussatellite-oss.github.io/damascussatellite/blog-post.html?id=6</loc>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://damascussatellite.gamer.gd/faq-advanced.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://dmascussatellite-oss.github.io/damascussatellite/faq-advanced.html</loc>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://damascussatellite.gamer.gd/tips-solutions.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://dmascussatellite-oss.github.io/damascussatellite/tips-solutions.html</loc>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://damascussatellite.gamer.gd/customer-reviews.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://dmascussatellite-oss.github.io/damascussatellite/customer-reviews.html</loc>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://damascussatellite.gamer.gd/gallery.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://dmascussatellite-oss.github.io/damascussatellite/gallery.html</loc>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <!-- صفحات علمية -->
   <url>
-    <loc>https://damascussatellite.gamer.gd/satellite-comparison.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://dmascussatellite-oss.github.io/damascussatellite/satellite-comparison.html</loc>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://damascussatellite.gamer.gd/technical-glossary.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://dmascussatellite-oss.github.io/damascussatellite/technical-glossary.html</loc>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://damascussatellite.gamer.gd/angle-formulas.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://dmascussatellite-oss.github.io/damascussatellite/angle-formulas.html</loc>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://damascussatellite.gamer.gd/coverage-maps.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://dmascussatellite-oss.github.io/damascussatellite/coverage-maps.html</loc>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://damascussatellite.gamer.gd/how-satellites-work.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://dmascussatellite-oss.github.io/damascussatellite/how-satellites-work.html</loc>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://damascussatellite.gamer.gd/satellite-orbits.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://dmascussatellite-oss.github.io/damascussatellite/satellite-orbits.html</loc>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://damascussatellite.gamer.gd/weather-effects.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://dmascussatellite-oss.github.io/damascussatellite/weather-effects.html</loc>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://damascussatellite.gamer.gd/lnb-guide.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://dmascussatellite-oss.github.io/damascussatellite/lnb-guide.html</loc>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://damascussatellite.gamer.gd/polarization-guide.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://dmascussatellite-oss.github.io/damascussatellite/polarization-guide.html</loc>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://damascussatellite.gamer.gd/dish-gain.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://dmascussatellite-oss.github.io/damascussatellite/dish-gain.html</loc>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://damascussatellite.gamer.gd/encryption-guide.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://dmascussatellite-oss.github.io/damascussatellite/encryption-guide.html</loc>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
     
   <url>
-    <loc>https://damascussatellite.gamer.gd/useful-links.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://dmascussatellite-oss.github.io/damascussatellite/useful-links.html</loc>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://damascussatellite.gamer.gd/warranty-policy.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://dmascussatellite-oss.github.io/damascussatellite/warranty-policy.html</loc>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-  </url>   
+  </url>
+
+  <!-- صفحات جديدة -->
+  <url>
+    <loc>https://dmascussatellite-oss.github.io/damascussatellite/poll.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dmascussatellite-oss.github.io/damascussatellite/tv-buying-guide.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://dmascussatellite-oss.github.io/damascussatellite/firmware-update-guide.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dmascussatellite-oss.github.io/damascussatellite/diseqc-coaxial-fconnector.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
 </urlset>
