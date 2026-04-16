@@ -1,7 +1,7 @@
 {
   "name": "ستالايت دمشق",
   "short_name": "ستلايت دمشق",
-  "start_url": "index.html",
+  "start_url": "https://dmascussatellite-oss.github.io/damascussatellite/index.html",
   "display": "standalone",
   "background_color": "#020617",
   "theme_color": "#020617",
